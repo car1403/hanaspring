@@ -7,15 +7,10 @@ import com.hana.app.frame.Service;
 import com.hana.app.repository.CustDao;
 
 import java.util.List;
-
+@org.springframework.stereotype.Service
 public class CustService implements Service<String, CustDto> {
 
     Dao<String, CustDto> dao;
-
-    public CustService(){
-
-        dao = new CustDao();
-    }
 
 
     @Override
