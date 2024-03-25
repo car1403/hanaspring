@@ -1,6 +1,6 @@
 package com.hana.app.frame;
 
-import com.hana.exception.DuplicatedIdException;
+import com.hana.app.exception.DuplicatedIdException;
 
 import java.util.List;
 

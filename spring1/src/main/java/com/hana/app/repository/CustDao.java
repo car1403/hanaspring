@@ -1,8 +1,8 @@
 package com.hana.app.repository;
 
-import com.hana.data.CustDto;
-import com.hana.exception.DuplicatedIdException;
-import com.hana.frame.Dao;
+import com.hana.app.data.CustDto;
+import com.hana.app.exception.DuplicatedIdException;
+import com.hana.app.frame.Dao;
 
 import java.util.ArrayList;
 import java.util.List;
