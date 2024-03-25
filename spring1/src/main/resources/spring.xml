@@ -9,7 +9,7 @@
        http://www.springframework.org/schema/context/spring-context-3.0.xsd
        ">
     <!-- 2. Dao Bean을 선언 한다. -->
-    <bean id="custDao" class="com.hana.app.repository.CustDao">
+    <bean id="custDao" class="com.hana.app.repository.CustMySQLDao">
     </bean>
     <!-- 1. Service Bean을 선언 한다. -->
     <bean id="custService" class="com.hana.app.service.CustService">
