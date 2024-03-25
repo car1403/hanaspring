@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hana</groupId>
-    <artifactId>spring1</artifactId>
+    <artifactId>spring2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
