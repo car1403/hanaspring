@@ -16,4 +16,9 @@ public class MainController {
         model.addAttribute("centerpage","login");
         return "main";
     }
+    @RequestMapping("/register")
+    public String register(Model model){
+        model.addAttribute("centerpage","register");
+        return "main";
+    }
 }
