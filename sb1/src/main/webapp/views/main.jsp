@@ -6,7 +6,8 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-	<link href="main.css" rel="stylesheet">
+	<!-- 127.0.0.1:8080/sb1/main.css  -->
+	<link href="<c:url value="/main.css"  />" rel="stylesheet">
 <style>
 </style>
 </head>
@@ -15,10 +16,9 @@
 <header>
 	<h1>Main Page</h1>
 	<ul>
-		<li><a href="main.nhn">MAIN</a></li>
-		<li><a href="login.nhn">LOGIN</a></li>
-		<li><a href="register.nhn">REGISTER</a></li>
-		<li><a href="selectall.nhn">SELECTALL</a></li>
+		<li><a href="<c:url value="/" />">MAIN</a></li>
+		<li><a href="<c:url value="/login" />">LOGIN</a></li>
+		<li><a href="<c:url value="/register" />">REGISTER</a></li>
 	</ul>	
 </header>
 <section>
@@ -30,8 +30,6 @@
 		   <jsp:include page="${centerpage}.jsp"></jsp:include>
 		</c:otherwise>
 	</c:choose>
-	
-	
 </section>
 <footer></footer>
 </body>
