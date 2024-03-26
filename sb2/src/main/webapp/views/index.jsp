@@ -86,18 +86,19 @@
             <hr class="d-sm-none">
         </div>
         <div class="col-sm-9">
-
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <div class="container">
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Sep 2, 2017</h5>
+                <div class="fakeimg">Fake Image</div>
+                <p>Some text..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-    <p>Footer</p>
+<div class=" text-center bg-dark" style="margin-bottom:0;padding: 5px">
+    <p class="text-white-50">Footer</p>
 </div>
 
 </body>
