@@ -7,7 +7,7 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 	<!-- 127.0.0.1:8080/sb1/main.css  -->
-	<link href="<c:url value="/main.css"  />" rel="stylesheet">
+	<link href="<c:url value="/css/main.css"  />" rel="stylesheet">
 <style>
 </style>
 </head>
