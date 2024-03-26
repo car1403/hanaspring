@@ -6,5 +6,9 @@
 </head>
 <body>
     <h1>Hello Thymeleaf</h1>
+    <h2 th:text="${data}"></h2>
+    <div th:each="s: ${datas}">
+        <h3 th:text="${s}"></h3>
+    </div>
 </body>
 </html>
