@@ -12,12 +12,10 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>${ pageContext.request.contextPath }</h1>
+    <h1>info</h1>
+    <h1><a href="<c:url value="/cust/cust"  />" > [회원 가입] </a>
 
-    <h1><a href="<c:url value="/cust/info"  />">Cust info</a></h1>
-    <h2>${data}</h2>
-    <c:forEach var="s" items="${datas}">
-        <h3>${s}</h3>
-    </c:forEach>
+
+    </h1>
 </body>
 </html>
