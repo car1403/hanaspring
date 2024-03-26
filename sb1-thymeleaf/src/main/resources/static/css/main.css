@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    width:700px;
+    height:150px;
+    background:red;
+    margin:0 auto;
+}
+header > h1 {
+    margin:0 auto;
+    width:200px;
+}
+header > ul {
+    margin:0 auto;
+    width:500px;
+    list-style: none;
+}
+header > ul > li{
+    float:left;
+    margin:0 10px;
+}
+section{
+    width:700px;
+    height:600px;
+    background:gray;
+    margin:0 auto;
+}
+section > #center{
+    width:500px;
+    background:white;
+    margin:0 auto;
+    text-align: center;
+}
+footer{
+    width:700px;
+    height:30px;
+    background:black;
+    margin:0 auto;
+}

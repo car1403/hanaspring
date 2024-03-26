@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<!-- 127.0.0.1:8080/sb1/main.css  -->
+	<link href="css/main.css"  rel="stylesheet">
+<style>
+</style>
+</head>
+
+<body>
+<header>
+	<h1>Main Page</h1>
+	<ul>
+		<li><a th:href="@{/}">MAIN</a></li>
+		<li><a th:href="@{/login}">LOGIN</a></li>
+		<li><a th:href="@{/register}">REGISTER</a></li>
+		<li><a href="">CUST ADD</a></li>
+		<li><a href="">CUST GET</a></li>
+	</ul>	
+</header>
+<section th:include="${centerpage} ? ${centerpage} : center">
+
+</section>
+<footer></footer>
+</body>
+</html>
+
+
+
+
+
+
