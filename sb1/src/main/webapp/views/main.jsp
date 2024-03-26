@@ -19,6 +19,8 @@
 		<li><a href="<c:url value="/" />">MAIN</a></li>
 		<li><a href="<c:url value="/login" />">LOGIN</a></li>
 		<li><a href="<c:url value="/register" />">REGISTER</a></li>
+		<li><a href="<c:url value="/cust/add" />">CUST ADD</a></li>
+		<li><a href="<c:url value="/cust/get" />">CUST GET</a></li>
 	</ul>	
 </header>
 <section>
