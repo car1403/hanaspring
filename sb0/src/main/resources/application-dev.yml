@@ -1,0 +1,14 @@
+server:
+  port: 80
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+logging:
+  level:
+    root: info
