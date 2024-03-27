@@ -10,7 +10,7 @@
 
 <div class="container">
     <h2>Login Page</h2>
-    <form action="<c:url value="/loginimpl"/>" method="post">
+    <form action="/loginimpl" method="post">
         <div class="form-group">
             <label for="id">ID:</label>
             <input type="text" class="form-control" id="id" placeholder="Enter id" name="id">

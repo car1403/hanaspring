@@ -30,17 +30,34 @@
 <div class="jumbotron text-center" style="margin-bottom:0">
     <h1>HTML5 & JavaScript</h1>
 </div>
-<ul class="nav justify-content-end">
-    <li class="nav-item">
-        <a class="nav-link" href="<c:url value="/login" />">LOGIN</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="<c:url value="/register" />">REGISTER</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">ABOUT US</a>
-    </li>
-</ul>
+<c:choose>
+    <c:when test="${id == null}">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/login" />">LOGIN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/register" />">REGISTER</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT US</a>
+            </li>
+        </ul>
+    </c:when>
+    <c:otherwise>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#">${id}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/logout" />">LOGOUT</a>
+            </li>
+        </ul>
+
+    </c:otherwise>
+</c:choose>
+
+
 <%--Start Nav Bar--%>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a class="navbar-brand" href="<c:url value='/'/>">Home</a>
