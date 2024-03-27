@@ -6,10 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- JSTL -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <title>Bootstrap 4 Website Example</title>
     <meta charset="utf-8">
@@ -28,23 +28,20 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-    <h1>My First Bootstrap 4 Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <h1>HTML5 & JavaScript</h1>
 </div>
 <ul class="nav justify-content-end">
     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">LOGIN</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">REGISTER</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">ABOUT US</a>
     </li>
 </ul>
+<%--Start Nav Bar--%>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -64,13 +61,12 @@
         </ul>
     </div>
 </nav>
+<%--End Nav Bar--%>
 
+<%--Start Center Area--%>
 <div class="container-fluid" style="margin-top:30px">
     <div class="row">
         <div class="col-sm-3">
-
-            <h3>Some Links</h3>
-            <p>Lorem ipsum dolor sit ame.</p>
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Active</a>
@@ -81,26 +77,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-
             </ul>
             <hr class="d-sm-none">
         </div>
         <div class="col-sm-9">
-            <div class="container">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg">Fake Image</div>
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            </div>
+
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg">Fake Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
     </div>
 </div>
+<%--End Center Area--%>
 
-<div class=" text-center bg-dark" style="margin-bottom:0;padding: 5px">
-    <p class="text-white-50">Footer</p>
+<%--Start Bottom Area--%>
+<div class="text-center bg-dark" style="margin-bottom:0">
+    <p>Footer</p>
 </div>
-
+<%--End Bottom Area--%>
 </body>
 </html>
-
