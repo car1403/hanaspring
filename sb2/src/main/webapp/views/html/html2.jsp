@@ -24,9 +24,14 @@
             });
         },
         display:function(datas){
+            let result = '';
             $(datas).each(function(index, data){
-                alert(index + ' ' +data);
+                result += '<tr>';
+                result += '<td>'+data.id+'</td>';
+                result += '<td>'+data.name+'</td>';
+                result += '</tr>';
             });
+            $('#cust_tb > tbody').html(result);
         }
     };
 
@@ -37,13 +42,23 @@
 <div class="container">
     <h2>HTML2 Page</h2>
     <button id="btn" type="button" class="btn btn-success">Success</button>
+    <table class="table table-striped" id="cust_tb">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
 
-    <div class="row">
-        <div class="container col-sm-4" >
+        </tbody>
+    </table>
+<%--    <div class="row">--%>
+<%--        <div class="container col-sm-4" >--%>
 
-        </div>
-        <div class="container col-sm-8">
+<%--        </div>--%>
+<%--        <div class="container col-sm-8" id="result">--%>
 
-        </div>
-    </div>
+<%--        </div>--%>
+<%--    </div>--%>
 </div>
