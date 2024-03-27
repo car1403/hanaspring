@@ -50,13 +50,22 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="<c:url value="/html/"/>">HTML</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">jQuery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Ajax</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Geo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cust</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Item</a>
             </li>
         </ul>
     </div>
@@ -66,7 +75,7 @@
 <%--Start Center Area--%>
 <div class="container-fluid" style="margin-top:30px">
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-2">
             <c:choose>
                 <c:when test="${left == null}">
                     <jsp:include page="left.jsp"/>
@@ -76,7 +85,7 @@
                 </c:otherwise>
             </c:choose>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-10">
             <c:choose>
                 <c:when test="${center == null}">
                     <jsp:include page="center.jsp"/>
