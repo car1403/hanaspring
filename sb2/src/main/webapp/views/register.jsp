@@ -6,10 +6,33 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<script>
+
+    $(function(){
+        register.init('<c:url value="/registerimpl"/>');
+    });
+
+</script>
 <div class="container">
     <h2>Register Page</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg">Fake Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <form id="register_form">
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" class="form-control" id="id" placeholder="Enter id" name="id">
+
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="password" class="form-control" id="name" placeholder="Enter name" name="name">
+
+        </div>
+        <button type="button" class="btn btn-primary">REGISTER</button>
+    </form>
 </div>
