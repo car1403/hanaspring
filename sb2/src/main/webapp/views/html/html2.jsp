@@ -8,10 +8,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script>
-    $(document).ready(function(){
-        $('#btn').click(function(){
-            alert('OK');
-        });
+    // JSON (JavaScript Object Notation)
+    let datas = [
+        {"id":"id01","name":"james1"},
+        {"id":"id02","name":"james2"},
+        {"id":"id03","name":"james3"},
+        {"id":"id04","name":"james4"},
+        {"id":"id05","name":"james5"}
+    ];
+    let html2 = {
+
+        init:function (){
+            $('#btn').click(function(){
+                html2.display(datas);
+            });
+        },
+        display:function(datas){
+            $(datas).each(function(index, data){
+                alert(index + ' ' +data);
+            });
+        }
+    };
+
+    $(function(){
+        html2.init();
     });
 </script>
 <div class="container">
