@@ -35,6 +35,7 @@ dependencies {
     implementation 'jakarta.servlet:jakarta.servlet-api'
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 
     // test
     testImplementation 'org.projectlombok:lombok'

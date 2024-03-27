@@ -1,6 +1,5 @@
 package com.hana.controller;
 
-import com.hana.dto.CustDto;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -42,16 +41,7 @@ public class MainController {
         }
         return "index";
     }
-    @RequestMapping("/registerimpl")
-    public String registerimpl(Model model,
-                               CustDto custDto, HttpSession httpSession){
-        log.info(custDto.getId());
-        log.info(custDto.getPwd());
-        log.info(custDto.getName());
-        httpSession.setAttribute("id", custDto.getId());
 
-        return "index";
-    }
 
     @RequestMapping("/register")
     public String register(Model model){
