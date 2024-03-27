@@ -5,29 +5,29 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/html")
-public class HtmlController {
-    String dir= "html/";
+@RequestMapping("/ajax")
+public class AjaxController {
+    String dir= "ajax/";
     @RequestMapping("/")
     public String main(Model model){
         model.addAttribute("left", dir+"left");
         model.addAttribute("center",dir+"center");
         return "index";
     }
-    @RequestMapping("/html1")
-    public String html1(Model model){
+    @RequestMapping("/ajax1")
+    public String ajax1(Model model){
         model.addAttribute("left", dir+"left");
         model.addAttribute("center",dir+"html1");
         return "index";
     }
-    @RequestMapping("/html2")
-    public String html2(Model model){
+    @RequestMapping("/ajax2")
+    public String ajax2(Model model){
         model.addAttribute("left", dir+"left");
         model.addAttribute("center",dir+"html2");
         return "index";
     }
-    @RequestMapping("/html3")
-    public String html3(Model model){
+    @RequestMapping("/ajax3")
+    public String ajax3(Model model){
         model.addAttribute("left", dir+"left");
         model.addAttribute("center",dir+"html3");
         return "index";

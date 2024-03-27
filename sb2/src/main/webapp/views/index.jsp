@@ -53,13 +53,13 @@
                 <a class="nav-link" href="<c:url value="/html/"/>">HTML</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">jQuery</a>
+                <a class="nav-link" href="<c:url value="/jquery/"/>">jQuery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ajax</a>
+                <a class="nav-link" href="<c:url value="/ajax/"/>">Ajax</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Geo</a>
+                <a class="nav-link" href="<c:url value="/geo/"/>">Geo</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Cust</a>
