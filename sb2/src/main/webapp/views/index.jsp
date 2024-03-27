@@ -32,10 +32,10 @@
 </div>
 <ul class="nav justify-content-end">
     <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
+        <a class="nav-link" href="<c:url value="/login" />">LOGIN</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">REGISTER</a>
+        <a class="nav-link" href="<c:url value="/register" />">REGISTER</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">ABOUT US</a>
@@ -43,7 +43,7 @@
 </ul>
 <%--Start Nav Bar--%>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="<c:url value='/'/>">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -67,26 +67,24 @@
 <div class="container-fluid" style="margin-top:30px">
     <div class="row">
         <div class="col-sm-3">
-            <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-            </ul>
-            <hr class="d-sm-none">
+            <c:choose>
+                <c:when test="${left == null}">
+                    <jsp:include page="left.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="${left}.jsp"/>
+                </c:otherwise>
+            </c:choose>
         </div>
         <div class="col-sm-9">
-
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <c:choose>
+                <c:when test="${center == null}">
+                    <jsp:include page="center.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="${center}.jsp"/>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 </div>
