@@ -33,7 +33,7 @@
     <h1>HTML5 & JavaScript</h1>
 </div>
 <c:choose>
-    <c:when test="${id == null}">
+    <c:when test="${sessionScope.id == null}">
         <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/login" />">LOGIN</a>
