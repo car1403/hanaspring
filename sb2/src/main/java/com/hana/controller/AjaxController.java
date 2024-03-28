@@ -17,19 +17,19 @@ public class AjaxController {
     @RequestMapping("/ajax1")
     public String ajax1(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html1");
+        model.addAttribute("center",dir+"ajax1");
         return "index";
     }
     @RequestMapping("/ajax2")
     public String ajax2(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html2");
+        model.addAttribute("center",dir+"ajax2");
         return "index";
     }
     @RequestMapping("/ajax3")
     public String ajax3(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html3");
+        model.addAttribute("center",dir+"ajax3");
         return "index";
     }
 }
