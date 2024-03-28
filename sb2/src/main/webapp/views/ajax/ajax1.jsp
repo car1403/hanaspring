@@ -1,13 +1,18 @@
 <script>
     let ajax1 = {
         init:function(){
-            $.ajax({
-                url:'/getservertime',
-                success:function(data){
-                    ajax1.display(data);
-                },
-                error:function(){}
-            });
+
+            setInterval(function(){
+                $.ajax({
+                    url:'/getservertime',
+                    success:function(data){
+                        ajax1.display(data);
+                    },
+                    error:function(){}
+                });
+            },1000);
+
+
         },
         display:function(data){
             $('#result').text(data);
