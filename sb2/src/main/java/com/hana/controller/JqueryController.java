@@ -17,19 +17,19 @@ public class JqueryController {
     @RequestMapping("/jquery1")
     public String jquery1(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html1");
+        model.addAttribute("center",dir+"jquery1");
         return "index";
     }
     @RequestMapping("/jquery2")
     public String jquery2(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html2");
+        model.addAttribute("center",dir+"jquery2");
         return "index";
     }
     @RequestMapping("/jquery3")
     public String jquery3(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html3");
+        model.addAttribute("center",dir+"jquery3");
         return "index";
     }
 }

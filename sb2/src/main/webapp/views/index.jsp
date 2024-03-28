@@ -80,12 +80,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/geo/"/>">Geo</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cust</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Item</a>
-            </li>
+            <c:if test="${id != null}">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Item</a>
+                </li>
+            </c:if>
         </ul>
     </div>
 </nav>
