@@ -71,7 +71,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Customer Management:</h6>
                         <a class="collapse-item" href="buttons.html">Add</a>
-                        <a class="collapse-item" href="cards.html">Get</a>
+                        <a class="collapse-item" href="<c:url value="/cust/get"/>">Get</a>
                     </div>
                 </div>
             </li>
