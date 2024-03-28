@@ -5,12 +5,18 @@
     let jquery3 = {
         init:function(){
             $('#btn_get').click(function(){
-                $.ajax({
-                    url:'<c:url value="/getdata"/>',
-                    success:function(data){
+                var url = '<c:url value="/getdata"/>';
+                    fetch(url).then(response => response.json()).then(data => {
                         alert(data);
-                    }
-                });
+                    });
+
+
+                <%--$.ajax({--%>
+                <%--    url:'<c:url value="/getdata"/>',--%>
+                <%--    success:function(data){--%>
+                <%--        alert(data);--%>
+                <%--    }--%>
+                <%--});--%>
             });
         }
     };

@@ -1,8 +1,10 @@
 <script>
     let ajax1 = {
         init:function(){
+            var url = '<c:url value="/getservertime"/>';
 
             setInterval(function(){
+
                 $.ajax({
                     url:'/getservertime',
                     success:function(data){
