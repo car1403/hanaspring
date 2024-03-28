@@ -23,9 +23,14 @@
 
     <!-- Custom styles for this template-->
     <link href="<c:url value="/css/sb-admin-2.min.css"/>" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="<c:url value="/vendor/datatables/dataTables.bootstrap4.min.css"/>" rel="stylesheet">
+
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<c:url value="/vendor/jquery/jquery.min.js"/>"></script>
+    <script src="<c:url value="/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
+
 
     <!-- Core plugin JavaScript-->
     <script src="<c:url value="/vendor/jquery-easing/jquery.easing.min.js"/>"></script>
@@ -98,7 +103,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Item Management:</h6>
                         <a class="collapse-item" href="utilities-color.html">Add</a>
-                        <a class="collapse-item" href="utilities-border.html">Get</a>
+                        <a class="collapse-item" href="<c:url value="/item/get"/>">Get</a>
                     </div>
                 </div>
             </li>
@@ -391,6 +396,11 @@
     <script src="<c:url value="/js/demo/chart-pie-demo.js"/>"></script>
 
 
+    <!-- Page level plugins -->
+    <script src="<c:url value="/vendor/datatables/jquery.dataTables.min.js"/>"></script>
+    <script src="<c:url value="/vendor/datatables/dataTables.bootstrap4.min.js"/>"></script>
+    <!-- Page level custom scripts -->
+    <script src="<c:url value="/js/demo/datatables-demo.js"/>"></script>
 </body>
 
 </html>
