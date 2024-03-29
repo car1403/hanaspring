@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-26
-  Time: 오후 4:22
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- JSTL -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -80,6 +74,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/geo/"/>">Geo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/chart/"/>">Chart</a>
             </li>
             <c:if test="${id != null}">
                 <li class="nav-item">
