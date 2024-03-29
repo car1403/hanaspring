@@ -52,7 +52,6 @@
                     title:item.title,
                     image: markerImage
                 });
-
             });
         }
     };
