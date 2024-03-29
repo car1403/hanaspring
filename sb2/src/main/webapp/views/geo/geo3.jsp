@@ -81,7 +81,7 @@
 
                 function mouseclickHandler(target){
                     return function(){
-                        location.href='<c:url value="/shopdetail?shopid='+target+'" />';
+                        location.href='<c:url value="/geo/shopdetail?shopid='+target+'" />';
                     };
                 }
 
