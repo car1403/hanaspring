@@ -32,7 +32,7 @@
             marker.setMap(this.map);
 
             var iwContent =
-                '<div style="padding:5px;">Hello World!<br><img src="<c:url value="/img/bab1.jpg"/>"></div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                '<div style="padding:5px;">Hello World!<br><img style="width:50px;" src="<c:url value="/img/bab1.jpg"/>"></div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 
             var infowindow = new kakao.maps.InfoWindow({
                 content : iwContent
