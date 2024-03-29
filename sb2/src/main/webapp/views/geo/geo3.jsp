@@ -1,15 +1,40 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-27
-  Time: 오전 9:37
-  To change this template use File | Settings | File Templates.
---%>
+<style>
+    #geo3 > #map{
+        width:500px;
+        height: 400px;
+        border:2px solid red;
+    }
+</style>
+<script>
+
+
+
+    let geo3 = {
+        map:null,
+        init:function(){
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                mapOption = {
+                    center: new kakao.maps.LatLng(37.5447611,127.0564625), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+            geo3.map = new kakao.maps.Map(mapContainer, mapOption);
+            geo3.display();
+        },
+        getshop:function(){
+            //$.ajax();
+            // lat, lng, title, img, target
+            var datas = [];
+        },
+        display:function(){
+
+        }
+    };
+    $(function(){
+        geo3.init();
+    });
+</script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="container">
+<div class="container" id="geo3">
     <h2>GEO3 Page</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg">Fake Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div id="map"></div>
 </div>
