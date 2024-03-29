@@ -40,5 +40,6 @@ public class GeoController {
         model.addAttribute("left",dir+"left");
         model.addAttribute("center",dir+"detail");
         return "index";
+
     }
 }
