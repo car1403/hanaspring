@@ -17,19 +17,19 @@ public class GeoController {
     @RequestMapping("/geo1")
     public String geo1(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html1");
+        model.addAttribute("center",dir+"geo1");
         return "index";
     }
     @RequestMapping("/geo2")
     public String geo2(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html2");
+        model.addAttribute("center",dir+"geo2");
         return "index";
     }
     @RequestMapping("/geo3")
     public String geo3(Model model){
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center",dir+"html3");
+        model.addAttribute("center",dir+"geo3");
         return "index";
     }
 }
