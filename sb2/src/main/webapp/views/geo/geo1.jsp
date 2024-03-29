@@ -9,22 +9,40 @@
 <script>
     let geo1 = {
         map:null,
-        lat:37.5448181,
-        lng:127.0565111,
+        lat:0.0,
+        lng:0.0,
         init:function() {
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-                mapOption = {
-                    center: new kakao.maps.LatLng(this.lat, this.lng), // 지도의 중심좌표
-                    level: 3 // 지도의 확대 레벨
-                };
-            this.map = new kakao.maps.Map(mapContainer, mapOption);
-            this.display();
+            if (navigator.geolocation) {
+
+                // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    geo1.lat = position.coords.latitude;
+                    geo1.lng = position.coords.longitude; // 경도
+
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                        mapOption = {
+                            center: new kakao.maps.LatLng(geo1.lat, geo1.lng), // 지도의 중심좌표
+                            level: 3 // 지도의 확대 레벨
+                        };
+                    geo1.map = new kakao.maps.Map(mapContainer, mapOption);
+                    geo1.display();
+                });
+
+
+            } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+                alert('error');
+            }
+
+
+
+
         },
         display:function(){
             var mapTypeControl = new kakao.maps.MapTypeControl();
             this.map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
             var zoomControl = new kakao.maps.ZoomControl();
             this.map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
             var markerPosition  = new kakao.maps.LatLng(this.lat,this.lng);
             var marker = new kakao.maps.Marker({
                 position: markerPosition
