@@ -32,9 +32,9 @@
             //$.ajax();
             // lat, lng, title, img, target
             var datas = [
-                {'lat':37.5547611,'lng':127.0654625,'title':'순대국','img':'a.jpg','target':'http://www.naver.com'},
-                {'lat':37.5747611,'lng':127.0554625,'title':'파스타','img':'b.jpg','target':'http://www.daum.net'},
-                {'lat':37.5147611,'lng':127.0154625,'title':'햄버거','img':'c.jpg','target':'http://www.nate.com'},
+                {'lat':37.5547611,'lng':127.0654625,'title':'순대국','img':'a.jpg','target':100},
+                {'lat':37.5747611,'lng':127.0554625,'title':'파스타','img':'b.jpg','target':101},
+                {'lat':37.5147611,'lng':127.0154625,'title':'햄버거','img':'c.jpg','target':102},
             ];
             geo3.display(datas);
         },
@@ -55,13 +55,36 @@
                     image: markerImage
                 });
                 // infowindow
-                var infoContent = '<h3>'+item.title+'</h3>';
-                infoContent += '<img src="<c:url value="/img/'+item.img+'"/>">';
+                var infoContent = '<p>'+item.title+'</p>';
+                infoContent += '<img style="width:50px;"  src="<c:url value="/img/'+item.img+'"/>">';
 
                 var infowindow = new kakao.maps.InfoWindow({
                     content : infoContent,
                     position: marketPosition
                 });
+
+                kakao.maps.event.addListener(marker, 'mouseover',mouseoverHandler(marker,infowindow));
+                kakao.maps.event.addListener(marker, 'mouseout',mouseoutHandler(marker,infowindow));
+                kakao.maps.event.addListener(marker, 'click',mouseclickHandler(item.target));
+
+                function mouseoverHandler(marker,infowindow){
+                    return function(){
+                        infowindow.open(geo3.map, marker);
+                    };
+                }
+
+                function mouseoutHandler(marker,infowindow){
+                    return function(){
+                        infowindow.close();
+                    };
+                }
+
+                function mouseclickHandler(target){
+                    return function(){
+                        location.href='<c:url value="/shopdetail?shopid='+target+'" />';
+                    };
+                }
+
             });
         }
     };
