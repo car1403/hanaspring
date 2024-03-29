@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <style>
     #geo3 > #map{
         width:500px;
@@ -18,8 +19,8 @@
                     level: 8 // 지도의 확대 레벨
                 };
             geo3.map = new kakao.maps.Map(mapContainer, mapOption);
-            var market_position = new kakao.maps.LatLng(37.5447611,127.0564625);
 
+            var market_position = new kakao.maps.LatLng(37.5447611,127.0564625);
             var marker = new kakao.maps.Marker({
                 position: market_position
             });
@@ -45,12 +46,21 @@
                 // event
                 var imageSize = new kakao.maps.Size(30, 30);
                 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
                 var marketPosition = new kakao.maps.LatLng(item.lat,item.lng);
                 var marker = new kakao.maps.Marker({
                     map: geo3.map,
                     position: marketPosition,
                     title:item.title,
                     image: markerImage
+                });
+                // infowindow
+                var infoContent = '<h3>'+item.title+'</h3>';
+                infoContent += '<img src="<c:url value="/img/'+item.img+'"/>">';
+
+                var infowindow = new kakao.maps.InfoWindow({
+                    content : infoContent,
+                    position: marketPosition
                 });
             });
         }
