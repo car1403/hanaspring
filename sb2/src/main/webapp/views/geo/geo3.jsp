@@ -38,7 +38,8 @@
             geo3.display(datas);
         },
         display:function(datas){
-            var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/2012/img/marker_p.png';            $(datas).each(function(index, item){
+            var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/2012/img/marker_p.png';
+            $(datas).each(function(index, item){
                 // marker 생성
                 // window 생성
                 // event
