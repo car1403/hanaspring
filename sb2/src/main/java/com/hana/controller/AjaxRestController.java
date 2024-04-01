@@ -56,6 +56,21 @@ public class AjaxRestController {
 //        }
         return ja;
     }
+    @RequestMapping("/chart4")
+    public Object chart4(@RequestParam("gender") String gender){
+        JSONArray ja = new JSONArray();
+
+        List<Chart2Dto> list = new ArrayList<>();
+        // [{"name":"S001","m1":10,....},{},{},{}]
+        list.add(new Chart2Dto("f",30,10,10,10,20,20));
+        list.add(new Chart2Dto("m",40,10,10,10,10,20));
+
+        list.stream().filter(c-> c.getName().equals(gender)).forEach(c->{
+
+        });
+
+        return ja;
+    }
     @RequestMapping("/geo/getdata")
     public Object geogetdata(){
         List<ShopDto> list = new ArrayList<>();
