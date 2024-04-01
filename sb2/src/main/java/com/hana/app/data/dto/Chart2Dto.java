@@ -2,6 +2,9 @@ package com.hana.app.data.dto;
 
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -14,5 +17,15 @@ public class Chart2Dto {
     private long m4;
     private long m5;
     private long m6;
+    public List<Long> getM(){
+        List<Long> list = new ArrayList<>();
+        list.add(this.m1);
+        list.add(this.m2);
+        list.add(this.m3);
+        list.add(this.m4);
+        list.add(this.m5);
+        list.add(this.m6);
+        return list;
+    }
 
 }

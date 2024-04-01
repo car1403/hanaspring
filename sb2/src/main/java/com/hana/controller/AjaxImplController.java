@@ -3,6 +3,8 @@ package com.hana.controller;
 import com.hana.app.data.dto.Chart2Dto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.data.dto.ShopDto;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,14 +23,23 @@ public class AjaxImplController {
     }
     @RequestMapping("/chart2")
     public Object chart2(){
+        JSONArray ja = new JSONArray();
+
         List<Chart2Dto> list = new ArrayList<>();
-        // [{},{},{},{}]
+        // [{"name":"S001","m1":10,....},{},{},{}]
         list.add(new Chart2Dto("S001",10,20,30,20,10,15));
         list.add(new Chart2Dto("S002",13,30,60,10,10,25));
         list.add(new Chart2Dto("S003",11,10,70,80,15,35));
         list.add(new Chart2Dto("S004",18,20,20,90,22,45));
 
-        return list;
+        for(Chart2Dto c:list){
+            JSONObject jo = new JSONObject();
+            // [{name, data:[]}]
+            jo.put("name",c.getName());
+            jo.put("data",c.getM());
+            ja.add(jo);
+        }
+        return ja;
     }
     @RequestMapping("/geo/getdata")
     public Object geogetdata(){
