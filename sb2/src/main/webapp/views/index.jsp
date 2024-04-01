@@ -15,6 +15,13 @@
     <%-- KAKAO Map API   --%>
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b91233131542ddc771208f56029a6d98"></script>
 
+    <%-- HighChart API   --%>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <%-- Custom API   --%>
     <script src="<c:url value="/js/0327.js" />"></script>
 
     <style>
