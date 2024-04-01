@@ -1,5 +1,6 @@
 package com.hana.controller;
 
+import com.hana.app.data.dto.Chart2Dto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.data.dto.ShopDto;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,17 @@ public class AjaxImplController {
     public Object getservertime(){
         Date date = new Date();
         return date;
+    }
+    @RequestMapping("/chart2")
+    public Object chart2(){
+        List<Chart2Dto> list = new ArrayList<>();
+        // [{},{},{},{}]
+        list.add(new Chart2Dto("S001",10,20,30,20,10,15));
+        list.add(new Chart2Dto("S002",13,30,60,10,10,25));
+        list.add(new Chart2Dto("S003",11,10,70,80,15,35));
+        list.add(new Chart2Dto("S004",18,20,20,90,22,45));
+
+        return list;
     }
     @RequestMapping("/geo/getdata")
     public Object geogetdata(){
