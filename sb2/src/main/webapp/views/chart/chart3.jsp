@@ -1,15 +1,26 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-27
-  Time: 오전 9:37
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<style>
+    .chart_layout{
+        width:300px;
+        height:300px;
+        border:2px solid red;
+    }
+</style>
+<script>
+    let chart3 = {
+        init:function(){}
+    };
+    $(function () {
+        chart3.init();
+    });
+</script>
 <div class="container">
-    <h2>Chart1 Page</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg">Fake Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <h2>Chart3 Page</h2>
+    <div class="row well" >
+        <div id="c1" class="col-sm4 well chart_layout"></div>
+        <div id="c2" class="col-sm4 well chart_layout"></div>
+        <div id="c3" class="col-sm4 well chart_layout"></div>
+    </div>
 </div>

@@ -3,9 +3,9 @@ package com.hana.controller;
 import com.hana.app.data.dto.Chart2Dto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.data.dto.ShopDto;
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +15,22 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-public class AjaxImplController {
+@Slf4j
+
+public class AjaxRestController {
+
+    private String aa;
+
+    public AjaxRestController() {
+        log.info("start ---------");
+        aa ="aaaa";
+    }
+
     @RequestMapping("/getservertime")
     public Object getservertime(){
         Date date = new Date();
+
+        log.info(this.aa+ "---------");
         return date;
     }
     @RequestMapping("/chart2")
@@ -32,13 +44,16 @@ public class AjaxImplController {
         list.add(new Chart2Dto("S003",11,10,70,80,15,35));
         list.add(new Chart2Dto("S004",18,20,20,90,22,45));
 
-        for(Chart2Dto c:list){
+        list.stream().forEach(c->{
             JSONObject jo = new JSONObject();
-            // [{name, data:[]}]
             jo.put("name",c.getName());
             jo.put("data",c.getM());
             ja.add(jo);
-        }
+        });
+
+//        for(Chart2Dto c:list){
+//
+//        }
         return ja;
     }
     @RequestMapping("/geo/getdata")

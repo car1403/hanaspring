@@ -19,4 +19,10 @@
   <li class="nav-item">
     <a class="nav-link" href="<c:url value="/chart/chart3"/>">Chart3</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="<c:url value="/chart/chart4"/>">Chart4</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="<c:url value="/chart/chart5"/>">Chart5</a>
+  </li>
 </ul>
