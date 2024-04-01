@@ -1,15 +1,38 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-27
-  Time: 오전 9:37
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<style>
+    #container{
+        width: 600px;
+        height: 500px;
+        border: 2px solid red;
+    }
+</style>
+<script>
+    let chart2 = {
+        init: function () {
+            $('#get').click(()=>{
+                this.get();
+            });
+        },
+        get:function(){
+            $.ajax({
+                url:'',
+                success:(data)=>{
+                    this.chart(data);
+                }
+            });
+        },
+        chart:function(data){
+            alert('ok');
+        }
+    };
+    $(function () {
+        chart2.init();
+    });
+</script>
 <div class="container">
-    <h2>Chart1 Page</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg">Fake Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <h2>Chart2 Page</h2>
+    <button id="get" type="button" class="btn btn-primary">GET</button>
+    <div id="container"></div>
 </div>
