@@ -20,13 +20,11 @@
         </tr>
         </thead>
         <tbody>
-            <c:forEach var="c" items="${custs}">
-                 <tr>
-                     <td><a href=""></a></td>
-                     <td></td>
-                     <td></td>
-                 </tr>
-            </c:forEach>
+             <tr th:each="c : ${custs}">
+                 <td><a th:href="@{/html/get(id=${c.id})}" th:text="${c.id}"></a></td>
+                 <td th:text="${c.pwd}"></td>
+                 <td th:text="${c.name}"></td>
+             </tr>
         </tbody>
     </table>
 </div>

@@ -47,7 +47,7 @@
 </ul>
 <ul class="nav justify-content-end" th:unless="${session.id == null}">
     <li class="nav-item">
-        <a class="nav-link" href="#">${id}</a>
+        <a class="nav-link" href="#" th:text="${session.id}"></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" th:href="@{/logout}">LOGOUT</a>
