@@ -15,7 +15,7 @@ logging:
 
 app:
   dir:
-    imgdir: file:///C:/hanaspring/sb2/imgs
-    logdir: file:///C:/hanaspring/sb2/logs
+    imgdir: /root/imgs/
+    logdir: /root/logs/
 
     # /root/logs/
