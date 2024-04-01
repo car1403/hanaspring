@@ -1,0 +1,13 @@
+server:
+  port: 8088
+
+logging:
+  level:
+    root: info
+
+app:
+  dir:
+    imgdir: file:///C:/hanaspring/sb2/imgs
+    logdir: file:///C:/hanaspring/sb2/logs
+
+    # /root/logs/
