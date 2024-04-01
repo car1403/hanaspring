@@ -1,6 +1,7 @@
 package com.hana.controller;
 
 import com.hana.app.data.dto.CustDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/html")
+@Slf4j
 public class HtmlController {
     String dir= "html/";
     @RequestMapping("/")
