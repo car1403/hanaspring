@@ -35,7 +35,7 @@
                     }
                 },
                 title: {
-                    text: 'Global smartphone shipments market share, Q1 2022',
+                    text: data.title,
                     align: 'left'
                 },
                 subtitle: {
@@ -66,7 +66,7 @@
                 series: [{
                     type: 'pie',
                     name: 'Share',
-                    data: data
+                    data: data.data
                 }]
             });
 

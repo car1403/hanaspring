@@ -66,10 +66,19 @@ public class AjaxRestController {
         list.add(new Chart2Dto("m",40,10,10,10,10,20));
 
         list.stream().filter(c-> c.getName().equals(gender)).forEach(c->{
-
+            c.getM().stream().forEach(n->{
+                JSONArray ja2 = new JSONArray();
+                // [["",20],[],[],[]]
+                ja2.add("OTT");
+                ja2.add(n);
+                ja.add(ja2);
+            });
         });
-
-        return ja;
+        //{"data:":[], "title":"f"}
+        JSONObject jo = new JSONObject();
+        jo.put("data",ja);
+        jo.put("title",gender);
+        return jo;
     }
     @RequestMapping("/geo/getdata")
     public Object geogetdata(){
