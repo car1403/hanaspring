@@ -1,6 +1,8 @@
 package com.hana.app.frame;
 
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 public interface HanaService<K, V> {
