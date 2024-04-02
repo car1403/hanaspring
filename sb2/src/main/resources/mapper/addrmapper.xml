@@ -7,7 +7,7 @@
     <select id="selectOne" parameterType="Integer" resultType="addrDto">
         SELECT * FROM db_addr WHERE addr_id=#{id}
     </select>
-    <select id="select" resultType="Integer">
+    <select id="select" resultType="addrDto">
         SELECT * FROM db_addr
     </select>
     <insert id="insert" parameterType="addrDto">
