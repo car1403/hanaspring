@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOGS_DIR" value="${app.dir.logdir}" />
+    <property name="LOGS_DIR" value="C:\project\logs" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -44,7 +44,7 @@
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </logger>
-    <logger name="com.kbstar.controller.ScheduleController" level="INFO">
+    <logger name="com.hana.controller.MainController" level="INFO">
         <appender-ref ref="FILE2" />
     </logger>
 

@@ -36,6 +36,7 @@ public class MainController {
                             @RequestParam("pwd") String pwd, HttpSession httpSession){
         if(id.equals("qqq") && pwd.equals("111")){
             //httpSession.setMaxInactiveInterval(80000);
+            log.info(id);
             httpSession.setAttribute("id", id);
         }else{
             model.addAttribute("center","loginfail");

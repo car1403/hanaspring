@@ -9,13 +9,23 @@ spring:
     view:
       prefix: /views/
       suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8&serverTimezone=Asia/Seoul
+    username: user01
+    password: 111111
+mybatis:
+  type-aliases-package: com.hana.app.data.dto
+  mapper-locations: classpath:/mapper/*.xml
+  #  configuration:
+  #    map-underscore-to-camel-case: true
 logging:
   level:
     root: info
 
 app:
   dir:
-    imgdir: file:///C:/hanaspring/sb2/imgs
-    logdir: file:///C:/hanaspring/sb2/logs
+    imgdir: file:///C:/project/imgs
+    logdir: file:///C:/project/logs
 
     # /root/logs/
