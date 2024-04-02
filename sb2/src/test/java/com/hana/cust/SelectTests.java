@@ -20,12 +20,8 @@ class SelectTests {
     CustService custService;
     @Test
     void contextLoads() {
-        List<CustDto> list = new ArrayList<>();
         try {
-            list = custService.get();
-            for(CustDto c: list){
-                log.info(c.toString());
-            }
+            custService.get();
             log.info("----------OK----------------");
         } catch (Exception e) {
             if(e instanceof SQLException){
