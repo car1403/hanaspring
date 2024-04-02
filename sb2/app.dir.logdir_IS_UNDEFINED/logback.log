@@ -1,0 +1,63 @@
+[2024-04-01 17:43:21:1559][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 38 mappings in 'requestMappingHandlerMapping'
+[2024-04-01 17:43:21:1593][restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-01 17:43:21:1606][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-01 17:43:21:1623][restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-01 17:43:48:29379][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-01 17:43:48:29380][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+[2024-04-01 17:43:48:29380][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[2024-04-01 17:43:48:29380][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+[2024-04-01 17:43:48:29380][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@27fbf5f2
+[2024-04-01 17:43:48:29381][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@456b92f7
+[2024-04-01 17:43:48:29381][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-04-01 17:43:48:29381][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-01 17:43:48:29389][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/loginimpl", parameters={masked}
+[2024-04-01 17:43:48:29395][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#loginimpl(Model, String, String, HttpSession)
+[2024-04-01 17:43:48:29431][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-01 17:43:48:29432][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-01 17:43:48:29434][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-01 17:43:49:30169][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:49:30187][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-01 17:43:49:30188][http-nio-80-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-01 17:43:49:30188][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:50:30841][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/jquery/", parameters={}
+[2024-04-01 17:43:50:30841][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.JqueryController#main(Model)
+[2024-04-01 17:43:50:30843][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-01 17:43:50:30844][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=jquery/left, center=jquery/center}
+[2024-04-01 17:43:50:30844][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-01 17:43:50:31004][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:50:31015][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-01 17:43:50:31018][http-nio-80-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-01 17:43:50:31020][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:51:31769][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/html/", parameters={}
+[2024-04-01 17:43:51:31770][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.HtmlController#main(Model)
+[2024-04-01 17:43:51:31771][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-01 17:43:51:31772][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=html/left, center=html/center}
+[2024-04-01 17:43:51:31773][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-01 17:43:51:31941][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:51:31963][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-01 17:43:51:31965][http-nio-80-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-01 17:43:51:31966][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:52:32898][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/html/html1", parameters={}
+[2024-04-01 17:43:52:32899][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.HtmlController#html1(Model)
+[2024-04-01 17:43:52:32900][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-01 17:43:52:32900][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=html/left, center=html/html1}
+[2024-04-01 17:43:52:32900][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-01 17:43:52:32955][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:52:32986][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-01 17:43:52:32986][http-nio-80-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-01 17:43:52:32989][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:53:33586][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/html/html3", parameters={}
+[2024-04-01 17:43:53:33586][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.HtmlController#html3(Model)
+[2024-04-01 17:43:53:33588][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-01 17:43:53:33588][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custs=[CustDto(id=id01, pwd=pwd01, name=james), CustDto(id=id02, pwd=pwd01, name=james), CustDto(id=id03, pwd=pwd01, name=james), CustDto(id=id04, pwd=pwd01, name=james), CustDto(id=id05, pwd=pwd01, name=james)], left=html/left, center=html/html3}
+[2024-04-01 17:43:53:33589][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-01 17:43:53:33692][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:43:53:33705][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-01 17:43:53:33705][http-nio-80-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-01 17:43:53:33707][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-01 17:44:25:733][main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5a9800f8
+[2024-04-01 17:44:26:1481][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 38 mappings in 'requestMappingHandlerMapping'
+[2024-04-01 17:44:26:1537][main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-01 17:44:26:1560][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-01 17:44:26:1584][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-01 17:44:27:2933][SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@5a9800f8, started on Mon Apr 01 17:44:25 KST 2024
