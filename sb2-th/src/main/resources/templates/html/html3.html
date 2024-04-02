@@ -21,6 +21,7 @@
         </thead>
         <tbody>
              <tr th:each="c : ${custs}">
+                 <!--     ?id=id01&name=james            -->
                  <td><a th:href="@{/html/get(id=${c.id})}" th:text="${c.id}"></a></td>
                  <td th:text="${c.pwd}"></td>
                  <td th:text="${c.name}"></td>
