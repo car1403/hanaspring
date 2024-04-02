@@ -20,6 +20,7 @@ class InsertTests {
             custService.add(custDto);
             log.info("----------OK----------------");
         } catch (Exception e) {
+            log.info("----------Fail----------------");
             e.printStackTrace();
         }
     }
