@@ -3,16 +3,18 @@ package com.hana.app.service;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.frame.HanaService;
 import com.hana.app.repository.CustRepository;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class CustService implements HanaService<String, CustDto> {
 
-    @Autowired
-    CustRepository custRepository;
+    final CustRepository custRepository;
 
     @Override
     public int add(CustDto custDto) throws Exception {
@@ -21,21 +23,21 @@ public class CustService implements HanaService<String, CustDto> {
 
     @Override
     public int del(String s) throws Exception {
-        return 0;
+        return custRepository.delete(s);
     }
 
     @Override
     public int modify(CustDto custDto) throws Exception {
-        return 0;
+        return custRepository.update(custDto);
     }
 
     @Override
     public CustDto get(String s) throws Exception {
-        return null;
+        return custRepository.selectOne(s);
     }
 
     @Override
     public List<CustDto> get() throws Exception {
-        return null;
+        return custRepository.select();
     }
 }
