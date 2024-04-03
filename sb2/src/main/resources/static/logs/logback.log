@@ -22,3 +22,9 @@
 [2024-04-03 09:09:20:2029][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
 [2024-04-03 09:09:20:2062][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
 [2024-04-03 09:09:21:3119][SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3eba57a7, started on Wed Apr 03 09:09:19 KST 2024
+[2024-04-03 09:14:53:771][main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@272a179c
+[2024-04-03 09:14:54:2061][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 38 mappings in 'requestMappingHandlerMapping'
+[2024-04-03 09:14:54:2141][main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-03 09:14:54:2167][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-03 09:14:54:2193][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-03 09:14:55:3297][SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@272a179c, started on Wed Apr 03 09:14:53 KST 2024

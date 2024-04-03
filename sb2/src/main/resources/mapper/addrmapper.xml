@@ -5,7 +5,7 @@
 <mapper namespace="com.hana.app.repository.AddrRepository">
 
     <select id="selectOne" parameterType="Integer" resultType="addrDto">
-        SELECT * FROM db_addr WHERE addr_id=#{id}
+        SELECT * FROM db_addr WHERE addr_id=#{k}
     </select>
     <select id="select" resultType="addrDto">
         SELECT * FROM db_addr
