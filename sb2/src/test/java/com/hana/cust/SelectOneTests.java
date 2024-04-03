@@ -1,8 +1,6 @@
-package com.hana.addr;
+package com.hana.cust;
 
-import com.hana.app.data.dto.AddrDto;
 import com.hana.app.data.dto.CustDto;
-import com.hana.app.service.AddrService;
 import com.hana.app.service.CustService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -14,15 +12,19 @@ import java.sql.SQLException;
 
 @SpringBootTest
 @Slf4j
-class InsertTests {
+class SelectOneTests {
 
     @Autowired
-    AddrService addrService;
+    CustService custService;
     @Test
     void contextLoads() {
-        AddrDto addrDto = AddrDto.builder().addrName("우리집3").addrDetail("서울1").custId("id03").build();
         try {
-            addrService.add(addrDto);
+            CustDto custDto;
+            custDto = custService.get("id33");
+            if(custDto == null){
+                log.info("----------NULL----------------");
+
+            }
             log.info("----------OK----------------");
         } catch (Exception e) {
             if(e instanceof SQLException){
