@@ -36,7 +36,7 @@ public class CustController {
         } catch (Exception e) {
             //throw new RuntimeException(e);
             model.addAttribute("left", dir+"left");
-            model.addAttribute("center","registerfail");
+            model.addAttribute("center",dir+"registerfail");
             return "index";
         }
 

@@ -40,4 +40,5 @@ public class AddrService implements HanaService<Integer, AddrDto> {
     public List<AddrDto> get() throws Exception {
         return addrRepository.select();
     }
+
 }
