@@ -42,6 +42,21 @@ public class CustController {
 
         return "redirect:/cust/get";
     }
+    @RequestMapping("/detail")
+    public String detail(Model model,@RequestParam("id") String id){
+        CustDto custDto = null;
+        try {
+            custDto = custService.get(id);
+            model.addAttribute("cust", custDto);
+            model.addAttribute("left", dir+"left");
+            model.addAttribute("center",dir+"detail");
+        } catch (Exception e) {
+            //throw new RuntimeException(e);
+            model.addAttribute("left", dir+"left");
+            model.addAttribute("center","registerfail");
+        }
+        return "index";
+    }
     @RequestMapping("/get")
     public String get(Model model){
         List<CustDto> list = null;

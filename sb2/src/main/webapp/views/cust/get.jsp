@@ -10,7 +10,7 @@
     });
 </script>
 <div class="container">
-    <h1>html3</h1>
+    <h1>Cust Get</h1>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -22,7 +22,7 @@
         <tbody>
             <c:forEach var="c" items="${custs}">
                  <tr>
-                     <td><a href="<c:url value="/html/get"/>?id=${c.id}">${c.id}</a></td>
+                     <td><a href="<c:url value="/cust/detail"/>?id=${c.id}">${c.id}</a></td>
                      <td>${c.pwd}</td>
                      <td>${c.name}</td>
                  </tr>
