@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOGS_DIR" value="C:\project\logs" />
+    <property resource="logback.properties" />
+    <property name="LOGS_DIR" value="${logdir}" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -25,7 +26,7 @@
     </appender>
 
     <appender name="FILE2" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS_DIR}/cartinfo.log</file>
+        <file>${LOGS_DIR}/custinfo.log</file>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss}, %msg%n</pattern>
         </encoder>

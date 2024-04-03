@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Random;
+
 @Controller
 @Slf4j
 @RequiredArgsConstructor
@@ -50,6 +52,9 @@ public class MainController {
                 throw new Exception();
             }
             httpSession.setAttribute("id", id);
+            Random r = new Random();
+            int num = r.nextInt(100)+1;
+            log.info(num+"");
         } catch (Exception e) {
             model.addAttribute("center","loginfail");
             //throw new RuntimeException(e);
