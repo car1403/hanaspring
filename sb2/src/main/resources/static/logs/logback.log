@@ -945,3 +945,106 @@ Caused by: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;a
 [2024-04-03 11:06:04:2014][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
 [2024-04-03 11:06:04:2040][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
 [2024-04-03 11:06:05:3110][SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3eba57a7, started on Wed Apr 03 11:06:03 KST 2024
+[2024-04-03 11:06:12:4407461][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:06:12:4407461][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:06:12:4407462][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:06:12:4407462][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:06:12:4407463][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:06:12:4407465][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:12:4407478][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:06:12:4407478][http-nio-80-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:06:12:4407479][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:13:4408551][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:06:13:4408551][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:06:13:4408551][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:06:13:4408551][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:06:13:4408551][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:06:13:4408553][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:13:4408565][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:06:13:4408565][http-nio-80-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:06:13:4408567][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:22:4417457][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/registerimpl", parameters={masked}
+[2024-04-03 11:06:22:4417457][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#registerimpl(Model, CustDto, HttpSession)
+[2024-04-03 11:06:22:4417460][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:06:22:4417460][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custDto=CustDto(id=id33, pwd=dd, name=dd), org.springframework.validation.BindingResult.custDto=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+[2024-04-03 11:06:22:4417460][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:06:22:4417460][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:22:4417479][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:06:22:4417479][http-nio-80-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:06:22:4417480][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:49:4444645][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:06:49:4444645][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:06:49:4444646][http-nio-80-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:06:49:4444646][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:06:49:4444646][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:06:49:4444649][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:49:4444660][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:06:49:4444660][http-nio-80-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:06:49:4444661][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:50:4445415][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:06:50:4445415][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:06:50:4445416][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:06:50:4445416][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:06:50:4445416][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:06:50:4445453][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:50:4445467][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:06:50:4445467][http-nio-80-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:06:50:4445468][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:59:4454016][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/cust/addimpl", parameters={masked}
+[2024-04-03 11:06:59:4454016][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#addimpl(Model, CustDto)
+[2024-04-03 11:06:59:4454020][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:06:59:4454020][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custDto=CustDto(id=id33, pwd=pwd33, name=홍말숙), org.springframework.validation.BindingResult.custDto=org.springframework.validation.BeanPropertyBindingResult: 0 errors, center=registerfail}
+[2024-04-03 11:06:59:4454020][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:06:59:4454020][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:59:4454035][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:06:59:4454035][http-nio-80-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:06:59:4454037][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:07:02:4456861][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:07:02:4456861][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:07:02:4456861][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:07:02:4456861][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:07:02:4456862][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:07:02:4456863][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:07:02:4456875][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:07:02:4456876][http-nio-80-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:07:02:4456877][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:07:02:4457615][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:07:02:4457615][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:07:02:4457615][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:07:02:4457615][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:07:02:4457615][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:07:02:4457617][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:07:02:4457627][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:07:02:4457627][http-nio-80-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:07:02:4457631][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:07:09:4463944][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/cust/addimpl", parameters={masked}
+[2024-04-03 11:07:09:4463945][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#addimpl(Model, CustDto)
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.RedirectView - View name 'redirect:', model {}
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 302 FOUND
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/get", parameters={}
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#get(Model)
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custs=[CustDto(id=id03, pwd=pwd03, name=한글), CustDto(id=id04, pwd=pwd04, name=james), CustDto(id=id22, pwd=pwd22, name=홍말숙), CustDto(id=id33, pwd=dd, name=dd), CustDto(id=id44, pwd=pwd44, name=홍말숙), CustDto(id=id66, pwd=pwd66, name=dlakftnr), CustDto(id=id73, pwd=pwd75, name=이말숙), CustDto(id=id75, pwd=pwd75, name=이말숙), CustDto(id=id76, pwd=pwd76, name=이말숙), CustDto(id=id77, pwd=pwd77, name=이말숙), CustDto(id=id98, pwd=pwd98, name=james), CustDto(id=id99, pwd=pwd99, name=james), CustDto(id=ww, pwd=ww, name=ww)], left=cust/left, center=cust/get}
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:07:09:4463953][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:07:09:4463975][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:07:09:4463975][http-nio-80-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:07:09:4463977][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:10:41:4676216][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:10:41:4676217][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:10:41:4676217][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:10:41:4676217][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:10:41:4676217][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:10:41:4676276][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:10:41:4676293][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:10:41:4676293][http-nio-80-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:10:41:4676295][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:10:43:4678371][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:10:43:4678371][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:10:43:4678372][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:10:43:4678372][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:10:43:4678372][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:10:43:4678372][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:10:43:4678383][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:10:43:4678383][http-nio-80-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:10:43:4678384][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

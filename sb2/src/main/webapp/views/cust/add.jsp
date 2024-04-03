@@ -3,9 +3,42 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script>
-
+    let cust_add = {
+        url:'',
+        init:function(url){
+            this.url = url;
+            $('#register_form > button').click(()=>{
+                let id = $('#id').val();
+                let pwd = $('#pwd').val();
+                let name = $('#name').val();
+                if(id == '' || id == null){
+                    alert('ID를 입력 하세요');
+                    $('#id').focus();
+                    return;
+                }
+                if(pwd == '' || pwd == null){
+                    alert('PWD를 입력 하세요');
+                    $('#pwd').focus();
+                    return;
+                }
+                if(name == '' || name == null){
+                    alert('NAME를 입력 하세요');
+                    $('#name').focus();
+                    return;
+                }
+                this.send();
+            });
+        },
+        send:function(){
+            $('#register_form').attr({
+                'method':'post',
+                'action':this.url
+            });
+            $('#register_form').submit();
+        }
+    };
     $(function(){
-        register.init('<c:url value="/cust/addimpl"/>');
+        cust_add.init('<c:url value="/cust/addimpl"/>');
     });
 
 </script>
