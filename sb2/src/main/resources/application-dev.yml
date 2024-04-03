@@ -12,8 +12,8 @@ spring:
   datasource:
     driver-class-name:  net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     url: jdbc:log4jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8
-    #driver-class-name: com.mysql.cj.jdbc.Driver
-    #url: jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8&serverTimezone=Asia/Seoul
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8&serverTimezone=Asia/Seoul
     username: user01
     password: 111111
 mybatis:
@@ -27,7 +27,5 @@ logging:
 
 app:
   dir:
-    imgdir: file:///C:/project/imgs
-    logdir: file:///C:/project/logs
-
-    # /root/logs/
+    imgdir: file:///C:/project/imgs/
+    logdir: file:///C:/project/logs/

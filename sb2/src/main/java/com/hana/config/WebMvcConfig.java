@@ -17,6 +17,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         log.info("================"+logdir);
+        log.info("================"+imgdir);
+
 
         registry.addResourceHandler("/imgs/**").addResourceLocations(imgdir);
         registry.addResourceHandler("/logs/**").addResourceLocations(logdir);
