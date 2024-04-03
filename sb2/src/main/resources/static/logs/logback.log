@@ -430,3 +430,518 @@
 [2024-04-03 10:49:25:3399903][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
 [2024-04-03 10:49:25:3399903][http-nio-80-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
 [2024-04-03 10:49:25:3399905][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:01:34:4129200][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 42 mappings in 'requestMappingHandlerMapping'
+[2024-04-03 11:01:34:4129214][restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-03 11:01:34:4129216][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-03 11:01:34:4129222][restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-03 11:02:45:4200605][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 42 mappings in 'requestMappingHandlerMapping'
+[2024-04-03 11:02:45:4200617][restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-03 11:02:45:4200620][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-03 11:02:45:4200622][restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-03 11:02:47:4202326][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 42 mappings in 'requestMappingHandlerMapping'
+[2024-04-03 11:02:47:4202339][restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-03 11:02:47:4202342][restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-03 11:02:47:4202344][restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6b91bd6a
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@65565e68
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/loginimpl", parameters={masked}
+[2024-04-03 11:02:49:4203754][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#loginimpl(Model, String, String, HttpSession)
+[2024-04-03 11:02:49:4203777][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:02:49:4203778][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-03 11:02:49:4203778][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:02:49:4204009][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:49:4204021][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:02:49:4204022][http-nio-80-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:02:49:4204023][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:49:4204669][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/logout", parameters={}
+[2024-04-03 11:02:49:4204669][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#logout(Model, HttpSession)
+[2024-04-03 11:02:49:4204670][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:02:49:4204670][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-03 11:02:49:4204670][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:02:49:4204671][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:49:4204682][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:02:49:4204682][http-nio-80-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:02:49:4204684][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:50:4205416][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/login", parameters={}
+[2024-04-03 11:02:50:4205416][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#login(Model)
+[2024-04-03 11:02:50:4205416][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:02:50:4205416][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {center=login}
+[2024-04-03 11:02:50:4205417][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:02:50:4205480][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:50:4205501][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:02:50:4205501][http-nio-80-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:02:50:4205502][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:55:4209961][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/loginimpl", parameters={masked}
+[2024-04-03 11:02:55:4209961][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#loginimpl(Model, String, String, HttpSession)
+[2024-04-03 11:02:55:4209964][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:02:55:4209964][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-03 11:02:55:4209964][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:02:55:4209966][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:02:55:4209978][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:02:55:4209979][http-nio-80-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:02:55:4209980][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:34:4249411][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/loginimpl", parameters={masked}
+[2024-04-03 11:03:34:4249411][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#loginimpl(Model, String, String, HttpSession)
+[2024-04-03 11:03:34:4249414][http-nio-80-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:03:34:4249414][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-03 11:03:34:4249414][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:03:34:4249462][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:34:4249474][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:03:34:4249475][http-nio-80-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:03:34:4249476][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:35:4250621][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/jquery/", parameters={}
+[2024-04-03 11:03:35:4250622][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.JqueryController#main(Model)
+[2024-04-03 11:03:35:4250622][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:03:35:4250622][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=jquery/left, center=jquery/center}
+[2024-04-03 11:03:35:4250623][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:03:35:4250686][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:35:4250696][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:03:35:4250698][http-nio-80-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:03:35:4250699][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:37:4251878][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:03:37:4251878][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:03:37:4251880][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:03:37:4251880][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:03:37:4251880][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:03:37:4251991][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:37:4252004][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:03:37:4252004][http-nio-80-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:03:37:4252008][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/views/index.jsp]]
+org.apache.jasper.JasperException: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;add.jsp] not found
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:612)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:478)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;add.jsp] not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:401)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:369)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:520)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:463)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:994)
+	at org.apache.jsp.views.index_jsp._jspx_meth_c_005fotherwise_005f2(index_jsp.java:928)
+	at org.apache.jsp.views.index_jsp._jspx_meth_c_005fchoose_005f2(index_jsp.java:853)
+	at org.apache.jsp.views.index_jsp._jspService(index_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	... 65 common frames omitted
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.jasper.JasperException: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;add.jsp] not found
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-03 11:03:38:4253451][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[2024-04-03 11:03:38:4253464][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+[2024-04-03 11:03:38:4253466][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+[2024-04-03 11:03:42:4257535][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/get", parameters={}
+[2024-04-03 11:03:42:4257535][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#get(Model)
+[2024-04-03 11:03:42:4257538][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:03:42:4257539][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custs=[CustDto(id=id03, pwd=pwd03, name=한글), CustDto(id=id04, pwd=pwd04, name=james), CustDto(id=id66, pwd=pwd66, name=dlakftnr), CustDto(id=id73, pwd=pwd75, name=이말숙), CustDto(id=id75, pwd=pwd75, name=이말숙), CustDto(id=id76, pwd=pwd76, name=이말숙), CustDto(id=id77, pwd=pwd77, name=이말숙), CustDto(id=id98, pwd=pwd98, name=james), CustDto(id=id99, pwd=pwd99, name=james), CustDto(id=ww, pwd=ww, name=ww)], left=cust/left, center=cust/get}
+[2024-04-03 11:03:42:4257539][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:03:42:4257541][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/views/index.jsp]]
+org.apache.jasper.JasperException: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;get.jsp] not found
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:612)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:478)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;get.jsp] not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:401)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:369)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:520)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:463)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:994)
+	at org.apache.jsp.views.index_jsp._jspx_meth_c_005fotherwise_005f2(index_jsp.java:928)
+	at org.apache.jsp.views.index_jsp._jspx_meth_c_005fchoose_005f2(index_jsp.java:853)
+	at org.apache.jsp.views.index_jsp._jspService(index_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	... 65 common frames omitted
+[2024-04-03 11:03:42:4257542][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.jasper.JasperException: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;get.jsp] not found
+[2024-04-03 11:03:42:4257542][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-03 11:03:42:4257542][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[2024-04-03 11:03:42:4257548][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+[2024-04-03 11:03:42:4257550][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+[2024-04-03 11:04:09:4284135][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:04:09:4284136][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:04:09:4284136][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:04:09:4284136][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:04:09:4284136][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:04:09:4284140][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/views/index.jsp]]
+org.apache.jasper.JasperException: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;add.jsp] not found
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:612)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:478)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;add.jsp] not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:401)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:369)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:520)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:463)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:994)
+	at org.apache.jsp.views.index_jsp._jspx_meth_c_005fotherwise_005f2(index_jsp.java:928)
+	at org.apache.jsp.views.index_jsp._jspx_meth_c_005fchoose_005f2(index_jsp.java:853)
+	at org.apache.jsp.views.index_jsp._jspService(index_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	... 65 common frames omitted
+[2024-04-03 11:04:09:4284140][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.jasper.JasperException: jakarta.servlet.ServletException: JSP file [&#47;views&#47;cust&#47;add.jsp] not found
+[2024-04-03 11:04:09:4284140][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-03 11:04:09:4284140][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[2024-04-03 11:04:09:4284144][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+[2024-04-03 11:04:09:4284144][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+[2024-04-03 11:05:01:4336244][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:05:01:4336244][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:05:01:4336245][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:01:4336245][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:05:01:4336245][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:01:4336248][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:01:4336257][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:01:4336258][http-nio-80-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:01:4336260][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:02:4337588][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:05:02:4337588][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:05:02:4337588][http-nio-80-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:02:4337588][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:05:02:4337589][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:02:4337589][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:02:4337603][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:02:4337603][http-nio-80-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:02:4337604][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:03:4338294][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:05:03:4338295][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:05:03:4338295][http-nio-80-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:03:4338296][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:05:03:4338296][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:03:4338330][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:03:4338344][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:03:4338345][http-nio-80-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:03:4338345][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:04:4339335][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/get", parameters={}
+[2024-04-03 11:05:04:4339335][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#get(Model)
+[2024-04-03 11:05:04:4339340][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:04:4339340][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custs=[CustDto(id=id03, pwd=pwd03, name=한글), CustDto(id=id04, pwd=pwd04, name=james), CustDto(id=id66, pwd=pwd66, name=dlakftnr), CustDto(id=id73, pwd=pwd75, name=이말숙), CustDto(id=id75, pwd=pwd75, name=이말숙), CustDto(id=id76, pwd=pwd76, name=이말숙), CustDto(id=id77, pwd=pwd77, name=이말숙), CustDto(id=id98, pwd=pwd98, name=james), CustDto(id=id99, pwd=pwd99, name=james), CustDto(id=ww, pwd=ww, name=ww)], left=cust/left, center=cust/get}
+[2024-04-03 11:05:04:4339340][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:04:4339384][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:04:4339397][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:04:4339397][http-nio-80-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:04:4339399][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:05:4340471][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:05:05:4340472][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:05:05:4340472][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:05:4340472][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:05:05:4340472][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:05:4340473][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:05:4340486][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:05:4340487][http-nio-80-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:05:4340488][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:12:4347096][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/registerimpl", parameters={masked}
+[2024-04-03 11:05:12:4347096][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#registerimpl(Model, CustDto, HttpSession)
+[2024-04-03 11:05:12:4347100][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:12:4347100][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custDto=CustDto(id=id03, pwd=dd, name=dd), org.springframework.validation.BindingResult.custDto=org.springframework.validation.BeanPropertyBindingResult: 0 errors, center=registerfail}
+[2024-04-03 11:05:12:4347100][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:12:4347150][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:12:4347180][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:12:4347180][http-nio-80-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:12:4347180][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:18:4352749][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:05:18:4352749][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:05:18:4352750][http-nio-80-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:18:4352750][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:05:18:4352750][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:18:4352752][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:18:4352763][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:18:4352764][http-nio-80-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:18:4352764][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:19:4353996][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:05:19:4353997][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:05:19:4353997][http-nio-80-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:19:4353997][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:05:19:4353997][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:19:4353998][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:19:4354007][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:19:4354008][http-nio-80-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:19:4354009][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:20:4355311][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/add", parameters={}
+[2024-04-03 11:05:20:4355311][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#add(Model)
+[2024-04-03 11:05:20:4355312][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:20:4355312][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/add}
+[2024-04-03 11:05:20:4355312][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:20:4355313][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:20:4355329][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:20:4355329][http-nio-80-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:20:4355330][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:29:4364451][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/registerimpl", parameters={masked}
+[2024-04-03 11:05:29:4364451][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#registerimpl(Model, CustDto, HttpSession)
+[2024-04-03 11:05:29:4364455][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:29:4364455][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custDto=CustDto(id=id44, pwd=pwd44, name=홍말숙), org.springframework.validation.BindingResult.custDto=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+[2024-04-03 11:05:29:4364455][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:29:4364455][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:29:4364477][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:29:4364477][http-nio-80-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:29:4364479][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:35:4370085][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-03 11:05:35:4370085][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-03 11:05:35:4370086][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:35:4370086][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-03 11:05:35:4370086][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:35:4370089][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:35:4370101][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:35:4370101][http-nio-80-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:35:4370102][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:35:4370727][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/get", parameters={}
+[2024-04-03 11:05:35:4370727][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#get(Model)
+[2024-04-03 11:05:35:4370731][http-nio-80-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-03 11:05:35:4370731][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {custs=[CustDto(id=id03, pwd=pwd03, name=한글), CustDto(id=id04, pwd=pwd04, name=james), CustDto(id=id44, pwd=pwd44, name=홍말숙), CustDto(id=id66, pwd=pwd66, name=dlakftnr), CustDto(id=id73, pwd=pwd75, name=이말숙), CustDto(id=id75, pwd=pwd75, name=이말숙), CustDto(id=id76, pwd=pwd76, name=이말숙), CustDto(id=id77, pwd=pwd77, name=이말숙), CustDto(id=id98, pwd=pwd98, name=james), CustDto(id=id99, pwd=pwd99, name=james), CustDto(id=ww, pwd=ww, name=ww)], left=cust/left, center=cust/get}
+[2024-04-03 11:05:35:4370731][http-nio-80-exec-9] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-03 11:05:35:4370733][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:05:35:4370743][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-03 11:05:35:4370746][http-nio-80-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-03 11:05:35:4370747][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-03 11:06:03:750][main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3eba57a7
+[2024-04-03 11:06:04:1924][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 42 mappings in 'requestMappingHandlerMapping'
+[2024-04-03 11:06:04:1990][main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-03 11:06:04:2014][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-03 11:06:04:2040][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-03 11:06:05:3110][SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3eba57a7, started on Wed Apr 03 11:06:03 KST 2024
