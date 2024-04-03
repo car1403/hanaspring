@@ -40,7 +40,7 @@ public class CustController {
             return "index";
         }
 
-        return "redirect:/cust/get";
+        return "redirect:/cust/detail?id="+custDto.getId();
     }
     @RequestMapping("/detail")
     public String detail(Model model,@RequestParam("id") String id){
