@@ -1,0 +1,27 @@
+server:
+  port: 80
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8&serverTimezone=Asia/Seoul
+    username: user01
+    password: 111111
+
+logging:
+  level:
+    root: info
+
+app:
+  dir:
+    imgdir: file:C:/project/imgs/
+    logdir: file:C:/project/logs/
+
+    #    file:/root/users/project/imgs/
