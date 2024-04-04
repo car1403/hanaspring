@@ -23,6 +23,9 @@ public class MainController {
 
     @RequestMapping("/")
     public String main(){
+        Random r = new Random();
+        int num = r.nextInt(100)+1;
+        log.info(num+"");
         return "index";
     }
 
@@ -52,9 +55,7 @@ public class MainController {
                 throw new Exception();
             }
             httpSession.setAttribute("id", id);
-            Random r = new Random();
-            int num = r.nextInt(100)+1;
-            log.info(num+"");
+
         } catch (Exception e) {
             model.addAttribute("center","loginfail");
             //throw new RuntimeException(e);
