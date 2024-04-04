@@ -5,19 +5,20 @@
 <mapper namespace="com.hana.app.repository.AdminRepository">
 
     <resultMap id="adminRole" type="adminDto">
-        <id property="" column="" />
-        <result property="" column="" />
-        <association property="" javaType="roleDto">
-            <id property="" column=""/>
-            <result property="" column=""/>
+        <id property="id" column="id" />
+        <result property="pwd" column="pwd" />
+        <association property="role" javaType="roleDto">
+            <id property="roleId" column="role_id"/>
+            <result property="roleName" column="role_name"/>
         </association>
    </resultMap>
 
 
     <select id="selectOne" parameterType="String" resultMap="adminRole">
-        SELECT * FROM admin_user u
+        SELECT u.id,u.pwd, r.role_id, r.role_name FROM admin_user u
         INNER JOIN admin_role r
         On u.arole = r.role_id
+        WHERE u.id = #{id}
     </select>
     <select id="select" resultMap="adminRole">
         SELECT u.id,u.pwd, r.role_id, r.role_name FROM admin_user u
