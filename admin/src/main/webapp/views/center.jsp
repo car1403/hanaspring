@@ -1,12 +1,83 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-28
-  Time: 오전 10:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<script>
+    let center = {
+        init:function(){
+            const defaultData = 'http://127.0.0.1:81/logs/custinfo.log';
+            const urlInput = document.getElementById('fetchURL');
+            const pollingCheckbox = document.getElementById('enablePolling');
+            const pollingInput = document.getElementById('pollingTime');
+
+            function createChart() {
+                Highcharts.chart('live_chart', {
+                    chart: {
+                        type: 'areaspline'
+                    },
+                    title: {
+                        text: 'Live Data'
+                    },
+                    accessibility: {
+                        announceNewData: {
+                            enabled: true,
+                            minAnnounceInterval: 15000,
+                            announcementFormatter: function (
+                                allSeries,
+                                newSeries,
+                                newPoint) {
+                                if (newPoint) {
+                                    return 'New point added. Value: ' + newPoint.y;
+                                }
+                                return false;
+                            }
+                        }
+                    },
+                    plotOptions: {
+                        areaspline: {
+                            color: '#32CD32',
+                            fillColor: {
+                                linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+                                stops: [
+                                    [0, '#32CD32'],
+                                    [1, '#32CD3200']
+                                ]
+                            },
+                            threshold: null,
+                            marker: {
+                                lineWidth: 1,
+                                lineColor: null,
+                                fillColor: 'white'
+                            }
+                        }
+                    },
+                    data: {
+                        csvURL: 'http://127.0.0.1:81/logs/custinfo.log',
+                        enablePolling: true,
+                        dataRefreshRate: 1
+                    }
+                });
+
+                // if (pollingInput.value < 1 || !pollingInput.value) {
+                     pollingInput.value = 1;
+                // }
+            }
+
+            // urlInput.value = defaultData;
+
+            // We recreate instead of using chart update to make sure the loaded CSV
+            // and such is completely gone.
+            // pollingCheckbox.onchange = urlInput.onchange =
+            //     pollingInput.onchange = createChart;
+
+            // Create the chart
+            createChart();
+        }
+    };
+    $(function(){
+        center.init();
+    });
+</script>
 
 <div class="container-fluid">
 

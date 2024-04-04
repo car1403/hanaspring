@@ -37,8 +37,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="<c:url value="/js/sb-admin-2.min.js"/>"></script>
-
-
+    <!-- HighCharts  -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 
 <body id="page-top">
