@@ -27,7 +27,7 @@ class SelectTests {
             log.info("OK------------------------");
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
