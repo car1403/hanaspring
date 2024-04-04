@@ -43,6 +43,26 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script>
+        let index = {
+            init:function(){
+                $('#login_form > button').click(()=>{
+                    // let id = $('#id').val();
+                    // let pwd = $('#id').val();
+                    $('#login_form').attr({
+                        'action':'<c:url value="/loginimpl"/>',
+                        'method':'POST'
+                    });
+                    $('#login_form').submit();
+                });
+            }
+        };
+        $(function(){
+            index.init();
+        });
+    </script>
+
 </head>
 
 <body id="page-top">
@@ -299,38 +319,21 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <c:choose>
-                            <c:when test="${id == null}">
+                            <c:when test="${sessionScope.admin == null}">
                                 <a href="#" data-toggle="modal" data-target="#loginModal">login</a>
                             </c:when>
                             <c:otherwise>
                                 <li class="nav-item dropdown no-arrow">
-                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.admin.id}</span>
                                         <img class="img-profile rounded-circle"
                                              src="img/undraw_profile.svg">
                                     </a>
                                     <!-- Dropdown - User Information -->
-                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                         aria-labelledby="userDropdown">
-                                        <a class="dropdown-item" href="#">
-                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Profile
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Settings
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Activity Log
-                                        </a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Logout
-                                        </a>
-                                    </div>
+                                </li>
+                                <li class="nav-item dropdown no-arrow">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.admin.role.roleName}</span>
                                 </li>
                             </c:otherwise>
                         </c:choose>
