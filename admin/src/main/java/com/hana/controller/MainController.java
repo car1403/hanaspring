@@ -48,6 +48,6 @@ public class MainController {
             return "index";
         }
 
-        return "index";
+        return "redirect:/";
     }
 }

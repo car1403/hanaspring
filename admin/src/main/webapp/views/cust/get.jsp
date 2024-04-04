@@ -41,7 +41,7 @@
                     <tbody>
                     <c:forEach var="c" items="${custs}">
                         <tr>
-                            <td>${c.id}</td>
+                            <td><a href="<c:url value="/cust/detail"/>?id=${c.id}">${c.id}</a></td>
                             <td>${c.pwd}</td>
                             <td>${c.name}</td>
                         </tr>
