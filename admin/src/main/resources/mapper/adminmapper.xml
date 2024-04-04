@@ -12,8 +12,6 @@
             <result property="roleName" column="role_name"/>
         </association>
    </resultMap>
-
-
     <select id="selectOne" parameterType="String" resultMap="adminRole">
         SELECT u.id,u.pwd, r.role_id, r.role_name FROM admin_user u
         INNER JOIN admin_role r
