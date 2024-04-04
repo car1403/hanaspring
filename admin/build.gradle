@@ -30,11 +30,24 @@ dependencies {
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    // Mybatis & Mysql
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+
+    // logback - Mybatis SQL Log
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
     //tomcat & JSP
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
     implementation 'jakarta.servlet:jakarta.servlet-api'
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+
+    // Mysql handler - LocalDate
+    implementation 'org.mybatis:mybatis-typehandlers-jsr310:1.0.2'
+
+    // JSON
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 
     // test
     testImplementation 'org.projectlombok:lombok'
