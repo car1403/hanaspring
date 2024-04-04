@@ -24,7 +24,7 @@ public class MainController {
     @RequestMapping("/")
     public String main(){
         Random r = new Random();
-        int num = r.nextInt(100)+1;
+        int num = r.nextInt(1000)+1;
         log.info(num+"");
         return "index";
     }
