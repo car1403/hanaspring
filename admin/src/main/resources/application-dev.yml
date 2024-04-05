@@ -27,8 +27,9 @@ logging:
 
 app:
   dir:
-    imgdir: file:C:/project/imgs/
-    logdir: file:C:/project/logs/
+    imgdir: file:///C:/project/imgs/  # 화면 출력 용
+    uploadimgdir: C:/project/imgs/    # 파일 Write 용
+    logdir: file:///C:/project/logs/
   url:
     chart-url: http://127.0.0.1:81
 

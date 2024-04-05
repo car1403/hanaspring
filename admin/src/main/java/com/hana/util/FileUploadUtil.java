@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileUploadUtil {
-    public static void saveFile(MultipartFile mf, String dir) {
+    public  static void saveFile(MultipartFile mf, String dir) {
         byte [] data;
         String imgname = mf.getOriginalFilename();
         System.out.println("----------------"+imgname);

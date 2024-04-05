@@ -24,7 +24,7 @@ public class ItemController {
     private final ItemService itemService;
     String dir = "item/";
 
-    @Value("${app.dir.imgdir}")
+    @Value("${app.dir.uploadimgdir}")
     String imgdir;
 
     @RequestMapping("/add")
@@ -41,6 +41,7 @@ public class ItemController {
         // 이미지 저장 (/imgs)
         //  MF, dir
         FileUploadUtil.saveFile(itemDto.getImage(),imgdir);
+        log.info("------------------------"+imgdir);
         return "redirect:/item/get";
     }
 
