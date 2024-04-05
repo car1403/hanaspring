@@ -18,6 +18,13 @@ public class ItemController {
 
     private final ItemService itemService;
     String dir = "item/";
+
+    @RequestMapping("/add")
+    public String add(Model model) throws Exception {
+        model.addAttribute("center",dir+"add");
+        return "index";
+    }
+
     @RequestMapping("/get")
     public String get(Model model) throws Exception {
         List<ItemDto> list = new ArrayList<>();
