@@ -4,6 +4,7 @@ import com.hana.app.data.dto.CustDto;
 import com.hana.app.frame.HanaService;
 import com.hana.app.repository.CustRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class CustService implements HanaService<String, CustDto> {
     final CustRepository custRepository;
 
     @Override
-    public int add(CustDto custDto) throws Exception {
+    public int add(CustDto custDto) throws DuplicateKeyException,Exception {
         return custRepository.insert(custDto);
     }
 

@@ -3,6 +3,7 @@ package com.hana.controller;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.CustService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,13 +63,13 @@ public class CustController {
         }
     }
     @RequestMapping("/addimpl")
-    public String addimpl(Model model,CustDto custDto) throws Exception {
+    public String addimpl(Model model,CustDto custDto) throws DuplicateKeyException, Exception {
 
         try {
             custService.add(custDto);
             return "redirect:/cust/detail?id="+custDto.getId();
         } catch (Exception e) {
-            throw new Exception("ER0001");
+            throw new DuplicateKeyException("ER0001");
         }
     }
     @RequestMapping("/delete")
