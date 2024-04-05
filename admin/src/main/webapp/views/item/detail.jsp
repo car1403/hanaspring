@@ -1,6 +1,8 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <script>
     let cust_detail = {
         init:function(){
@@ -59,8 +61,16 @@
 
                     </div>
                     <div class="form-group">
-                        <h6>${item.regDate}</h6>
-                        <h6>${item.updateDate}</h6>
+                        <h6>
+                            <fmt:parseDate value="${ item.regDate }"
+                                           pattern="yyyy-MM-dd" var="parsedDateTime" type="both" />
+                            <fmt:formatDate pattern="yyyy년 MM월 dd일" value="${ parsedDateTime }" />
+                        </h6>
+                        <h6>
+                            <fmt:parseDate value="${ item.udpateDate }"
+                                           pattern="yyyy-MM-dd" var="parsedDateTime2" type="both" />
+                            <fmt:formatDate pattern="yyyy년 MM월 dd일" value="${ parsedDateTime2 }" />
+                        </h6>
                     </div>
                     <div class="form-group">
                        <img src="<c:url value="/imgs"/>/${item.imgName}">
