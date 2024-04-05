@@ -47,12 +47,12 @@
 
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text"  class="form-control" id="name" placeholder="Enter password" name="name">
+                        <input type="text"  class="form-control" id="name" placeholder="Enter password" name="itemName">
 
                     </div>
                     <div class="form-group">
                         <label for="price">Price:</label>
-                        <input type="number"  class="form-control" id="price" placeholder="Enter name" name="price">
+                        <input type="number"  class="form-control" id="price" placeholder="Enter name" name="itemPrice">
 
                     </div>
                     <div class="form-group">
