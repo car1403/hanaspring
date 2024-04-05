@@ -32,6 +32,11 @@ public class CustController {
         }
         return "index";
     }
+    @RequestMapping("/add")
+    public String add(Model model){
+        model.addAttribute("center",dir+"add");
+        return "index";
+    }
 
     @RequestMapping("/detail")
     public String detail(Model model,@RequestParam("id") String id){
@@ -51,6 +56,16 @@ public class CustController {
 
         try {
             custService.modify(custDto);
+            return "redirect:/cust/detail?id="+custDto.getId();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @RequestMapping("/addimpl")
+    public String addimpl(Model model,CustDto custDto){
+
+        try {
+            custService.add(custDto);
             return "redirect:/cust/detail?id="+custDto.getId();
         } catch (Exception e) {
             throw new RuntimeException(e);
