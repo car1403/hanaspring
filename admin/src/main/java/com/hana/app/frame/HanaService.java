@@ -4,10 +4,11 @@ package com.hana.app.frame;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public interface HanaService<K, V> {
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = FileNotFoundException.class)
     int add(V v) throws DuplicateKeyException,Exception;
     @Transactional
     int del(K k) throws Exception;
