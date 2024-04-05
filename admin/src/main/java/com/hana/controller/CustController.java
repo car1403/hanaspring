@@ -46,4 +46,24 @@ public class CustController {
         }
         return "index";
     }
+    @RequestMapping("/update")
+    public String update(Model model,CustDto custDto){
+
+        try {
+            custService.modify(custDto);
+            return "redirect:/cust/detail?id="+custDto.getId();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @RequestMapping("/delete")
+    public String delete(Model model,@RequestParam("id") String id){
+
+        try {
+            custService.del(id);
+            return "redirect:/cust/get";
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

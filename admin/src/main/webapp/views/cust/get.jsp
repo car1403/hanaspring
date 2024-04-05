@@ -1,13 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-28
-  Time: 오전 11:03
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script>
+    let cust_get = {
 
+    };
+    $(function(){
+        cust_get.init();
+    });
+</script>
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -29,6 +30,8 @@
                         <th>ID</th>
                         <th>PWD</th>
                         <th>NAME</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
                     </tr>
                     </thead>
                     <tfoot>
@@ -36,6 +39,8 @@
                         <th>ID</th>
                         <th>PWD</th>
                         <th>NAME</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
                     </tr>
                     </tfoot>
                     <tbody>
@@ -44,6 +49,12 @@
                             <td><a href="<c:url value="/cust/detail"/>?id=${c.id}">${c.id}</a></td>
                             <td>${c.pwd}</td>
                             <td>${c.name}</td>
+                            <td>
+                                <button onclick="" type="button" class="btn btn-primary">Update</button>
+                            </td>
+                            <td>
+                                <button onclick="" type="button" class="btn btn-primary">Delete</button>
+                            </td>
                         </tr>
                     </c:forEach>
                     </tbody>
