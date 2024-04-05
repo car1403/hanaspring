@@ -62,13 +62,13 @@ public class CustController {
         }
     }
     @RequestMapping("/addimpl")
-    public String addimpl(Model model,CustDto custDto){
+    public String addimpl(Model model,CustDto custDto) throws Exception {
 
         try {
             custService.add(custDto);
             return "redirect:/cust/detail?id="+custDto.getId();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new Exception("ER0001");
         }
     }
     @RequestMapping("/delete")
