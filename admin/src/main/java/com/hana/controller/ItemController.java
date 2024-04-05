@@ -2,12 +2,15 @@ package com.hana.controller;
 
 import com.hana.app.data.dto.ItemDto;
 import com.hana.app.service.ItemService;
+import com.hana.util.FileUploadUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +24,9 @@ public class ItemController {
     private final ItemService itemService;
     String dir = "item/";
 
+    @Value("${app.dir.imgdir}")
+    String imgdir;
+
     @RequestMapping("/add")
     public String add(Model model) throws Exception {
         model.addAttribute("center",dir+"add");
@@ -28,11 +34,14 @@ public class ItemController {
     }
     @RequestMapping("/addimpl")
     public String addimpl(Model model, ItemDto itemDto) throws Exception {
+        // 데이터 입력
+        itemDto.setImgName(itemDto.getImage().getOriginalFilename());
+        itemService.add(itemDto);
 
-        log.info(itemDto.toString());
-
-        model.addAttribute("center",dir+"add");
-        return "index";
+        // 이미지 저장 (/imgs)
+        //  MF, dir
+        FileUploadUtil.saveFile(itemDto.getImage(),imgdir);
+        return "redirect:/item/get";
     }
 
     @RequestMapping("/get")
