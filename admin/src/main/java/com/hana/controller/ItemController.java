@@ -45,10 +45,19 @@ public class ItemController {
         return "redirect:/item/get";
     }
 
-    @RequestMapping("/updateimpl")
-    public String updateimpl(Model model, ItemDto itemDto) throws Exception {
+    @RequestMapping("/update")
+    public String update(Model model, ItemDto itemDto) throws Exception {
+        // id, name, price, imgname, or newimg
+        if(itemDto.getImage().isEmpty()){
+            itemService.modify(itemDto);
+        }else{
+            String oldimg = itemDto.getImgName();
+            itemDto.setImgName(itemDto.getImage().getOriginalFilename());
+            itemService.modify(itemDto);
 
-
+            FileUploadUtil.saveFile(itemDto.getImage(),imgdir);
+            FileUploadUtil.deleteFile(oldimg,imgdir);
+        }
 
         return "redirect:/item/detail?id="+itemDto.getItemId();
     }
