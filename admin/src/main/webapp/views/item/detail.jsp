@@ -62,6 +62,9 @@
                         <h6>${item.regDate}</h6>
                         <h6>${item.updateDate}</h6>
                     </div>
+                    <div class="form-group">
+                       <img src="<c:url value="/imgs"/>/${item.imgName}">
+                    </div>
                     <button id="btn_update" type="button" class="btn btn-primary">Update</button>
                     <button id="btn_delete" type="button" class="btn btn-primary">Delete</button>
 
