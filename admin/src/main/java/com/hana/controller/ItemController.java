@@ -38,9 +38,6 @@ public class ItemController {
         itemDto.setImgName(itemDto.getImage().getOriginalFilename());
         itemService.add(itemDto);
 
-        // 이미지 저장 (/imgs)
-        //  MF, dir
-        FileUploadUtil.saveFile(itemDto.getImage(),imgdir);
         log.info("------------------------"+imgdir);
         return "redirect:/item/get";
     }

@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface HanaService<K, V> {
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     int add(V v) throws DuplicateKeyException,Exception;
     @Transactional
     int del(K k) throws Exception;

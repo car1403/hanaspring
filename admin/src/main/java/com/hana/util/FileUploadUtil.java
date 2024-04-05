@@ -13,7 +13,7 @@ public class FileUploadUtil {
         Path filePath = Paths.get(dir+filename);
         Files.delete(filePath);
     }
-    public  static void saveFile(MultipartFile mf, String dir) {
+    public  static void saveFile(MultipartFile mf, String dir) throws IOException {
         byte [] data;
         String imgname = mf.getOriginalFilename();
         System.out.println("----------------"+imgname);
@@ -26,7 +26,7 @@ public class FileUploadUtil {
             System.out.println("----------------OK");
 
         }catch(Exception e) {
-            e.printStackTrace();
+            throw e;
         }
     }
 }
