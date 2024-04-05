@@ -45,43 +45,28 @@ public class ItemController {
     @RequestMapping("/update")
     public String update(Model model, ItemDto itemDto) throws Exception {
         // id, name, price, imgname, or newimg
-        if(itemDto.getImage().isEmpty()){
-            itemService.modify(itemDto);
-        }else{
-            String oldimg = itemDto.getImgName();
-            itemDto.setImgName(itemDto.getImage().getOriginalFilename());
-            itemService.modify(itemDto);
-
-            FileUploadUtil.saveFile(itemDto.getImage(),imgdir);
-            FileUploadUtil.deleteFile(oldimg,imgdir);
-        }
-
+        itemService.modify(itemDto);
         return "redirect:/item/detail?id="+itemDto.getItemId();
     }
 
     @RequestMapping("/get")
     public String get(Model model) throws Exception {
         List<ItemDto> list = new ArrayList<>();
-        try {
-            list = itemService.get();
-            model.addAttribute("itemlist",list);
-            model.addAttribute("center",dir+"get");
-        } catch (Exception e) {
-            throw new Exception("EI0001");
-        }
+        list = itemService.get();
+        model.addAttribute("itemlist",list);
+        model.addAttribute("center",dir+"get");
+
 
         return "index";
     }
     @RequestMapping("/detail")
     public String detail(Model model, @RequestParam("id") int id) throws Exception {
         ItemDto itemDto = null;
-        try {
-            itemDto = itemService.get(id);
-            model.addAttribute("item",itemDto);
-            model.addAttribute("center",dir+"detail");
-        } catch (Exception e) {
-            throw new Exception("EI0001");
-        }
+
+        itemDto = itemService.get(id);
+        model.addAttribute("item",itemDto);
+        model.addAttribute("center",dir+"detail");
+
 
         return "index";
     }

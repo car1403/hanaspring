@@ -4,6 +4,7 @@ import com.hana.app.data.dto.AddrDto;
 import com.hana.app.frame.HanaService;
 import com.hana.app.repository.AddrRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class AddrService implements HanaService<Integer, AddrDto> {
     final AddrRepository addrRepository;
 
     @Override
-    public int add(AddrDto addrDto) throws Exception {
+    public int add(AddrDto addrDto) throws DuplicateKeyException, Exception {
         return addrRepository.insert(addrDto);
     }
 

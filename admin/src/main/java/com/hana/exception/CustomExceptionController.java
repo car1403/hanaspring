@@ -15,7 +15,7 @@ public class CustomExceptionController {
     }
     @ExceptionHandler(DuplicateKeyException.class)
     public String except2(DuplicateKeyException e, Model model){
-        model.addAttribute("msg", "DuplicateKeyException:"+e.getMessage());
+        model.addAttribute("msg", "DuplicateKeyException:");
         model.addAttribute("center", "error");
         return "index";
     }

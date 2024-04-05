@@ -63,14 +63,10 @@ public class CustController {
         }
     }
     @RequestMapping("/addimpl")
-    public String addimpl(Model model,CustDto custDto) throws DuplicateKeyException, Exception {
+    public String addimpl(Model model,CustDto custDto) throws Exception {
+        custService.add(custDto);
+        return "redirect:/cust/detail?id="+custDto.getId();
 
-        try {
-            custService.add(custDto);
-            return "redirect:/cust/detail?id="+custDto.getId();
-        } catch (Exception e) {
-            throw new DuplicateKeyException("ER0001");
-        }
     }
     @RequestMapping("/delete")
     public String delete(Model model,@RequestParam("id") String id){
