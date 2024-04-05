@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,19 @@ public class ItemController {
             list = itemService.get();
             model.addAttribute("itemlist",list);
             model.addAttribute("center",dir+"get");
+        } catch (Exception e) {
+            throw new Exception("EI0001");
+        }
+
+        return "index";
+    }
+    @RequestMapping("/detail")
+    public String detail(Model model, @RequestParam("id") int id) throws Exception {
+        ItemDto itemDto = null;
+        try {
+            itemDto = itemService.get(id);
+            model.addAttribute("item",itemDto);
+            model.addAttribute("center",dir+"detail");
         } catch (Exception e) {
             throw new Exception("EI0001");
         }
