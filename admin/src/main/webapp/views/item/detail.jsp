@@ -67,9 +67,9 @@
                             <fmt:formatDate pattern="yyyy년 MM월 dd일" value="${ parsedDateTime }" />
                         </h6>
                         <h6>
-                            <fmt:parseDate value="${ item.udpateDate }"
-                                           pattern="yyyy-MM-dd" var="parsedDateTime2" type="both" />
-                            <fmt:formatDate pattern="yyyy년 MM월 dd일" value="${ parsedDateTime2 }" />
+                            <fmt:parseDate value="${ item.updateDate }"
+                                           pattern="yyyy-MM-dd" var="parsedDateTime" type="both" />
+                            <fmt:formatDate pattern="yyyy년 MM월 dd일" value="${ parsedDateTime }" />
                         </h6>
                     </div>
                     <div class="form-group">
