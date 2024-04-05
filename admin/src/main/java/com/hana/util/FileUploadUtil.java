@@ -26,6 +26,7 @@ public class FileUploadUtil {
             System.out.println("----------------OK");
 
         }catch(Exception e) {
+            e.printStackTrace();
             throw e;
         }
     }
