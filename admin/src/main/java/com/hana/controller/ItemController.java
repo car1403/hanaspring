@@ -45,6 +45,14 @@ public class ItemController {
         return "redirect:/item/get";
     }
 
+    @RequestMapping("/updateimpl")
+    public String updateimpl(Model model, ItemDto itemDto) throws Exception {
+
+
+
+        return "redirect:/item/detail?id="+itemDto.getItemId();
+    }
+
     @RequestMapping("/get")
     public String get(Model model) throws Exception {
         List<ItemDto> list = new ArrayList<>();

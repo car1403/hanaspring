@@ -4,29 +4,28 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <script>
-    let cust_detail = {
+    let item_detail = {
         init:function(){
-            $('#detail_form > #btn_update').click(()=>{
-                this.send();
-            });
-            $('#detail_form > #btn_delete').click(()=>{
-                let c = confirm('삭제하기겠습니까?');
+
+            $('#item_update_form > #btn_update').click(()=>{
+
+                let c = confirm('수정하시겠습니까?');
                 if(c == true){
-                    let id = $('#id').val();
-                    location.href = '<c:url value="/cust/delete"/>?=id'+id;
+                   this.send();
                 }
             });
         },
         send:function(){
-            $('#detail_form').attr({
+            $('#item_update_form').attr({
                 'method':'post',
-                'action':'<c:url value="/cust/update"/>'
+                'enctype':'multipart/form-data',
+                'action':'<c:url value="/item/update"/>'
             });
-            $('#detail_form').submit();
+            $('#item_update_form').submit();
         }
     };
     $(function(){
-        cust_detail.init();
+        item_detail.init();
     });
 </script>
 
@@ -44,20 +43,20 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <form id="detail_form">
+                <form id="item_update_form">
                     <div class="form-group">
                         <label for="id">ID:</label>
-                        <input type="text"  readonly="readonly" value="${item.itemId}" class="form-control" id="id" placeholder="Enter id" name="id">
+                        <input type="text"  readonly="readonly" value="${item.itemId}" class="form-control" id="id" placeholder="Enter id" name="itemId">
 
                     </div>
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text"  value="${item.itemName}"  class="form-control" id="name" placeholder="Enter password" name="name">
+                        <input type="text"  value="${item.itemName}"  class="form-control" id="name" placeholder="Enter password" name="itemName">
 
                     </div>
                     <div class="form-group">
                         <label for="price">Price:</label>
-                        <input type="number" value="${item.itemPrice}"  class="form-control" id="price" placeholder="Enter name" name="price">
+                        <input type="number" value="${item.itemPrice}"  class="form-control" id="price" placeholder="Enter name" name="itemPrice">
 
                     </div>
                     <div class="form-group">
@@ -74,6 +73,13 @@
                     </div>
                     <div class="form-group">
                        <img src="<c:url value="/imgs"/>/${item.imgName}">
+                       <input type="hidden" name="imgName" value="${item.imgName}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="newimage">New Image:</label>
+                        <input type="file"  class="form-control" id="newimage" placeholder="Enter name" name="image">
+
+
                     </div>
                     <button id="btn_update" type="button" class="btn btn-primary">Update</button>
                     <button id="btn_delete" type="button" class="btn btn-primary">Delete</button>
