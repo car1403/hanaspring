@@ -5,7 +5,9 @@ import com.hana.app.service.AdminService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,8 +18,12 @@ public class MainController {
 
     private final AdminService adminService;
 
+    @Value("${app.url.chart-url}")
+    String chartUrl;
+
     @RequestMapping("/")
-    public String main(){
+    public String main(Model model){
+        model.addAttribute("charturl",chartUrl);
         return "index";
     }
 

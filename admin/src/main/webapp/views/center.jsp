@@ -5,7 +5,7 @@
 <script>
     let center = {
         init:function(){
-            const defaultData = 'http://127.0.0.1:81/logs/custinfo.log';
+            const defaultData = '${charturl}/logs/custinfo.log';
             const urlInput = document.getElementById('fetchURL');
             const pollingCheckbox = document.getElementById('enablePolling');
             const pollingInput = document.getElementById('pollingTime');
@@ -52,7 +52,7 @@
                         }
                     },
                     data: {
-                        csvURL: 'http://127.0.0.1:81/logs/custinfo.log',
+                        csvURL: '${charturl}/logs/custinfo.log',
                         enablePolling: true,
                         dataRefreshRate: 1
                     }

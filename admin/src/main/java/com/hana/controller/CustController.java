@@ -20,7 +20,7 @@ public class CustController {
 
     String dir = "cust/";
     @RequestMapping("/get")
-    public String get(Model model){
+    public String get(Model model) throws Exception {
         // Database에서 데이터를 가지고 온다.
         List<CustDto> list = new ArrayList<>();
         try {
@@ -28,7 +28,7 @@ public class CustController {
             model.addAttribute("custs",list);
             model.addAttribute("center",dir+"get");
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new Exception("ER0001");
         }
         return "index";
     }
