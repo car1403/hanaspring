@@ -25,6 +25,7 @@ public class ItemService implements HanaService<Integer, ItemDto> {
             Exception {
         int result = 0;
         result= itemRepository.insert(itemDto);
+
         FileUploadUtil.saveFile(itemDto.getImage(),imgdir);
         return result;
     }
