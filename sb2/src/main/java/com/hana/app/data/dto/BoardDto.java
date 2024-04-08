@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -16,7 +17,7 @@ public class BoardDto {
     private String custId;
     private String boardTitle;
     private String boardContent;
-    private LocalDate boardRegdate;
-    private LocalDate boardUpdate;
+    private LocalDateTime boardRegdate;
+    private LocalDateTime boardUpdate;
     private int boardCnt;
 }
