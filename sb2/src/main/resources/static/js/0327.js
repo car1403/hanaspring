@@ -28,40 +28,7 @@ let login = {
         $('#login_form').submit();
     }
 };
-let register = {
-    url:'',
-    init:function(url){
-        this.url = url;
-        $('#register_form > button').click(function(){
-            let id = $('#id').val();
-            let pwd = $('#pwd').val();
-            let name = $('#name').val();
-            if(id == '' || id == null){
-                alert('ID를 입력 하세요');
-                $('#id').focus();
-                return;
-            }
-            if(pwd == '' || pwd == null){
-                alert('PWD를 입력 하세요');
-                $('#pwd').focus();
-                return;
-            }
-            if(name == '' || name == null){
-                alert('NAME를 입력 하세요');
-                $('#name').focus();
-                return;
-            }
-            register.send();
-        });
-    },
-    send:function(){
-        $('#register_form').attr({
-            'method':'post',
-            'action':this.url
-        });
-        $('#register_form').submit();
-    }
-};
+
 // JSON (JavaScript Object Notation)
 let datas = [
     {"id":"id01","name":"james1"},
