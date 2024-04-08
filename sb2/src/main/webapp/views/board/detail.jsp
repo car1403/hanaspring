@@ -40,7 +40,10 @@
             <label for="content">Content:</label>
             <textarea class="form-control" rows="10" id="content" name="boardContent" >${board.boardContent}</textarea>
         </div>
-        <input type="hidden" name="custId" value="${sessionScope.id}">
+        <div class="form-group">
+            <label for="custid">Cust ID:</label>
+            <input type="text" value="${board.custId}" class="form-control" id="custid"  name="custId" readonly="readonly">
+        </div>
         <input type="hidden" name="boardId" value="${board.boardId}">
 
         <button id="btn_update" type="button" class="btn btn-primary">Update</button>
