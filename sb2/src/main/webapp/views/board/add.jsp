@@ -3,63 +3,53 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script>
-    let cust_add = {
+    let board_add = {
         url:'',
         init:function(url){
             this.url = url;
-            $('#register_form > button').click(()=>{
-                let id = $('#id').val();
-                let pwd = $('#pwd').val();
-                let name = $('#name').val();
-                if(id == '' || id == null){
-                    alert('ID를 입력 하세요');
-                    $('#id').focus();
+            $('#board_add > button').click(()=>{
+                let title = $('#title').val();
+                let content = $('#content').val();
+                if(title == '' || title == null){
+                    alert('title을 입력 하세요');
+                    $('#title').focus();
                     return;
                 }
-                if(pwd == '' || pwd == null){
-                    alert('PWD를 입력 하세요');
-                    $('#pwd').focus();
+                if(content == '' || content == null){
+                    alert('content를 입력 하세요');
+                    $('#content').focus();
                     return;
                 }
-                if(name == '' || name == null){
-                    alert('NAME를 입력 하세요');
-                    $('#name').focus();
-                    return;
-                }
+
                 this.send();
             });
         },
         send:function(){
-            $('#register_form').attr({
+            $('#board_add').attr({
                 'method':'post',
                 'action':this.url
             });
-            $('#register_form').submit();
+            $('#board_add').submit();
         }
     };
     $(function(){
-        cust_add.init('<c:url value="/cust/addimpl"/>');
+        board_add.init('<c:url value="/board/addimpl"/>');
     });
 
 </script>
 <div class="container">
     <h2>Board Register Page</h2>
-    <form id="register_form">
+    <form id="board_add">
         <div class="form-group">
-            <label for="id">ID:</label>
-            <input type="text" class="form-control" id="id" placeholder="Enter id" name="id">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter title" name="boardTitle">
 
         </div>
         <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-
+            <label for="content">Content:</label>
+            <textarea class="form-control" rows="10" id="content" name="boardContent" placeholder="Enter content"></textarea>
         </div>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-
-        </div>
+        <input type="hidden" name="custId" value="${sessionScope.id}">
         <button type="button" class="btn btn-primary">REGISTER</button>
     </form>
 </div>

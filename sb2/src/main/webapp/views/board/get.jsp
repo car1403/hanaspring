@@ -15,16 +15,26 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>PWD</th>
-            <th>NAME</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>CustId</th>
+            <th>RegDate</th>
+            <th>UpdateDate</th>
+            <th>Click</th>
         </tr>
         </thead>
         <tbody>
-                 <tr>
-                     <td>aa</td>
-                     <td>aa</td>
-                     <td>aa</td>
+            <c:forEach var="b" items="${boards}">
+                <tr>
+                    <td><a href="<c:url value="/board/detail"/>?id=${b.boardId}">${b.boardId}</a></td>
+                     <td>${b.boardTitle}</td>
+                     <td>${b.boardContent}</td>
+                     <td>${b.custId}</td>
+                     <td>${b.boardRegdate}</td>
+                     <td>${b.boardUpdate}</td>
+                     <td>${b.boardCnt}</td>
                  </tr>
+            </c:forEach>
         </tbody>
     </table>
 </div>
