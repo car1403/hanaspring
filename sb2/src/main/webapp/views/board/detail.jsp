@@ -1,6 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <script>
     let board_detail = {
@@ -45,7 +46,9 @@
             <input type="text" value="${board.custId}" class="form-control" id="custid"  name="custId" readonly="readonly">
         </div>
         <input type="hidden" name="boardId" value="${board.boardId}">
-
+        <div class="form-group">
+            <p>등록일:${ board.boardRegdate } </p>
+        </div>
         <button id="btn_update" type="button" class="btn btn-primary">Update</button>
         <button id="btn_delete" type="button" class="btn btn-primary">Delete</button>
     </form>

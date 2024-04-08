@@ -1,5 +1,6 @@
 package com.hana.board;
 
+import com.hana.app.data.dto.BoardDto;
 import com.hana.app.service.AddrService;
 import com.hana.app.service.BoardService;
 import lombok.extern.slf4j.Slf4j;

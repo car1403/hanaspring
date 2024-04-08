@@ -23,6 +23,7 @@ class SelectOneTests {
         try {
             BoardDto boardDto = null;
             boardDto = boardService.get(3);
+            log.info(boardDto.getBoardRegdate().toString());
             log.info("----------OK----------------");
         } catch (Exception e) {
             if(e instanceof SQLException){
