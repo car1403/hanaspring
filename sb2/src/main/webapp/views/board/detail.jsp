@@ -52,6 +52,11 @@
                                pattern="yyyy-MM-dd'T'HH:mm:ss" var="parsedDateTime" type="both" />
                 <fmt:formatDate pattern="dd.MM.yyyy HH:mm:ss" value="${ parsedDateTime }" />
             </p>
+            <p>수정일:
+                <fmt:parseDate value="${ board.boardUpdate }"
+                               pattern="yyyy-MM-dd'T'HH:mm:ss" var="parsedDateTime" type="both" />
+                <fmt:formatDate pattern="dd.MM.yyyy HH:mm:ss" value="${ parsedDateTime }" />
+            </p>
         </div>
         <button id="btn_update" type="button" class="btn btn-primary">Update</button>
         <button id="btn_delete" type="button" class="btn btn-primary">Delete</button>
