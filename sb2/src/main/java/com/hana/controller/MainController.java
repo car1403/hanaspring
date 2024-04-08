@@ -63,8 +63,9 @@ public class MainController {
             }
             httpSession.setAttribute("id", id);
 
-        } catch (Exception e) {
-            model.addAttribute("center","loginfail");
+        } catch (Exception e){
+            model.addAttribute("msg","ID또는 PWD가 틀렸습니다.");
+            model.addAttribute("center","login");
             //throw new RuntimeException(e);
         }
         return "index";
@@ -93,7 +94,7 @@ public class MainController {
 
     @ResponseBody
     @RequestMapping("/registercheckid")
-    public Object registercheckid(Model model, @RequestParam("id") String id) throws Exception {
+    public Object registercheckid(@RequestParam("id") String id) throws Exception {
         String result = "0";
         CustDto custDto = custService.get(id);
         if(custDto == null){
