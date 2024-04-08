@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hana.app.repository.BoardRepository">
+
+<!--    <select id="findByCustId" parameterType="String" resultType="addrDto">-->
+<!--        SELECT * FROM db_addr WHERE cust_id=#{id}-->
+<!--    </select>-->
+    <select id="selectOne" parameterType="Integer" resultType="boardDto">
+        SELECT * FROM db_board WHERE board_id=#{k}
+    </select>
+    <select id="select" resultType="boardDto">
+        SELECT * FROM db_board
+    </select>
+    <insert id="insert" parameterType="boardDto">
+        INSERT INTO db_board VALUES (0,#{custId},#{boardTitle},#{boardContent},NOW(),NOW(),0)
+    </insert>
+    <update id="update" parameterType="boardDto">
+        UPDATE db_board SET board_title=#{boardTitle}, board_content=#{boardContent},
+                            board_update=NOW()  WHERE board_id=#{boardId}
+    </update>
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM db_board WHERE board_id=#{id}
+    </delete>
+
+</mapper>
