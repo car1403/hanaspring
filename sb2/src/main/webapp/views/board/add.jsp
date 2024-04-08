@@ -42,12 +42,15 @@
     <form id="board_add">
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title" placeholder="Enter title" name="boardTitle">
+            <input type="text" class="form-control" id="title" placeholder="Enter title"
+                   name="boardTitle">
 
         </div>
         <div class="form-group">
             <label for="content">Content:</label>
-            <textarea class="form-control" rows="10" id="content" name="boardContent" placeholder="Enter content"></textarea>
+            <textarea class="form-control"
+                      rows="10" id="content"
+                      name="boardContent" placeholder="Enter content"></textarea>
         </div>
         <input type="hidden" name="custId" value="${sessionScope.id}">
         <button type="button" class="btn btn-primary">REGISTER</button>

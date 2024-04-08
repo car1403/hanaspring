@@ -7,9 +7,11 @@
     let board_detail = {
         init:function(){
             $('#board_detail_form > #btn_update').click(()=>{
+
                 this.send();
             });
             $('#board_detail_form > #btn_delete').click(()=>{
+
                 let c = confirm('삭제하기겠습니까?');
                 if(c == true){
                     let id = $('input[name="boardId"]').val();
@@ -34,16 +36,20 @@
     <form id="board_detail_form">
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" value="${board.boardTitle}" class="form-control" id="title"  name="boardTitle">
+            <input type="text" value="${board.boardTitle}"
+                   class="form-control" id="title"  name="boardTitle">
 
         </div>
         <div class="form-group">
             <label for="content">Content:</label>
-            <textarea class="form-control" rows="10" id="content" name="boardContent" >${board.boardContent}</textarea>
+            <textarea class="form-control"
+                      rows="10" id="content"
+                      name="boardContent" >${board.boardContent}</textarea>
         </div>
         <div class="form-group">
             <label for="custid">Cust ID:</label>
-            <input type="text" value="${board.custId}" class="form-control" id="custid"  name="custId" readonly="readonly">
+            <input type="text" value="${board.custId}"
+                   class="form-control" id="custid"  name="custId" readonly="readonly">
         </div>
         <input type="hidden" name="boardId" value="${board.boardId}">
         <div class="form-group">
@@ -58,7 +64,9 @@
                 <fmt:formatDate pattern="dd.MM.yyyy HH:mm:ss" value="${ parsedDateTime }" />
             </p>
         </div>
-        <button id="btn_update" type="button" class="btn btn-primary">Update</button>
-        <button id="btn_delete" type="button" class="btn btn-primary">Delete</button>
+        <c:if test="${sessionScope.id == board.custId}">
+            <button id="btn_update" type="button" class="btn btn-primary">Update</button>
+            <button id="btn_delete" type="button" class="btn btn-primary">Delete</button>
+        </c:if>
     </form>
 </div>

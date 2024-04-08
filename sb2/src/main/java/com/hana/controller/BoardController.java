@@ -4,6 +4,7 @@ import com.hana.app.data.dto.BoardDto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +25,7 @@ public class BoardController {
     public String get(Model model) throws Exception {
         List<BoardDto> list = null;
         list = boardService.get();
+
         model.addAttribute("boards",list);
 
         model.addAttribute("center",dir+"get");
@@ -48,10 +50,15 @@ public class BoardController {
         return "redirect:/board/get";
     }
     @RequestMapping("/detail")
-    public String detail(Model model,@RequestParam("id") int id){
+    public String detail(Model model, @RequestParam("id") int id, HttpSession httpSession){
         BoardDto boardDto = null;
         try {
             boardDto = boardService.get(id);
+            if(httpSession != null &&
+                    !boardDto.getCustId().equals(httpSession.getAttribute("id"))){
+                boardService.cntUpdate(id);
+            }
+
             model.addAttribute("board", boardDto);
             model.addAttribute("center",dir+"detail");
         } catch (Exception e) {

@@ -11,5 +11,6 @@ import java.util.List;
 @Repository
 @Mapper
 public interface BoardRepository extends HanaRepository<Integer, BoardDto> {
-//    List<AddrDto> findByCustId(String id);
+    int cntUpdate(Integer id) throws Exception;;
+    List<BoardDto> getRank() throws Exception;;
 }

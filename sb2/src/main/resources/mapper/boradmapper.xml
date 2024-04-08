@@ -13,6 +13,9 @@
     <select id="select" resultType="boardDto">
         SELECT * FROM db_board
     </select>
+    <select id="getRank" resultType="boardDto">
+        SELECT * FROM db_board ORDER BY board_cnt DESC LIMIT 3
+    </select>
     <insert id="insert" parameterType="boardDto">
         INSERT INTO db_board VALUES (0,#{custId},#{boardTitle},#{boardContent},NOW(),NOW(),0)
     </insert>
@@ -23,5 +26,8 @@
     <delete id="delete" parameterType="Integer">
         DELETE FROM db_board WHERE board_id=#{id}
     </delete>
-
+    <update id="cntUpdate" parameterType="Integer">
+        update db_board set board_cnt = board_cnt +1
+        where board_id = #{id}
+    </update>
 </mapper>

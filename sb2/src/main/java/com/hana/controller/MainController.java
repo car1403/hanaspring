@@ -1,6 +1,8 @@
 package com.hana.controller;
 
+import com.hana.app.data.dto.BoardDto;
 import com.hana.app.data.dto.CustDto;
+import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Random;
 
 @Controller
@@ -20,12 +23,19 @@ import java.util.Random;
 public class MainController {
 
     final CustService custService;
+    final BoardService boardService;
 
     @RequestMapping("/")
-    public String main(){
+    public String main(Model model) throws Exception {
         Random r = new Random();
         int num = r.nextInt(1000)+1;
-        log.info(num+"");
+        List<BoardDto> list = null;
+        try{
+            list = boardService.getRank();
+        }catch (Exception e){
+            model.addAttribute("ranks",null);
+        }
+        model.addAttribute("ranks",list);
         return "index";
     }
 
