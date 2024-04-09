@@ -20,4 +20,6 @@ public class BoardDto {
     private LocalDateTime boardRegdate;
     private LocalDateTime boardUpdate;
     private int boardCnt;
+    // 조회시 comment 개수 확인
+    private int commentCnt;
 }
