@@ -25,5 +25,8 @@
   <li class="nav-item">
     <a class="nav-link" href="<c:url value="/cust/get"/>">get</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="<c:url value="/cust/allpage?pageNo=1"/>">allpage</a>
+  </li>
 
 </ul>

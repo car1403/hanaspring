@@ -68,7 +68,7 @@ public class MainController {
             model.addAttribute("center","login");
             //throw new RuntimeException(e);
         }
-        return "index";
+        return "redirect:/";
     }
 
     @RequestMapping("/registerimpl")
