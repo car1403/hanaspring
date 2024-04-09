@@ -24,10 +24,7 @@ class SelectOneTests {
         try {
             BoardDto boardDto = null;
             boardDto = boardService.get(3);
-            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd hhmmss");
-            String nowString = boardDto.getBoardRegdate().format(dateTimeFormatter);
-            System.out.println(nowString);
-            log.info(boardDto.getBoardRegdate().toString());
+
             log.info("----------OK----------------");
         } catch (Exception e) {
             if(e instanceof SQLException){
