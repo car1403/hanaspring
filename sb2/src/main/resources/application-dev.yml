@@ -29,5 +29,6 @@ app:
   dir:
     imgdir: file:C:/project/imgs/
     logdir: file:C:/project/logs/
+  wkey: C2YXvxKurZ%2FmXrbnFlyub5B89GCCWUmYncj4wvNqlWzyP0IwmeP%2FAVl1mU3Tz7Kzk8mfT3f6Wm2wJJ9Z6yNjgw%3D%3D
 
     #    file:/root/users/project/imgs/
