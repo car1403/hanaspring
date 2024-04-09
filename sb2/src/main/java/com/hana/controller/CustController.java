@@ -84,6 +84,7 @@ public class CustController {
         try {
             p = new PageInfo<>(custService.getPage(pageNo), 5); // 5:하단 네비게이션 개수
             model.addAttribute("cpage", p);
+            model.addAttribute("target", "/cust");
             model.addAttribute("left", dir+"left");
             model.addAttribute("center",dir+"allpage");
         } catch (Exception e) {
