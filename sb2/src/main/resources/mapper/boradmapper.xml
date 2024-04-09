@@ -13,16 +13,15 @@
         <result column="board_cnt" property="boardCnt"/>
         <collection property="commentList" ofType="commentDto">
             <id column="comment_id" property="commentId"/>
-            <result column="cust_id" property="custId"/>
+            <result column="comment_cust_id" property="custId"/>
             <result column="comment_content" property="commentContent"/>
             <result column="comment_regdate" property="commentRegdate"/>
             <result column="comment_update" property="commentUpdate"/>
-            <result column="board_id" property="boardId"/>
         </collection>
     </resultMap>
     <select id="selectOne" parameterType="Integer" resultMap="boardncomment">
-        select * from db_board b
-        INNER JOIN db_comment c
+        select *, c.cust_id as comment_cust_id from db_board b
+        LEFT JOIN db_comment c
         ON b.board_id = c.board_id
         where b.board_id = #{id}
     </select>

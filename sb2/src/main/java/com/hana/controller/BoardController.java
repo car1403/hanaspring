@@ -52,10 +52,14 @@ public class BoardController {
         return "redirect:/board/get";
     }
     @RequestMapping("/detail")
-    public String detail(Model model, @RequestParam("id") int id, HttpSession httpSession){
+    public String detail(Model model, @RequestParam("id") int id, HttpSession httpSession) throws Exception {
         BoardDto boardDto = null;
         try {
             boardDto = boardService.get(id);
+            log.info(boardDto.getCommentList().size()+"---------------------------");
+            boardDto.getCommentList().stream().forEach(c->{log.info(c.toString());});
+            log.info(boardDto.getCommentList().size()+"---------------------------");
+
             if(httpSession != null &&
                     !boardDto.getCustId().equals(httpSession.getAttribute("id"))){
                 boardService.cntUpdate(id);
@@ -64,8 +68,7 @@ public class BoardController {
             model.addAttribute("board", boardDto);
             model.addAttribute("center",dir+"detail");
         } catch (Exception e) {
-            //throw new RuntimeException(e);
-            model.addAttribute("center","registerfail");
+            throw e;
         }
         return "index";
     }
