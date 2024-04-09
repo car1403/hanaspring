@@ -95,7 +95,8 @@ public class BoardController {
     }
 
     @RequestMapping("/allpage")
-    public String allpage(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, Model model){
+    public String allpage(@RequestParam(value = "pageNo", defaultValue = "1")
+                              int pageNo, Model model){
         PageInfo<BoardDto> p;
         try {
             p = new PageInfo<>(boardService.getPage(pageNo), 5); // 5:하단 네비게이션 개수

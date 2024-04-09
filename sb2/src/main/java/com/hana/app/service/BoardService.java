@@ -51,7 +51,7 @@ public class BoardService implements HanaService<Integer, BoardDto> {
         return boardRepository.cntUpdate(id);
     }
     public Page<BoardDto> getPage(int pageNo) throws Exception {
-        PageHelper.startPage(pageNo, 5); // 3: 한화면에 출력되는 개수
+        PageHelper.startPage(pageNo, 4); // 3: 한화면에 출력되는 개수
         return boardRepository.getPage();
     }
 
