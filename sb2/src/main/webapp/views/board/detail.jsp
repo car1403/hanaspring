@@ -91,7 +91,7 @@
                         <td>${c.custId}</td>
                         <td>
                             <fmt:parseDate value="${c.commentRegdate}"
-                                           pattern="yyyy-MM-dd'T'HH:mm:ss" var="parsedDateTime" type="both" />
+                                           pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime" type="both" />
                             <fmt:formatDate pattern="yyyy년MM월dd일 HH시mm분" value="${ parsedDateTime }" />
                         </td>
                     </tr>
