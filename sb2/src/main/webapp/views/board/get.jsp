@@ -1,6 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<style>
+    .comment{
+        color:red; !important
+    }
+</style>
+
 <script>
     let html3 = {
         init: function () {
@@ -26,7 +32,12 @@
             <c:forEach var="b" items="${boards}">
                 <tr>
                     <td><a href="<c:url value="/board/detail"/>?id=${b.boardId}">${b.boardId}</a></td>
-                     <td>${b.boardTitle}</td>
+                     <td>
+                             ${b.boardTitle}
+                             <c:if test="${b.commentCnt != 0}">
+                                <span class="comment">[${b.commentCnt}]</span>
+                             </c:if>
+                     </td>
                      <td>${b.custId}</td>
                      <td>
                          <fmt:parseDate value="${b.boardRegdate}"
