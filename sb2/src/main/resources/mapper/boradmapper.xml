@@ -3,12 +3,28 @@
         PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hana.app.repository.BoardRepository">
-
-<!--    <select id="findByCustId" parameterType="String" resultType="addrDto">-->
-<!--        SELECT * FROM db_addr WHERE cust_id=#{id}-->
-<!--    </select>-->
-    <select id="selectOne" parameterType="Integer" resultType="boardDto">
-        SELECT * FROM db_board WHERE board_id=#{k}
+    <resultMap id="boardncomment" type="boardDto">
+        <id column="board_id" property="boardId"/>
+        <result column="board_title" property="boardTitle"/>
+        <result column="board_content" property="boardContent"/>
+        <result column="cust_id" property="custId"/>
+        <result column="board_regdate" property="boardRegdate"/>
+        <result column="board_update" property="boardUpdate"/>
+        <result column="board_cnt" property="boardCnt"/>
+        <collection property="commentList" ofType="commentDto">
+            <id column="comment_id" property="commentId"/>
+            <result column="cust_id" property="custId"/>
+            <result column="comment_content" property="commentContent"/>
+            <result column="comment_regdate" property="commentRegdate"/>
+            <result column="comment_update" property="commentUpdate"/>
+            <result column="board_id" property="boardId"/>
+        </collection>
+    </resultMap>
+    <select id="selectOne" parameterType="Integer" resultMap="boardncomment">
+        select * from db_board b
+        INNER JOIN db_comment c
+        ON b.board_id = c.board_id
+        where b.board_id = #{id}
     </select>
     <select id="select" resultType="boardDto">
         select b.*,
