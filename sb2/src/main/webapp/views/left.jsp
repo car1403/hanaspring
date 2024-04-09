@@ -24,6 +24,9 @@
     <a class="nav-link" href="<c:url value="/board/get"/>">Board Get</a>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="<c:url value="/board/allpage"/>">Board All Get</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
   </li>
 </ul>

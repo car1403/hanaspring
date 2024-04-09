@@ -25,6 +25,11 @@
         ON b.board_id = c.board_id
         where b.board_id = #{id}
     </select>
+    <select id="getPage" resultType="boardDto">
+        select b.*,
+               (select count(*) from db_comment where board_id=b.board_id) as comment_cnt
+        from db_board b
+    </select>
     <select id="select" resultType="boardDto">
         select b.*,
                (select count(*) from db_comment where board_id=b.board_id) as comment_cnt
