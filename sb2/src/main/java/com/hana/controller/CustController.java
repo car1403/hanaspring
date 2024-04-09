@@ -79,7 +79,7 @@ public class CustController {
         return "index";
     }
     @RequestMapping("/allpage")
-    public String allpage(@RequestParam("pageNo") int pageNo, Model model){
+    public String allpage(@RequestParam(value = "pageNo",defaultValue = "1") int pageNo, Model model){
         PageInfo<CustDto> p;
         try {
             p = new PageInfo<>(custService.getPage(pageNo), 5); // 5:하단 네비게이션 개수
