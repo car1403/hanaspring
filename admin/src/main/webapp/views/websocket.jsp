@@ -37,9 +37,28 @@
             $('#disconnect').click(()=>{
                 this.disconnect();
             });
-            $('#sendall').click(()=>{});
-            $('#sendme').click(()=>{});
-            $('#sendto').click(()=>{});
+            $('#sendall').click(()=>{
+                let msg = JSON.stringify({
+                    'sendid' : this.id,
+                    'content1' : $("#alltext").val()
+                });
+                this.stompClient.send("/receiveall", {}, msg);
+            });
+            $('#sendme').click(()=>{
+                let msg = JSON.stringify({
+                    'sendid' : this.id,
+                    'content1' : $("#metext").val()
+                });
+                this.stompClient.send("/receiveme", {}, msg);
+            });
+            $('#sendto').click(()=>{
+                var msg = JSON.stringify({
+                    'sendid' : this.id,
+                    'receiveid' : $('#target').val(),
+                    'content1' : $('#totext').val()
+                });
+                this.stompClient.send('/receiveto', {}, msg);
+            });
         },
         connect:function(){
             let sid = this.id;
