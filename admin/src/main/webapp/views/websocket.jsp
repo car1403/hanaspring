@@ -37,6 +37,9 @@
             $('#disconnect').click(()=>{
                 this.disconnect();
             });
+            $('#sendall').click(()=>{});
+            $('#sendme').click(()=>{});
+            $('#sendto').click(()=>{});
         },
         connect:function(){
             let sid = this.id;
@@ -62,9 +65,6 @@
             } else {
                 $("#status").text("Disconnected");
             }
-        },
-        disconnect:function(){
-
         }
     };
     $(function(){
