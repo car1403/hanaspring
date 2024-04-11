@@ -28,6 +28,8 @@ public class MainController {
 
     @Value("${app.key.wkey}")
     String wkey;
+    @Value("${app.key.whkey}")
+    String whkey;
 
     @RequestMapping("/")
     public String main(Model model) throws Exception {
@@ -48,10 +50,20 @@ public class MainController {
         model.addAttribute("center","login");
         return "index";
     }
+    @RequestMapping("/weather")
+    public String weather(Model model){
+        model.addAttribute("center","weather");
+        return "index";
+    }
     @RequestMapping("/wh")
     @ResponseBody
     public Object wh(Model model) throws IOException, ParseException {
         return WeatherUtil.getWeather("109", wkey);
+    }
+    @RequestMapping("/wh2")
+    @ResponseBody
+    public Object wh2(Model model) throws IOException, ParseException {
+        return WeatherUtil.getWeather2("1835848", whkey);
     }
 
     @RequestMapping("/logout")

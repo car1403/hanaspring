@@ -27,6 +27,6 @@
     <a class="nav-link" href="<c:url value="/board/allpage"/>">Board All Get</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="<c:url value="/weather"/>">Weather</a>
   </li>
 </ul>
