@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,7 @@ public class MainController {
 
     final CustService custService;
     final BoardService boardService;
+    final BCryptPasswordEncoder encoder;
 
     @Value("${app.key.wkey}")
     String wkey;
@@ -109,6 +111,8 @@ public class MainController {
                                CustDto custDto, HttpSession httpSession){
 
         try {
+            log.info(encoder.encode(custDto.getPwd()));
+            log.info(encoder.encode(custDto.getPwd()).length()+"");
             custService.add(custDto);
             httpSession.setAttribute("id", custDto.getId());
         } catch (Exception e) {
