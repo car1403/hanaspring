@@ -46,24 +46,22 @@
             this.stompClient.connect({}, function(frame) {
                 websocket.setConnected(true);
                 console.log('Connected: ' + frame);
-                this.subscribe('/send', function(msg) {
-                    $("#all").prepend(
-                        "<h4>" + JSON.parse(msg.body).sendid +":"+
-                        JSON.parse(msg.body).content1
-                        + "</h4>");
-                });
-                this.subscribe('/send/'+sid, function(msg) {
-                    $("#me").prepend(
-                        "<h4>" + JSON.parse(msg.body).sendid +":"+
-                        JSON.parse(msg.body).content1+ "</h4>");
-                });
-                this.subscribe('/send/to/'+sid, function(msg) {
-                    $("#to").prepend(
-                        "<h4>" + JSON.parse(msg.body).sendid +":"+
-                        JSON.parse(msg.body).content1
-                        + "</h4>");
-                });
+
             });
+        },
+        disconnect:function(){
+            if (this.stompClient !== null) {
+                this.stompClient.disconnect();
+            }
+            websocket.setConnected(false);
+            console.log("Disconnected");
+        },
+        setConnected:function(connected){
+            if (connected) {
+                $("#status").text("Connected");
+            } else {
+                $("#status").text("Disconnected");
+            }
         },
         disconnect:function(){
 
