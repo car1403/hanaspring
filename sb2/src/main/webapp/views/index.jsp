@@ -27,6 +27,9 @@
     <%-- Custom API   --%>
     <script src="<c:url value="/js/0327.js" />"></script>
 
+    <%-- Web Socket Lib    --%>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <style>
         .fakeimg {
             height: 200px;
@@ -61,6 +64,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/logout" />">LOGOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/chat" />">Chat</a>
             </li>
         </ul>
 

@@ -30,6 +30,8 @@ public class MainController {
     String wkey;
     @Value("${app.key.whkey}")
     String whkey;
+    @Value("${app.url.serverurl}")
+    String serverurl;
 
     @RequestMapping("/")
     public String main(Model model) throws Exception {
@@ -53,6 +55,12 @@ public class MainController {
     @RequestMapping("/weather")
     public String weather(Model model){
         model.addAttribute("center","weather");
+        return "index";
+    }
+    @RequestMapping("/chat")
+    public String chat(Model model){
+        model.addAttribute("serverurl",serverurl);
+        model.addAttribute("center","chat");
         return "index";
     }
     @RequestMapping("/wh")
