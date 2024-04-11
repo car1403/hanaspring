@@ -26,7 +26,11 @@ public class MainController {
         model.addAttribute("charturl",chartUrl);
         return "index";
     }
-
+    @RequestMapping("/websocket")
+    public String websocket(Model model){
+        model.addAttribute("center","websocket");
+        return "index";
+    }
     @RequestMapping("/logout")
     public String logout(HttpSession httpSession){
         if(httpSession != null){
