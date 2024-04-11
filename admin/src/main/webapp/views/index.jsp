@@ -31,6 +31,9 @@
     <script src="<c:url value="/vendor/jquery/jquery.min.js"/>"></script>
     <script src="<c:url value="/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
 
+    <%-- Web Socket Lib    --%>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<c:url value="/vendor/jquery-easing/jquery.easing.min.js"/>"></script>
