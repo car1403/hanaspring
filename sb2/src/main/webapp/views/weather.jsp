@@ -18,7 +18,6 @@
             $('#w3').html('체감온도:'+result.main.feels_like);
             $('#w4').html('최저온도:'+result.main.temp_min);
             $('#w5').html('최고온도:'+result.main.temp_max);
-
         }
     };
     $(function () {

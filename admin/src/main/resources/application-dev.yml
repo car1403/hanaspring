@@ -34,3 +34,4 @@ app:
     chart-url: http://127.0.0.1:81
 
     #    file:/root/users/project/imgs/
+    #    /root/users/project/imgs/

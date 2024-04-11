@@ -55,6 +55,9 @@ dependencies {
     // pageing
     implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.6'
 
+    // Property Encryption
+    implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.3'
+
     // test
     testImplementation 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
