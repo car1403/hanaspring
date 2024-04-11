@@ -90,12 +90,14 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <!-- Web Socket -->
-            <li class="nav-item active">
-                <a class="nav-link" href="<c:url value="/websocket" />">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Web Socket</span></a>
-            </li>
+            <c:if test="${sessionScope.admin != null}">
+                <!-- Web Socket -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="<c:url value="/websocket" />">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Web Socket</span></a>
+                </li>
+            </c:if>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
