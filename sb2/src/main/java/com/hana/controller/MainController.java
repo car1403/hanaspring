@@ -26,7 +26,7 @@ public class MainController {
     final CustService custService;
     final BoardService boardService;
 
-    @Value("${app.wkey}")
+    @Value("${app.key.wkey}")
     String wkey;
 
     @RequestMapping("/")

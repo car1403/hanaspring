@@ -18,7 +18,13 @@ class Test {
         String loc = "109";
         JSONObject jsonObject = (JSONObject) WeatherUtil.getWeather(loc, key);
 
-        log.info("----------LOG----------------"+jsonObject.toJSONString());
+        log.info("----------LOG1----------------"+jsonObject.toJSONString());
+
+        String key2 = "5f8cdbafcfe5dd8a4edbbe08e8d21e3d";
+        String loc2 = "1835848";
+        JSONObject jsonObject2 = (JSONObject) WeatherUtil.getWeather2(loc2, key2);
+        log.info("----------LOG2----------------"+jsonObject2.toJSONString());
+
     }
 
 }
