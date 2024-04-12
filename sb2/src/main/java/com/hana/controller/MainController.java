@@ -4,6 +4,7 @@ import com.hana.app.data.dto.BoardDto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
+import com.hana.util.StringEnc;
 import com.hana.util.WeatherUtil;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -114,6 +115,7 @@ public class MainController {
             //log.info(encoder.encode(custDto.getPwd()));
             //log.info(encoder.encode(custDto.getPwd()).length()+"");
             custDto.setPwd(encoder.encode(custDto.getPwd()));
+            custDto.setName(StringEnc.encryptor(custDto.getName()));
             custService.add(custDto);
             httpSession.setAttribute("id", custDto.getId());
         } catch (Exception e) {
