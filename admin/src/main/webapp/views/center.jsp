@@ -3,6 +3,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script>
+    let center_websocket = {
+        stompClient:null,
+        init:function(){
+            let socket = new SockJS('${serverurl}/wss');
+            this.stompClient = Stomp.over(socket);
+            this.stompClient.connect({},function(frame){
+                console.log(frame);
+                this.subscribe('/send2',function(msg){
+                    console.log(msg);
+                });
+            });
+        }
+    };
     let center = {
         init:function(){
             const defaultData = '${charturl}/logs/custinfo.log';
@@ -76,6 +89,7 @@
     };
     $(function(){
         center.init();
+        center_websocket.init();
     });
 </script>
 
