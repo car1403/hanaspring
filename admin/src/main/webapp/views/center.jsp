@@ -8,6 +8,8 @@
         init:function(){
             let socket = new SockJS('${serverurl}/wss');
             this.stompClient = Stomp.over(socket);
+            console.log('Start -------');
+
             this.stompClient.connect({},function(frame){
                 console.log(frame);
                 this.subscribe('/send2',function(msg){
@@ -72,7 +74,7 @@
                 });
 
                 // if (pollingInput.value < 1 || !pollingInput.value) {
-                     pollingInput.value = 1;
+                     //pollingInput.value = 1;
                 // }
             }
 
