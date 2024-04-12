@@ -26,7 +26,7 @@ public class MainController {
 
     final CustService custService;
     final BoardService boardService;
-    //final BCryptPasswordEncoder encoder;
+    final BCryptPasswordEncoder encoder;
 
     @Value("${app.key.wkey}")
     String wkey;
@@ -93,7 +93,7 @@ public class MainController {
             if(custDto == null){
                 throw new Exception();
             }
-            if(!custDto.getPwd().equals(pwd)){
+            if(!encoder.matches(pwd,custDto.getPwd())){
                 throw new Exception();
             }
             httpSession.setAttribute("id", id);
@@ -113,6 +113,7 @@ public class MainController {
         try {
             //log.info(encoder.encode(custDto.getPwd()));
             //log.info(encoder.encode(custDto.getPwd()).length()+"");
+            custDto.setPwd(encoder.encode(custDto.getPwd()));
             custService.add(custDto);
             httpSession.setAttribute("id", custDto.getId());
         } catch (Exception e) {
