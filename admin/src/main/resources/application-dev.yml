@@ -5,6 +5,11 @@ server:
       charset: UTF-8
       force: true
 spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: aaaa
   mvc:
     view:
       prefix: /views/
