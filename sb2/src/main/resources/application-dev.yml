@@ -7,6 +7,15 @@ server:
     session:
       timeout: 10m
 spring:
+  session:
+    redis:
+      namespace: spring:session
+    store-type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: aaaa
   mvc:
     view:
       prefix: /views/
