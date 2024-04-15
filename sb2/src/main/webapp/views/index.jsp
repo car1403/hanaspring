@@ -64,7 +64,7 @@
                 <a class="nav-link" href="#">${id}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<c:url value="/logout" />">LOGOUT</a>
+                <a class="nav-link" href="<c:url value="/logoutimpl" />">LOGOUT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/chat" />">Chat</a>

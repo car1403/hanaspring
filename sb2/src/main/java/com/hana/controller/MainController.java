@@ -2,6 +2,8 @@ package com.hana.controller;
 
 import com.hana.app.data.dto.BoardDto;
 import com.hana.app.data.dto.CustDto;
+import com.hana.app.data.entity.LoginCust;
+import com.hana.app.repository.LoginCustRepository;
 import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
 import com.hana.util.StringEnc;
@@ -28,6 +30,7 @@ public class MainController {
     final CustService custService;
     final BoardService boardService;
     final BCryptPasswordEncoder encoder;
+    final LoginCustRepository loginCustRepository;
 
 
     @Value("${app.key.wkey}")
@@ -78,11 +81,15 @@ public class MainController {
         return WeatherUtil.getWeather2("1835848", whkey);
     }
 
-    @RequestMapping("/logout")
-    public String logout(Model model, HttpSession httpSession){
+    @RequestMapping("/logoutimpl")
+    public String logoutimpl(Model model, HttpSession httpSession){
+        log.info("start Logout --------------------------------------");
         if(httpSession != null){
+            loginCustRepository.deleteById((String) httpSession.getAttribute("id"));
             httpSession.invalidate();
         }
+        log.info("end Logout --------------------------------------");
+
         return "index";
     }
     @RequestMapping("/loginimpl")
@@ -98,11 +105,8 @@ public class MainController {
             if(!encoder.matches(pwd,custDto.getPwd())){
                 throw new Exception();
             }
-            log.info("redis start ---------------------------");
-            //redisTemplate.opsForSet().add(custDto.getId(),custDto);
-//            redisTemplate.opsForValue().set(custDto.getId(), custDto);
-
-            log.info("redis end ---------------------------");
+            LoginCust loginCust = LoginCust.builder().loginId(id).build();
+            loginCustRepository.save(loginCust);
 
             httpSession.setAttribute("id", id);
 
