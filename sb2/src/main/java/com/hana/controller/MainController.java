@@ -105,8 +105,8 @@ public class MainController {
             if(!encoder.matches(pwd,custDto.getPwd())){
                 throw new Exception();
             }
-            LoginCust loginCust = LoginCust.builder().loginId(id).build();
-            loginCustRepository.save(loginCust);
+
+            loginCustRepository.save(LoginCust.builder().loginId(id).build());
 
             httpSession.setAttribute("id", id);
 
@@ -128,6 +128,8 @@ public class MainController {
             custDto.setPwd(encoder.encode(custDto.getPwd()));
             custDto.setName(StringEnc.encryptor(custDto.getName()));
             custService.add(custDto);
+            loginCustRepository.save(LoginCust.builder().loginId(custDto.getId()).build());
+
             httpSession.setAttribute("id", custDto.getId());
         } catch (Exception e) {
             //throw new RuntimeException(e);
