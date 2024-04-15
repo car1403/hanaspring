@@ -44,14 +44,15 @@ public class CustController {
     }
     @RequestMapping("/logininfo")
     public String logininfo(Model model){
-        long cnt = loginCustRepository.count();
         Iterable<LoginCust> it = loginCustRepository.findAll();
         List<LoginCust> list = new ArrayList<>();
         it.forEach(lc->{
-            list.add(lc);
+            if(lc != null){
+                list.add(lc);
+            }
         });
         model.addAttribute("logincusts",list);
-        model.addAttribute("cnt",cnt);
+        model.addAttribute("cnt",list.size());
         model.addAttribute("center",dir+"logininfo");
         return "index";
     }

@@ -29,4 +29,7 @@
   <li class="nav-item">
     <a class="nav-link" href="<c:url value="/weather"/>">Weather</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="<c:url value="/pic"/>">Pic</a>
+  </li>
 </ul>
