@@ -13,8 +13,8 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
 //        registry.addEndpoint("/ws").setAllowedOrigins("http://127.0.0.1").withSockJS();
-//        registry.addEndpoint("/ws").setAllowedOrigins("http://172.16.21.91").withSockJS();
-        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/ws").setAllowedOrigins("http://172.16.21.91").withSockJS();
+//        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
         registry.addEndpoint("/wss").setAllowedOrigins("http://172.16.21.91").withSockJS();
 
         //        registry.addEndpoint("/ws").setAllowedOrigins("http://172.16.20.222").withSockJS();

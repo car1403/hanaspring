@@ -29,6 +29,7 @@ public class MainController {
     final BoardService boardService;
     final BCryptPasswordEncoder encoder;
 
+
     @Value("${app.key.wkey}")
     String wkey;
     @Value("${app.key.whkey}")
@@ -97,6 +98,12 @@ public class MainController {
             if(!encoder.matches(pwd,custDto.getPwd())){
                 throw new Exception();
             }
+            log.info("redis start ---------------------------");
+            //redisTemplate.opsForSet().add(custDto.getId(),custDto);
+//            redisTemplate.opsForValue().set(custDto.getId(), custDto);
+
+            log.info("redis end ---------------------------");
+
             httpSession.setAttribute("id", id);
 
         } catch (Exception e){
