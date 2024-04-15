@@ -1,0 +1,50 @@
+server:
+  port: 88
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+    session:
+      timeout: 10m
+spring:
+  session:
+    redis:
+      namespace: spring:session
+    store-type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: aaaa
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  datasource:
+    driver-class-name:  net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8&serverTimezone=Asia/Seoul
+    #user01/111111
+    username: ENC(QznjiJzQTKahonwCpxUWoQ==)
+    password: ENC(NhFa7QYb4jY1kgnC3OnVgw==)
+mybatis:
+  type-aliases-package: com.hana.app.data.dto
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    root: info
+
+app:
+  url:
+    serverurl: http://172.16.21.91:81
+  dir:
+    imgdir: file:///C:/project/imgs/
+    logdir: file:///C:/project/logs/
+  key:
+    wkey: C2YXvxKurZ%2FmXrbnFlyub5B89GCCWUmYncj4wvNqlWzyP0IwmeP%2FAVl1mU3Tz7Kzk8mfT3f6Wm2wJJ9Z6yNjgw%3D%3D
+    whkey: ENC(HE6zJ0DpDGhlGZSvdc1aN++IWaW5YHRz6qdK3xPBPtUJU/vJUQEnExcV8MnXJ7um)
+    #    file:/root/users/project/imgs/
+

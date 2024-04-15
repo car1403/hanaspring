@@ -16,11 +16,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 
 @Controller
@@ -106,18 +107,14 @@ public class MainController {
             if(!encoder.matches(pwd,custDto.getPwd())){
                 throw new Exception();
             }
-            Optional<LoginCust> loginCust =  loginCustRepository.findById(id);
-            if(loginCust.isPresent()){
-                throw new Exception();
-            }
+
             loginCustRepository.save(LoginCust.builder().loginId(id).build());
 
             httpSession.setAttribute("id", id);
 
         } catch (Exception e){
-            model.addAttribute("msg","로그인 되어 있습니다.");
+            model.addAttribute("msg","ID또는 PWD가 틀렸습니다.");
             model.addAttribute("center","login");
-            return "index";
             //throw new RuntimeException(e);
         }
         return "redirect:/";

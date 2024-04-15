@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hana.app.repository.BoardRepository">
+    <resultMap id="boardncomment" type="boardDto">
+        <id column="board_id" property="boardId"/>
+        <result column="board_title" property="boardTitle"/>
+        <result column="board_content" property="boardContent"/>
+        <result column="cust_id" property="custId"/>
+        <result column="board_regdate" property="boardRegdate"/>
+        <result column="board_update" property="boardUpdate"/>
+        <result column="board_cnt" property="boardCnt"/>
+        <collection property="commentList" ofType="commentDto">
+            <id column="comment_id" property="commentId"/>
+            <result column="comment_cust_id" property="custId"/>
+            <result column="comment_content" property="commentContent"/>
+            <result column="comment_regdate" property="commentRegdate"/>
+            <result column="comment_update" property="commentUpdate"/>
+        </collection>
+    </resultMap>
+    <select id="selectOne" parameterType="Integer" resultMap="boardncomment">
+        select *, c.cust_id as comment_cust_id from db_board b
+        LEFT JOIN db_comment c
+        ON b.board_id = c.board_id
+        where b.board_id = #{id}
+    </select>
+    <select id="getPage" resultType="boardDto">
+        select b.*,
+               (select count(*) from db_comment where board_id=b.board_id) as comment_cnt
+        from db_board b
+    </select>
+    <select id="select" resultType="boardDto">
+        select b.*,
+               (select count(*) from db_comment where board_id=b.board_id) as comment_cnt
+        from db_board b
+    </select>
+    <select id="getRank" resultType="boardDto">
+        SELECT * FROM db_board ORDER BY board_cnt DESC LIMIT 3
+    </select>
+    <insert id="insert" parameterType="boardDto">
+        INSERT INTO db_board VALUES (0,#{custId},#{boardTitle},#{boardContent},NOW(),NOW(),0)
+    </insert>
+    <update id="update" parameterType="boardDto">
+        UPDATE db_board SET board_title=#{boardTitle}, board_content=#{boardContent},
+                            board_update=NOW()  WHERE board_id=#{boardId}
+    </update>
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM db_board WHERE board_id=#{id}
+    </delete>
+    <update id="cntUpdate" parameterType="Integer">
+        update db_board set board_cnt = board_cnt +1
+        where board_id = #{id}
+    </update>
+</mapper>

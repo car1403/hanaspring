@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hana.app.repository.CustRepository">
+
+    <select id="selectOne" parameterType="String" resultType="custDto">
+        SELECT * FROM db_cust WHERE id=#{id}
+    </select>
+    <select id="select" resultType="custDto">
+        SELECT * FROM db_cust
+    </select>
+    <select id="getPage" resultType="custDto">
+        SELECT * FROM db_cust
+    </select>
+    <insert id="insert" parameterType="custDto">
+        INSERT INTO db_cust VALUES (#{id},#{pwd},#{name})
+    </insert>
+    <update id="update" parameterType="custDto">
+        UPDATE db_cust SET pwd=#{pwd},name=#{name} WHERE id=#{id}
+    </update>
+    <delete id="delete" parameterType="String">
+        DELETE FROM db_cust WHERE id=#{id}
+    </delete>
+
+</mapper>

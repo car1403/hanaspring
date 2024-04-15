@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hana.app.repository.CommentRepository">
+
+<!--    <select id="findByCustId" parameterType="String" resultType="addrDto">-->
+<!--        SELECT * FROM db_addr WHERE cust_id=#{id}-->
+<!--    </select>-->
+    <select id="selectOne" parameterType="Integer" resultType="commentDto">
+        SELECT * FROM db_comment WHERE board_id=#{k}
+    </select>
+    <select id="select" resultType="commentDto">
+        SELECT * FROM db_comment
+    </select>
+
+    <insert id="insert" parameterType="commentDto">
+        INSERT INTO db_comment VALUES (0,#{custId},#{commentContent},NOW(),NOW(),#{boardId})
+    </insert>
+    <update id="update" parameterType="commentDto">
+        UPDATE db_comment SET comment_content=#{commentContent},
+                              comment_update=NOW()  WHERE comment_id=#{commentId}
+    </update>
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM db_comment WHERE comment_id=#{id}
+    </delete>
+
+</mapper>
