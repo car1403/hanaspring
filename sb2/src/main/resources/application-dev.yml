@@ -41,7 +41,8 @@ app:
   url:
     serverurl: http://172.16.21.91:81
   dir:
-    imgdir: file:///C:/project/imgs/
+    imgdir: file:///C:/project/imgs/  # 화면 출력 용
+    uploadimgdir: C:/project/imgs/    # 파일 Write 용
     logdir: file:///C:/project/logs/
   key:
     wkey: C2YXvxKurZ%2FmXrbnFlyub5B89GCCWUmYncj4wvNqlWzyP0IwmeP%2FAVl1mU3Tz7Kzk8mfT3f6Wm2wJJ9Z6yNjgw%3D%3D

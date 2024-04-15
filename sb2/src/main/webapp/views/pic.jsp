@@ -40,7 +40,7 @@
             formData.append('file', file, fileName);
             $.ajax({
                 type: 'post',
-                url: '/saveimg/',
+                url: '/saveimg',
                 enctype: 'multipart/form-data',
                 cache: false,
                 data: formData,
