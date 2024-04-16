@@ -64,6 +64,11 @@ public class MainController {
         model.addAttribute("center","login");
         return "index";
     }
+    @RequestMapping("/summary")
+    public String summary(Model model){
+        model.addAttribute("center","summary");
+        return "index";
+    }
     @RequestMapping("/saveimg")
     @ResponseBody
     public String saveimg(@RequestParam("file") MultipartFile file) throws IOException {
