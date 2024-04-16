@@ -13,6 +13,7 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
 
 @SpringBootTest
 @Slf4j
@@ -26,6 +27,8 @@ class OcrTests {
         String imgname = "biz2.jpg";
         JSONObject jsonObject = (JSONObject) OCRUtil.getResult(dir,imgname);
         log.info(jsonObject.toJSONString());
+        Map<String,String> map = OCRUtil.getData(jsonObject);
+        map.values().forEach(txt->{log.info(txt);});
 
     }
 

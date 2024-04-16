@@ -114,22 +114,22 @@ public class OCRUtil {
         JSONObject jo1 = (JSONObject) images.get(0);
         JSONArray fields = (JSONArray) jo1.get("fields");
 
-        JSONObject biznum_obj = (JSONObject) fields.get(0);
-        String biznum = (String)biznum_obj.get("inferText");
+//        JSONObject biznum_obj = (JSONObject) fields.get(0);
+//        String biznum = (String)biznum_obj.get("inferText");
 
-        JSONObject bizname_obj = (JSONObject) fields.get(1);
+        JSONObject bizname_obj = (JSONObject) fields.get(0);
         String bizname = (String)bizname_obj.get("inferText");
 
-        JSONObject bizowner_obj = (JSONObject) fields.get(2);
+        JSONObject bizowner_obj = (JSONObject) fields.get(1);
         String bizowner = (String)bizowner_obj.get("inferText");
 
-        JSONObject bizdate_obj = (JSONObject) fields.get(3);
+        JSONObject bizdate_obj = (JSONObject) fields.get(2);
         String bizdate = (String)bizdate_obj.get("inferText");
 
-        JSONObject bizadd_obj = (JSONObject) fields.get(4);
+        JSONObject bizadd_obj = (JSONObject) fields.get(3);
         String bizadd = (String)bizadd_obj.get("inferText");
 
-        map.put("biznum", biznum);
+//        map.put("biznum", biznum);
         map.put("bizname", bizname);
         map.put("bizowner", bizowner);
         map.put("bizdate", bizdate);
