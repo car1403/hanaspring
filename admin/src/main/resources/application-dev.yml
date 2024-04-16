@@ -37,6 +37,8 @@ app:
     logdir: file:///C:/project/logs/
   url:
     server-url: http://172.16.21.91:81
-
+  key:
+    ncp-id: swwqpofjbn
+    ncp-secret: FXNZ5O2ZxPX6eC8u06N8rVRfsA5RbaEuns5IZTs9
     #    file:/root/users/project/imgs/
     #    /root/users/project/imgs/
