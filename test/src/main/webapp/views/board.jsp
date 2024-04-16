@@ -14,6 +14,21 @@
         board.init();
     });
 </script>
+<div class="commonSection1">
+    <div class="commonContent1">
+        <img src="../img/member/sub-visual02.jpg"
+             style="width: 100%; height: 100%;">
+        <div class="commonContent2 text-center">
+            <div>
+                <h3>COMMUNITY</h3>
+            </div>
+            <div>
+                <p><img src="../img/icon-home.png"> > 커뮤니티 > 공지사항</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- 공지사항 -->
 <div class="communitySection2 container text-center">
     <div>
