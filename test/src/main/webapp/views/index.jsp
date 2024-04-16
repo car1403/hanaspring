@@ -12,8 +12,9 @@
     <title>프론트엔드 종합실습</title>
 
     <!-- Main CSS : Header, Main, Footer -->
-    <link rel="stylesheet" href="<c:url value="/css/main.css"/>" />
-
+    <link rel="stylesheet" href="<c:url value="/css/main.css"/>">
+    <link rel="stylesheet" href="<c:url value="/css/common.css"/>">
+    <link rel="stylesheet" href="<c:url value="/css/community/community.css"/>">
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -96,7 +97,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link" href="#">커뮤니티</a>
               <div class="dropdown-content">
-                <a href="./community/community01.html">공지사항</a>
+                <a href="<c:url value="/board"/> ">공지사항</a>
                 <a href="#">홍보자료</a>
                 <a href="#">채용안내</a>
               </div>
