@@ -1,0 +1,64 @@
+.communitySection2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.communitySection2 div div:nth-child(1) {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.communitySection2 div div:nth-child(2) {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+/* 묻고답하기 */
+.qna {
+  width: 100%;
+}
+.qna table {
+  width: 100%;
+  /* height: 300px; */
+  border-top: 2px solid black;
+}
+.qna tr {
+  height: 50px;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  cursor: pointer;
+}
+.qna td:nth-child(2) {
+  text-align: left;
+  padding-left: 20px;
+}
+.qna table tr:nth-child(1) {
+  background-color: rgb(236, 236, 236);
+}
+.qna td {
+  color: #777;
+  font-size: 14px;
+}
+
+/* search bar */
+.search > div {
+  text-align: right;
+}
+.search {
+  padding-bottom: 50px;
+}
+.search input[type="text"] {
+  height: 25px;
+}
+.search input[type="image"] {
+  border: 1px solid black;
+  width: 26px;
+}
+.search td {
+  padding-left: 3px;
+}
+.search td:nth-child(3) {
+  padding-top: 5px;
+}
+.search img {
+  cursor: pointer;
+}

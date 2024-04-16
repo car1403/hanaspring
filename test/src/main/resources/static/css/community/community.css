@@ -1,0 +1,85 @@
+.communitySection2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.communitySection2 div div:nth-child(1) {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.communitySection2 div div:nth-child(2) {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+/* 공지사항 */
+.Notice {
+  width: 100%;
+}
+.Notice table {
+  width: 100%;
+  height: auto;
+  border-top: 2px solid black;
+}
+.Notice tr {
+  border-bottom: 1px solid rgb(236, 236, 236);
+  cursor: pointer;
+  height: 50px;
+}
+.Notice td:nth-child(2) {
+  text-align: left;
+  padding-left: 20px;
+}
+/* 제목줄 */
+.Notice table tr:nth-child(1) {
+  background-color: rgb(236, 236, 236);
+}
+.Notice td {
+  color: #777;
+  font-size: 14px;
+}
+
+/* search bar */
+.search {
+  padding-bottom: 50px;
+}
+.search input[type="text"] {
+  height: 25px;
+}
+.search input[type="image"] {
+  border: 1px solid black;
+  width: 26px;
+}
+.search td {
+  padding-left: 3px;
+}
+.search td:nth-child(3) {
+  padding-top: 5px;
+}
+
+/* 공지사항 상세 */
+.NoticeContent {
+  border-top: 2px solid black;
+}
+.NoticeContent table {
+  width: 100%;
+}
+.NoticeContent tr {
+  border-bottom: 1px solid rgb(207, 207, 207);
+  height: 50px;
+}
+.NoticeContent th {
+  background-color: rgb(241, 241, 241);
+  width: 30%;
+}
+.NoticeContent td {
+  color: #777;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 5px;
+}
+.NoticeContent div:last-child {
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 10px;
+}

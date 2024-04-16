@@ -1,0 +1,43 @@
+/* sub title image */
+.commonSection1 {
+  width: 100%;
+  position: relative;
+}
+.commonContent1 {
+  height: 200px;
+}
+.commonContent1 img {
+  max-height: 100%;
+}
+.commonContent2 {
+  padding: 5px 10px;
+  position: absolute;
+  top: 30%;
+  right: 38%;
+  color: white;
+}
+
+/* dropdown */
+.homeBtn {
+  width: 50px;
+  color: white;
+  background-color: black;
+}
+.dropdown-menu.dropdown-item {
+  height: 30px;
+}
+
+/* 태블릿 */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .dropdownHide,
+  .homeBtn {
+    display: none;
+  }
+}
+/* 모바일 */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .dropdownHide,
+  .homeBtn {
+    display: none;
+  }
+}

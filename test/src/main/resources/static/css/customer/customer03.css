@@ -1,0 +1,86 @@
+.communitySection2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.communitySection2 div div:nth-child(1) {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.communitySection2 div div:nth-child(2) {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+/* FAQ */
+.faq table {
+  border-top: 2px solid black;
+  width: 100%;
+  height: 300px;
+}
+.faq td:nth-child(1) {
+  font-weight: bold;
+  background-color: rgb(248, 248, 248);
+}
+.faq td:nth-child(2) {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 8px;
+  cursor: pointer;
+}
+.faq tr {
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+/* faq detail */
+.faq_detail table {
+  border-top: 2px solid black;
+  width: 100%;
+}
+.faq_detail tr:nth-child(1) > td:nth-child(1) {
+  font-weight: bold;
+  background-color: rgb(248, 248, 248);
+}
+.faq_detail td:nth-child(2) {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 8px;
+}
+.faq_detail tr {
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+.faq_detail tr:nth-child(1) {
+  height: 50px;
+}
+.faq_detail tr:nth-child(2) div {
+  font-size: 12px;
+  text-align: left;
+  padding-bottom: 50px;
+  padding-top: 8px;
+  padding-left: 8px;
+}
+.list {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+/* search bar */
+.search > div {
+  text-align: right;
+}
+.search {
+  padding-bottom: 50px;
+}
+.search input[type="text"] {
+  height: 25px;
+}
+.search input[type="image"] {
+  border: 1px solid black;
+  width: 26px;
+}
+.search td {
+  padding-left: 3px;
+}
+.search td:nth-child(3) {
+  padding-top: 5px;
+}

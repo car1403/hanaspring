@@ -1,0 +1,46 @@
+.main {
+  padding: 15px;
+}
+table {
+  width: 400px;
+}
+table tr:nth-child(1) {
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  height: 50px;
+}
+table tr:nth-child(1) td {
+  padding-left: 10px;
+}
+table tr:nth-child(2) td {
+  font-size: 12px;
+  padding-top: 20px;
+}
+table tr:nth-child(3) {
+  height: 80px;
+  background-color: rgb(253, 242, 232);
+}
+table tr:nth-child(3) img {
+  padding-left: 10px;
+}
+input[type="password"] {
+  height: 20px;
+  text-align: left;
+  font-size: 12px;
+  padding-left: 5px;
+}
+div div:nth-child(2) {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+div div:nth-child(3) {
+  text-align: right;
+  background-color: rgb(236, 236, 236);
+}
+
+.closeBtn {
+  padding-top: 5px;
+  padding-right: 5px;
+}

@@ -1,0 +1,94 @@
+/* join 1 */
+.joinForm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.joinSection1 {
+  text-align: center;
+}
+.joinSection1 h3 {
+  font-size: 30px;
+}
+.joinSection1 p {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+.wellcome {
+  border: 1px solid black;
+  padding: 20px;
+}
+.wellcome h3 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.wellcome h5 {
+  font-size: 15px;
+  color: #999;
+}
+.term1,
+.term2,
+.term3 {
+  padding-top: 50px;
+  font-size: 14px;
+}
+textarea {
+  width: 100%;
+}
+.imageBtn {
+  text-align: center;
+}
+
+/* join 2 */
+.contents {
+  background-color: rgb(216, 216, 216);
+  padding: 20px;
+}
+.contents h3 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.contents h5 {
+  font-size: 15px;
+}
+table {
+  border: 1px solid rgb(224, 224, 224);
+  width: 100%;
+}
+tr {
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+td {
+  border-right: 1px solid rgb(224, 224, 224);
+}
+.information1 {
+  padding-top: 30px;
+}
+td:nth-child(1) {
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
+  background-color: rgb(245, 245, 245);
+}
+td:nth-child(2) {
+  padding-left: 10px;
+  font-size: 12px;
+}
+.information1 input {
+  height: 20px;
+  padding-left: 5px;
+}
+select {
+  height: 20px;
+}
+.passwordCheckQuestion {
+  height: 20px;
+}
+.information2 {
+  padding-top: 50px;
+}
+.imageBtn2 {
+  text-align: center;
+  border-top: 1px solid rgb(224, 224, 224);
+  padding-top: 30px;
+}

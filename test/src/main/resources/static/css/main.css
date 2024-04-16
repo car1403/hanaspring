@@ -1,0 +1,525 @@
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 플로팅버튼 */
+.toTopScroll {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  right: 5px;
+  bottom: 5px;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+/* 탑메뉴 */
+.topMenu span a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+.topMenu span a:link {
+  color: #5a5a5a;
+}
+.topMenu span a:hover {
+  color: #5a5a5a;
+}
+.top {
+  width: 100%;
+  height: 30px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+}
+.topMenu {
+  width: 90%;
+  text-align: right;
+  vertical-align: middle;
+  line-height: 30px;
+}
+.topMenu span {
+  padding: 5px;
+}
+/* .topMenu a {
+  margin-bottom: 0;
+  text-decoration: none;
+  color: #777777;
+} */
+.topMenu .home {
+  background-image: url(../img/home01.png);
+  background-repeat: no-repeat;
+  background-position: -10% -50%;
+}
+.home > a {
+  padding: 0 0 0 22px;
+}
+
+/* 네비바의 로그인,회원가입 */
+.ljoin {
+  border-top: 1px solid rgb(202, 202, 202);
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.ljoin a {
+  font-size: 12px;
+  color: #555555;
+}
+.ljoin a:hover {
+  text-decoration: none;
+  color: #555555;
+}
+
+/* 네비바의 드롭다운메뉴 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(17, 14, 14);
+  min-width: 120px;
+  z-index: 1;
+  font-size: 12px;
+  margin-top: -3px;
+  margin-left: 30px;
+}
+.dropdown-content a {
+  display: block;
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;
+  background-color: black;
+}
+.dropdown-content a:link {
+  color: white;
+}
+.dropdown-content a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.dropdown-content a:visited {
+  color: white;
+}
+/* 드롭다운메뉴의 마우스오버시 팝업 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 캐러셀 */
+.section1 {
+  position: relative;
+}
+.caption-text {
+  padding: 5px 10px;
+  position: absolute;
+  top: 30%;
+  /* right: 0%; */
+  color: white;
+}
+.caption-text h3 {
+  font-size: 5vw;
+}
+/* .caption-text div:nth-child(2) {
+  width: 40%;
+} */
+.carouselBtn {
+  width: 120px;
+  height: 30px;
+  font-size: 12px;
+  border: 1px solid rgb(56, 56, 145);
+  background-color: rgb(56, 56, 145);
+  color: white;
+}
+.carouselBtn:hover {
+  border: 1px solid black;
+  background-color: black;
+}
+.carouselBtn a {
+  color: white;
+}
+
+/* 섹션2 */
+.groupSection {
+  height: 250px;
+}
+.groupSection div {
+  text-align: center;
+  padding: 10px;
+}
+.groupSection p {
+  margin: 0 auto;
+  width: 50%;
+  color: #777777;
+}
+.btn2 {
+  width: 150px;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+.btn2:hover {
+  border: 1px solid rgb(56, 56, 145);
+  background-color: rgb(56, 56, 145);
+  color: white;
+}
+
+/* 섹션3 */
+.proMain {
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  padding-bottom: 50px;
+}
+.proSection1 {
+  padding-top: 20px;
+  text-align: center;
+}
+.proSection1 span {
+  color: #777777;
+}
+.proSection2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+.proSection3 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 48%;
+  height: 500px;
+  padding-left: 3px;
+}
+.contents1 {
+  height: 500px;
+  width: 48%;
+  padding: 3px;
+}
+.contents1 img,
+.contents2 img,
+.contents3 img,
+.contents4 img,
+.contents5 img {
+  width: 100%;
+  height: 100%;
+}
+.con1 {
+  position: relative;
+  width: 50%;
+}
+.contents2 {
+  height: 250px;
+  flex: 1 40%;
+  padding: 3px;
+}
+.contents3 {
+  height: 250px;
+  flex: 1 40%;
+  padding: 3px;
+}
+.contents4 {
+  height: 250px;
+  flex: 1 40%;
+  padding: 3px;
+}
+.contents5 {
+  height: 250px;
+  flex: 1 40%;
+  padding: 3px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s ease;
+}
+.con1:hover .overlay {
+  opacity: 0.8;
+  background-color: black;
+}
+.con2 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.con2 button {
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+/* 섹션4 */
+.businessMain {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+}
+.businessSection1 {
+  text-align: center;
+}
+.businessSection1 p {
+  color: #777777;
+}
+.businessSection2 {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: center;
+  align-content: center;
+}
+.businessSection2 p {
+  font-size: 12px;
+}
+.businessCard div {
+  padding: 10px;
+  color: black;
+}
+.businessCard a:hover {
+  text-decoration: none;
+}
+.businessCard h4 {
+  font-size: 14px;
+}
+.businessCard {
+  border: 1px solid rgb(197, 197, 197);
+  margin: 10px;
+  max-width: 250px;
+
+  flex: 1 22%;
+
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+.businessImg {
+  width: 100%;
+  transition: all 0.2s linear;
+}
+.businessCard:hover .businessImg {
+  transform: scale(1.2, 1.2);
+}
+
+/* 섹션5 */
+.mainBanner {
+  position: relative;
+}
+.mainBannerImg {
+  vertical-align: middle;
+}
+.mainBannerText {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 20%;
+  text-align: center;
+  color: white;
+}
+.btn1 {
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.btn1:hover {
+  border: 1px solid rgb(56, 56, 145);
+  background-color: rgb(56, 56, 145);
+}
+
+/* 섹션6 */
+.csMain {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 100px;
+}
+.csSection1 {
+  flex: 1 100%;
+  text-align: center;
+}
+.csSection1 span {
+  color: #777777;
+}
+.csSection2 {
+  border: 1px solid rgb(192, 192, 192);
+  flex: 1 40%;
+
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+}
+
+.csSection2 div:nth-child(1) {
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+.csSection2 div:nth-child(2) {
+  padding-top: 10px;
+}
+.csSection2 h5,
+.csSection2 a,
+.csSection2 li {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.csSection2 h5 {
+  padding-bottom: 10px;
+}
+.csSection2 h5 a {
+  font-size: 13px;
+  color: gray;
+}
+.csSection2 li {
+  font-size: 13px;
+}
+.csSection2 li a {
+  color: gray;
+}
+.csSection2 li a:hover {
+  color: gray;
+}
+.csSection2 li label {
+  color: rgb(187, 187, 187);
+}
+.csSection3 {
+  display: flex;
+  flex: 1 40%;
+  text-align: center;
+}
+.csCard1,
+.csCard2,
+.csCard3 {
+  flex: 1 30%;
+  padding: 10px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.csCard1 div,
+.csCard2 div,
+.csCard3 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7px;
+}
+.csCard1 a,
+.csCard2 a,
+.csCard3 a {
+  color: white;
+}
+.csCard1 a:link,
+.csCard2 a:link,
+.csCard3 a:link {
+  color: white;
+}
+.csCard1 a:hover,
+.csCard2 a:hover,
+.csCard3 a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.csCard1 {
+  background-color: rgb(33, 33, 153);
+}
+.csCard2 {
+  background-color: rgb(76, 132, 155);
+}
+.csCard3 {
+  background-color: rgb(75, 66, 66);
+}
+.csCard1:hover {
+  background-color: rgb(7, 7, 85);
+}
+.csCard2:hover {
+  background-color: skyblue;
+}
+.csCard3:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+/* footer */
+.footer {
+  height: 250px;
+  background-color: rgb(54, 54, 54);
+}
+.footer div a {
+  color: white;
+}
+.footer div a:hover {
+  text-decoration: none;
+}
+.footer div span {
+  color: rgb(163, 163, 163);
+}
+.footer div label {
+  color: white;
+  font-size: 10px;
+}
+.footer div {
+  padding-top: 15px;
+}
+
+/* 테블릿 */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+/* 모바일 */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  /* product */
+  .contents1 {
+    flex: 1 100%;
+  }
+  .proSection3 {
+    flex: 1 100%;
+  }
+  /* business */
+  .businessCard {
+    flex: 1 45%;
+  }
+  .businessImg {
+    height: 180px;
+  }
+  /* cs */
+  .csMain {
+    display: flex;
+    flex-flow: column;
+  }
+  .csSection3 {
+    display: flex;
+    flex-flow: column;
+    padding-top: 10px;
+  }
+
+  /* footer */
+  .footer div a:nth-child(1) {
+    display: none;
+  }
+  .footer div a:nth-child(4) {
+    display: none;
+  }
+  .footer div a:nth-child(5) {
+    display: none;
+  }
+  .footer div span {
+    font-size: 12px;
+  }
+}
