@@ -90,7 +90,7 @@
         <button id="disconnect">Disconnect</button>
 
         <h3>To</h3>
-        <input type="text" id="target" value="admin">
+        <input type="text" id="target" value="sadmin">
         <input type="text" id="totext"><button id="sendto">Send</button>
         <div id="to"></div>
 
