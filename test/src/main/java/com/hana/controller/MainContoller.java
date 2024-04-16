@@ -15,4 +15,9 @@ public class MainContoller {
         model.addAttribute("center","board");
         return "index";
     }
+    @RequestMapping("/admin")
+    public String admin(Model model){
+        model.addAttribute("center","admin");
+        return "index";
+    }
 }
