@@ -71,6 +71,12 @@ public class MainController {
         model.addAttribute("center","login");
         return "index";
     }
+    @RequestMapping("/chat2")
+    public String chat2(Model model){
+        model.addAttribute("serverurl",serverurl);
+        model.addAttribute("center","chat2");
+        return "index";
+    }
     @RequestMapping("/summary")
     public String summary(Model model){
         model.addAttribute("center","summary");
