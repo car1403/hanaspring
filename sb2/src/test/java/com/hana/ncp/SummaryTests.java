@@ -23,55 +23,9 @@ class SummaryTests {
 
     @Test
     void contextLoads() {
-        try {
-            String text = "수업 재개를 계획했던 의과대학 다수가 학사 일정을 다시 미루고 있다. 앞서 정부의 의대 증원 방침에 반발한 의대생들이 수업을 거부하자 대학은 지난 2월부터 휴강을 이어왔다. 그러다 집단 유급 '한계선'에 도달한 대학들은 지난 4일부터 수업을 재개하고 있다. 하지만 의대 증원을 둘러싼 갈등이 지속되고 있고 학생들의 출석률도 저조해 학사 일정을 다시 미루는 학교들이 생겼다.";
-
-            String apiURL = "https://naveropenapi.apigw.ntruss.com/text-summary/v1/summarize"; //
-            URL url = new URL(apiURL);
-            HttpURLConnection con = (HttpURLConnection)url.openConnection();
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "application/json;UTF-8");
-            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", ncpId);
-            con.setRequestProperty("X-NCP-APIGW-API-KEY", ncpSecret);
-            // post request
-            //  String postParams = "content=" + text;
-            con.setDoOutput(true);
-
-            JSONObject jsonObject = new JSONObject();
-
-            JSONObject documentObject = new JSONObject();
-            documentObject.put("content",text);
-
-            JSONObject optionObject = new JSONObject();
-            optionObject.put("language","ko");
-            optionObject.put("model","news");
-            optionObject.put("summaryCount",2);
-
-            jsonObject.put("document",documentObject);
-            jsonObject.put("option",optionObject);
-
-
-            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-            wr.write(jsonObject.toString().getBytes("UTF-8"));
-            wr.flush();
-            wr.close();
-            int responseCode = con.getResponseCode();
-            BufferedReader br;
-            if(responseCode==200) { // 정상 호출
-                br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            } else {  // 오류 발생
-                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
-            }
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-            while ((inputLine = br.readLine()) != null) {
-                response.append(inputLine);
-            }
-            br.close();
-            System.out.println(response.toString());
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+        String text = "개강을 다시 미룬 한 대학의 관계자는 \"(의대 증원 관련 갈등) 상황이 아직 정리되지 않아 섣불리 개강했다가 학생들이 수업일수를 채우지 못하면 그 피해가 고스란히 학생들에게 가기 때문\"이라며 이유를 설명했다. 수업을 재개해도 학생들이 수업을 빠지면 집단 유급 등 피해 가능성이 있다는 의미다.";
+        JSONObject obj = (JSONObject) NcpUtil.getSummary(ncpId, ncpSecret, text);
+        log.info(obj.toJSONString());
     }
 
 }
