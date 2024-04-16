@@ -14,7 +14,8 @@
                 url:'<c:url value="/summaryimpl"/>',
                 data:{'content':content},
                 success:(result)=>{
-                    $('#result').val(result);
+
+                    $('#result').val(result.summary);
                 }
             });
         }
