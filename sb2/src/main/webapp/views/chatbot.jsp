@@ -18,7 +18,7 @@
 
     #to {
         width: 400px;
-        height: 200px;
+        height: 400px;
         overflow: auto;
         border: 2px solid green;
     }
