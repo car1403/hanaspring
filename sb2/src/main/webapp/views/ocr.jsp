@@ -12,7 +12,7 @@
         </div>
         <button id="btn_add" type="submit" class="btn btn-primary">Send</button>
     </form>
-    <img width="200px" src="/imgs/<c:url value="${imgname}"/> ">
+    <img width="200px" src="<c:url value="/imgs/${imgname}"/> ">
     <h3>${result.bizname}</h3>
     <h3>${result.bizowner}</h3>
     <h3>${result.bizdate}</h3>

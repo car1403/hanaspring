@@ -43,6 +43,8 @@ public class MainController {
     String whkey;
     @Value("${app.url.serverurl}")
     String serverurl;
+    @Value("${app.url.chatboturl}")
+    String chatboturl;
     @Value("${app.dir.uploadimgdir}")
     String uploadImgDir;
 
@@ -92,6 +94,12 @@ public class MainController {
     public String chat2(Model model){
         model.addAttribute("serverurl",serverurl);
         model.addAttribute("center","chat2");
+        return "index";
+    }
+    @RequestMapping("/chatbot")
+    public String chatbot(Model model){
+        model.addAttribute("serverurl",chatboturl);
+        model.addAttribute("center","chatbot");
         return "index";
     }
     @RequestMapping("/summary")

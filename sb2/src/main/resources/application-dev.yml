@@ -40,6 +40,7 @@ logging:
 app:
   url:
     serverurl: http://172.16.21.91:81
+    chatboturl: http://172.16.21.91
   dir:
     imgdir: file:///C:/project/imgs/  # 화면 출력 용
     uploadimgdir: C:/project/imgs/    # 파일 Write 용

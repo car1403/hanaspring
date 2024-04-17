@@ -77,14 +77,14 @@
     <script>
         let chatbtn = {
             init:function(){
-                // const scrollBtn = document.createElement("button");
-                // scrollBtn.innerHTML = "chatbot";
-                // scrollBtn.setAttribute("id", "scroll-btn");
-                // document.body.appendChild(scrollBtn);
-                // scrollBtn.classList.add("show");
-                // scrollBtn.addEventListener("click", function(){
-                //     location.href='/login';
-                // });
+                const scrollBtn = document.createElement("button");
+                scrollBtn.innerHTML = "chatbot";
+                scrollBtn.setAttribute("id", "scroll-btn");
+                document.body.appendChild(scrollBtn);
+                scrollBtn.classList.add("show");
+                scrollBtn.addEventListener("click", function(){
+                    location.href='<c:url value="/chatbot"/>';
+                });
                 const scrollBtn2 = document.createElement("button");
                 scrollBtn2.innerHTML = "1:1";
                 scrollBtn2.setAttribute("id", "scroll-btn2");
