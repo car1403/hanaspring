@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.*;
@@ -15,6 +16,10 @@ import java.nio.charset.Charset;
 @SpringBootTest
 @Slf4j
 class KakaoTests1 {
+
+    @Value("${app.key.kakao_rest_key}")
+    String key;
+
     @Test
     void contextLoads() throws Exception {
         String address = "https://dapi.kakao.com/v2/local/search/keyword.JSON";
@@ -25,7 +30,7 @@ class KakaoTests1 {
                 + "&y=" + "126.9433486"
                 + "&radius=" + "1000";
 
-        String apiKey = "c93e43d704d5faa1049cf193e5f8decc";	//발급받은 restapi key
+        String apiKey = key;	//발급받은 restapi key
 
 
 

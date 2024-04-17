@@ -52,5 +52,6 @@ app:
     ncp-secret: ENC(Pl9mdJu/zld0bwZqSTGlqZpS9Dbw/ae+VHx5FMyU/PiT+a7kwZe8lWq9nt+5ezPYKbK/NQCqOzc=)
     chatbot_url: ENC(ZnHGJ0YJ2g3MTdDhMVCDuKc7oz4HfcgMTSOymi8xKMRVeuz5OOTUqBY34fD5g8UvSq0Cdh4Teg4THsI3U1Dx1bfUEmherz18Uqd0VBAmQ+qC66sI1GdDlhV0hDzezd8cMZ+oon8YZ/CtL0+IJqdlA9QlesmKABHQhxiF3M595Hk=)
     chatbot_key: ENC(6t6htbGHY74v6i5Yt0dyZs2wqv5RLhgE9WWhGN53k3j2M2q9LMQseb4hweMq04vVux4yU8649V0=)
+    kakao_rest_key: ENC(RnDbPagfIlw2xJ3Zm0yeK4QxY6OFKZuUvizDIMbiBh9GCSBpGFlfyAmABWokCRPZ)
     #    file:/root/users/project/imgs/
 
