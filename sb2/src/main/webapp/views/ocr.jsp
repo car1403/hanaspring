@@ -1,11 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2024-03-27
-  Time: 오전 9:37
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container">
     <h2>Ocr</h2>
+    <form id="item_add_form" action="<c:url value="/ocrimpl"/>"
+          method="post"
+          enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="file"  class="form-control" id="image" placeholder="Enter name" name="image">
+        </div>
+        <button id="btn_add" type="submit" class="btn btn-primary">Send</button>
+    </form>
 </div>
