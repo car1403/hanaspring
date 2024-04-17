@@ -46,9 +46,11 @@ app:
     uploadimgdir: C:/project/imgs/    # 파일 Write 용
     logdir: file:///C:/project/logs/
   key:
-    wkey: C2YXvxKurZ%2FmXrbnFlyub5B89GCCWUmYncj4wvNqlWzyP0IwmeP%2FAVl1mU3Tz7Kzk8mfT3f6Wm2wJJ9Z6yNjgw%3D%3D
+    wkey: ENC(4b2QhZtHxU+VJF4KGgEFamJCW3LkcuQjwrNldg9+kdreoQDYoS/DTlLQstIc637fAoMEwCpIVyiAbDP0/7TI3YpCNKcr+zLqKH7oNCHzF5K+B6ETHW1gWzeKIqdUNCk5dWRDOer9knDq/cd6lBE7Hw==)
     whkey: ENC(HE6zJ0DpDGhlGZSvdc1aN++IWaW5YHRz6qdK3xPBPtUJU/vJUQEnExcV8MnXJ7um)
-    ncp-id: swwqpofjbn
-    ncp-secret: FXNZ5O2ZxPX6eC8u06N8rVRfsA5RbaEuns5IZTs9
+    ncp-id: ENC(KSrjJJfkLujcxeEposGXJlKKyb5k9C49)
+    ncp-secret: ENC(Pl9mdJu/zld0bwZqSTGlqZpS9Dbw/ae+VHx5FMyU/PiT+a7kwZe8lWq9nt+5ezPYKbK/NQCqOzc=)
+    chatbot_url: ENC(ZnHGJ0YJ2g3MTdDhMVCDuKc7oz4HfcgMTSOymi8xKMRVeuz5OOTUqBY34fD5g8UvSq0Cdh4Teg4THsI3U1Dx1bfUEmherz18Uqd0VBAmQ+qC66sI1GdDlhV0hDzezd8cMZ+oon8YZ/CtL0+IJqdlA9QlesmKABHQhxiF3M595Hk=)
+    chatbot_key: ENC(6t6htbGHY74v6i5Yt0dyZs2wqv5RLhgE9WWhGN53k3j2M2q9LMQseb4hweMq04vVux4yU8649V0=)
     #    file:/root/users/project/imgs/
 

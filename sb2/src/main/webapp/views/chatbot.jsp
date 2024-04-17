@@ -29,6 +29,7 @@
         stompClient:null,
         init:function(){
             this.id = $('#adm_id').text();
+            this.connect();
             $('#connect').click(()=>{
                 this.connect();
             });
