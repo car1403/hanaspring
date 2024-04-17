@@ -71,6 +71,11 @@ public class MainController {
         model.addAttribute("center","login");
         return "index";
     }
+    @RequestMapping("/ocr")
+    public String ocr(Model model){
+        model.addAttribute("center","ocr");
+        return "index";
+    }
     @RequestMapping("/chat2")
     public String chat2(Model model){
         model.addAttribute("serverurl",serverurl);

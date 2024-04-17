@@ -35,4 +35,7 @@
   <li class="nav-item">
     <a class="nav-link" href="<c:url value="/summary"/>">Summary</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="<c:url value="/ocr"/>">Ocr</a>
+  </li>
 </ul>
