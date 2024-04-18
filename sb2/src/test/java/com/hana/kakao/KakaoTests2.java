@@ -1,7 +1,9 @@
 package com.hana.kakao;
 
 import lombok.extern.slf4j.Slf4j;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,8 +32,9 @@ class KakaoTests2 {
         // post request
         //  String postParams = "content=" + text;
         con.setDoOutput(true);
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("prompt","오늘 아침 하늘은 곧 비가 올 것 같아서");
+        jsonObject.put("prompt","오늘 날씨 어때");
         jsonObject.put("max_tokens",120);
 
 
@@ -54,6 +57,14 @@ class KakaoTests2 {
         }
         br.close();
         log.info(response.toString());
+
+        JSONParser jsonParser = new JSONParser();
+        JSONObject returnObject = null;
+        returnObject = (JSONObject) jsonParser.parse(response.toString());
+        JSONArray ja = (JSONArray) returnObject.get("generations");
+        JSONObject jo = (JSONObject) ja.get(0);
+        String result = (String) jo.get("text");
+        log.info(result);
 
 
 
