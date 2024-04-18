@@ -2,6 +2,7 @@ package com.hana.app.service;
 
 import com.hana.app.data.entity.CustAddrEntity;
 import com.hana.app.frame.HanaService;
+import com.hana.app.repository.CustAddrRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,28 +12,31 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class CustAddrService implements HanaService<CustAddrEntity, Long> {
+
+    private final CustAddrRepository custAddrRepository;
     @Override
     public CustAddrEntity insert(CustAddrEntity custAddrEntity) {
-        return null;
+        return custAddrRepository.save(custAddrEntity);
     }
 
     @Override
     public Boolean delete(Long aLong) {
-        return null;
+        custAddrRepository.deleteById(aLong);
+        return true;
     }
 
     @Override
     public CustAddrEntity update(CustAddrEntity custAddrEntity) {
-        return null;
+        return custAddrRepository.save(custAddrEntity);
     }
 
     @Override
     public Optional<CustAddrEntity> get(Long aLong) {
-        return Optional.empty();
+        return custAddrRepository.findById(aLong);
     }
 
     @Override
     public List<CustAddrEntity> get() {
-        return List.of();
+        return custAddrRepository.findAll();
     }
 }
