@@ -11,10 +11,9 @@ spring:
       suffix: .jsp
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/shopdbjpa?characterEncoding=utf8
-    username: user06
+    url: jdbc:mysql://127.0.0.1:3306/jpadb?characterEncoding=utf8
+    username: jpauser
     password: 111111
-
   jpa:
     hibernate:
       ddl-auto: update
