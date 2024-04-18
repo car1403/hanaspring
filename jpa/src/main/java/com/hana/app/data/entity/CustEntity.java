@@ -3,11 +3,14 @@ package com.hana.app.data.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity(name = "cust")
 @Table(name="db_cust")
 @Getter
-@ToString
+@ToString()
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
@@ -20,7 +23,11 @@ public class CustEntity {
     @Column(length = 50,nullable = false)
     private String name;
 
-    @OneToOne(mappedBy = "cust")
+    @OneToOne(mappedBy = "cust") // EAGER COMPOSITION
     private CustInfoEntity custInfo;
+
+    @OneToMany(mappedBy = "cust", fetch = FetchType.EAGER) // LAZY AGGREGATION
+    @Builder.Default
+    private List<CustAddrEntity> custAddrEntityList = new ArrayList<CustAddrEntity>();
 
 }

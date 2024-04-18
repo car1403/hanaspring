@@ -30,6 +30,7 @@ public class CustService implements HanaService<CustEntity,String> {
         return custRepository.findAll();
     }
 
+
     @Override
     public Boolean delete(String s) {
         custRepository.deleteById(s);
@@ -40,4 +41,5 @@ public class CustService implements HanaService<CustEntity,String> {
     public CustEntity update(CustEntity custEntity) {
         return custRepository.save(custEntity);
     }
+
 }

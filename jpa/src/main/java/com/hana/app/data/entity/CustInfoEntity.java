@@ -15,7 +15,7 @@ public class CustInfoEntity {
     @Column(name="custinfo_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne()
     @JoinColumn(name="cust_id")
     private CustEntity cust;
     private String addr;
