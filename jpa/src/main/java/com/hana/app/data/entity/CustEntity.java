@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@Entity
+@Entity(name = "cust")
 @Table(name="db_cust")
 @Getter
 @ToString
@@ -19,5 +19,8 @@ public class CustEntity {
     private String pwd;
     @Column(length = 50,nullable = false)
     private String name;
+
+    @OneToOne(mappedBy = "cust")
+    private CustInfoEntity custInfo;
 
 }

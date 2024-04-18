@@ -18,13 +18,25 @@ class CustInfoTests {
 	void contextLoads() {
 		CustEntity cust = CustEntity.builder().id("id02").build();
 
-		CustInfoEntity custInfo = CustInfoEntity.builder()
-				.cust(cust)
-				.addr("Seoul Korea")
-				.age(30)
-				.build();
-		custInfoService.insert(custInfo);
+//		CustInfoEntity custInfo = CustInfoEntity.builder()
+//				.cust(cust)
+//				.addr("Seoul Korea")
+//				.age(30)
+//				.build();
+//		custInfoService.insert(custInfo);
 		log.info("OK----------------------");
+
+		CustInfoEntity custInfo1 = custInfoService.get(2L).get();
+		log.info(custInfo1.toString());
+		log.info(custInfo1.getCust().getId());
 	}
 
 }
+
+
+
+
+
+
+
+
