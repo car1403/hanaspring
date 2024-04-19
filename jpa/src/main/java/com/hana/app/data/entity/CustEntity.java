@@ -26,7 +26,7 @@ public class CustEntity {
     @OneToOne(mappedBy = "cust") // EAGER COMPOSITION
     private CustInfoEntity custInfo;
 
-    @OneToMany(mappedBy = "cust", fetch = FetchType.EAGER) // LAZY AGGREGATION
+    @OneToMAany(mappedBy = "cust", fetch = FetchType.EAGER) // LAZY AGGREGATION
     @Builder.Default
     private List<CustAddrEntity> custAddrEntityList = new ArrayList<CustAddrEntity>();
 
