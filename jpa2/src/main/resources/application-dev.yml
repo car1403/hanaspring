@@ -1,0 +1,43 @@
+server:
+  port: 80
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jpadb?characterEncoding=utf8
+    username: jpauser
+    password: 111111
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        default_batch_fetch_size: 500
+    database: mysql
+
+#        ddl-auto의 옵션
+#        none
+#        update: 테이블의 내용이 변경된 경우 자동으로 ddl실행
+#        create: 프로그램 시작 시 create
+#        create-drop: 프로그램 시작 시 create, 종료 시 drop
+#        validate: 테이블 내용이 변경되면 변경 내용을 출력하고 프로그램 종료
+
+logging:
+  level:
+    root: info
+
+#app:
+#  dir:
+#    imgdir: /root/project/imgs
+#    logdir: /root/project/logs
