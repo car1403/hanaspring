@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
-@ToString
+@ToString(exclude = "cust")
 @Getter
 public class CustInfoEntity extends BaseEntity {
     @Id

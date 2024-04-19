@@ -18,4 +18,7 @@ public class CustEntity extends BaseEntity {
     private String pwd;
     @Column(nullable = false,columnDefinition = "varchar(30)")
     private String name;
+
+    @OneToOne(mappedBy = "cust")
+    CustInfoEntity custInfo;
 }
