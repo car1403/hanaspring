@@ -3,6 +3,9 @@ package com.hana.app.data.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity(name="cust")
 @Table(name="t_cust")
 @NoArgsConstructor
@@ -21,4 +24,8 @@ public class CustEntity extends BaseEntity {
 
     @OneToOne(mappedBy = "cust")
     CustInfoEntity custInfo;
+
+    @OneToMany(mappedBy = "cust",fetch = FetchType.EAGER)
+    @Builder.Default
+    List<CustAddrEntity> custAddrs = new ArrayList<>();
 }
