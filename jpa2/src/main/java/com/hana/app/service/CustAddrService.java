@@ -1,10 +1,10 @@
 package com.hana.app.service;
 
 import com.hana.app.data.entity.CartEntity;
-import com.hana.app.data.entity.CateEntity;
+import com.hana.app.data.entity.CustAddrEntity;
 import com.hana.app.frame.HanaService;
 import com.hana.app.repository.CartRepository;
-import com.hana.app.repository.CateRepository;
+import com.hana.app.repository.CustAddrRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +13,12 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class CartService implements HanaService<CartEntity, Integer> {
+public class CustAddrService implements HanaService<CustAddrEntity, Integer> {
 
-    private final CartRepository repository;
+    private final CustAddrRepository repository;
 
     @Override
-    public CartEntity insert(CartEntity entity) {
+    public CustAddrEntity insert(CustAddrEntity entity) {
         return repository.save(entity);
     }
 
@@ -29,21 +29,19 @@ public class CartService implements HanaService<CartEntity, Integer> {
     }
 
     @Override
-    public CartEntity update(CartEntity entity) {
+    public CustAddrEntity update(CustAddrEntity entity) {
         return repository.save(entity);
     }
 
     @Override
-    public Optional<CartEntity> get(Integer integer) {
+    public Optional<CustAddrEntity> get(Integer integer) {
         return repository.findById(integer);
     }
 
     @Override
-    public List<CartEntity> get() {
+    public List<CustAddrEntity> get() {
         return repository.findAll();
     }
 
-    public List<CartEntity> findByCustId(String id) {
-        return repository.findByCustId(id);
-    }
+
 }
