@@ -7,6 +7,11 @@ server:
     session:
       timeout: 10m
 spring:
+  messages:
+    basename: messages/message
+    encoding: utf-8
+    cache-duration: 10
+    fallback-to-system-locale: false
   session:
     redis:
       namespace: spring:session

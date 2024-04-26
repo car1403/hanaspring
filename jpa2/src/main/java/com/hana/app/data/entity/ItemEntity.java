@@ -2,6 +2,8 @@ package com.hana.app.data.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity(name="item")
 @Table(name="t_item")
@@ -19,7 +21,9 @@ public class ItemEntity extends BaseEntity {
     private String name;
     @Column(nullable = false, columnDefinition = "int default 0")
     private int price;
+
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "cate_id") // EAGER
     private CateEntity cate;
 

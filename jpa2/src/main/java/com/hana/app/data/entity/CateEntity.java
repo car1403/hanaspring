@@ -17,4 +17,7 @@ public class CateEntity extends BaseEntity {
     private int id;
     @Column(nullable = false,unique = true,columnDefinition = "varchar(30)")
     private String name;
+
+
+
 }

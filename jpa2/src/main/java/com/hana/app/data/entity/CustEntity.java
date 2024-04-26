@@ -25,7 +25,7 @@ public class CustEntity extends BaseEntity {
     @OneToOne(mappedBy = "cust")
     CustInfoEntity custInfo;
 
-    @OneToMany(mappedBy = "cust",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "cust", fetch = FetchType.EAGER)
     @Builder.Default
     List<CustAddrEntity> custAddrs = new ArrayList<>();
 }

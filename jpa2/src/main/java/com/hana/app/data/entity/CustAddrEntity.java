@@ -21,9 +21,9 @@ public class CustAddrEntity extends BaseEntity {
     @JoinColumn(name="cust_id")
     private CustEntity cust;
 
-    public void addCust(CustEntity cust) {
-        this.cust = cust;
-        this.cust.getCustAddrs().add(this);
-    }
+//    public void addCust(CustEntity cust) {
+//        this.cust = cust;
+//        this.cust.getCustAddrs().add(this);
+//    }
 
 }
