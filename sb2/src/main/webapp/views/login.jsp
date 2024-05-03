@@ -27,6 +27,7 @@
             <input type="password" value="pwd03" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
 
         </div>
+        <input type="hidden" name="redirectURL" value="${redirectURL}"/>
         <div class="form-group">
             <p>${msg}</p>
         </div>
