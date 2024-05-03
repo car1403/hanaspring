@@ -20,7 +20,7 @@ spring:
     redis:
       host: localhost
       port: 6379
-      password: aaaa
+      password: aaaaa
   mvc:
     view:
       prefix: /views/
@@ -40,16 +40,16 @@ mybatis:
     map-underscore-to-camel-case: true
 logging:
   level:
-    root: info
+    root: error
 
 app:
   url:
     serverurl: http://172.16.21.91:81
     chatboturl: http://172.16.21.91
   dir:
-    imgdir: file:///C:/project/imgs/  # 화면 출력 용
-    uploadimgdir: C:/project/imgs/    # 파일 Write 용
-    logdir: file:///C:/project/logs/
+    imgdir: file:/root/imgs/  # 화면 출력 용
+    uploadimgdir: /root/imgs/    # 파일 Write 용
+    logdir: file:/root/logs/
   key:
     wkey: ENC(4b2QhZtHxU+VJF4KGgEFamJCW3LkcuQjwrNldg9+kdreoQDYoS/DTlLQstIc637fAoMEwCpIVyiAbDP0/7TI3YpCNKcr+zLqKH7oNCHzF5K+B6ETHW1gWzeKIqdUNCk5dWRDOer9knDq/cd6lBE7Hw==)
     whkey: ENC(HE6zJ0DpDGhlGZSvdc1aN++IWaW5YHRz6qdK3xPBPtUJU/vJUQEnExcV8MnXJ7um)
