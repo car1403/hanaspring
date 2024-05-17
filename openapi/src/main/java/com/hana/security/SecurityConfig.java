@@ -23,10 +23,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 @RequiredArgsConstructor
 public class SecurityConfig  {
-    //    private final CustomUserDetailsService customUserDetailsService;
+
     private final JwtTokenProvider jwtTokenProvider;
-//    private final CustomAccessDeniedHandler accessDeniedHandler;
-//    private final CustomAuthenticationEntryPoint authenticationEntryPoint;
     private final RedisTemplate redisTemplate;
 
     @Bean
