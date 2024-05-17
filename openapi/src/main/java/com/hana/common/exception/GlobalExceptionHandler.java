@@ -14,6 +14,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RequiredArgsConstructor
 public class GlobalExceptionHandler {
     private final Response response;
+    @ExceptionHandler(NameDuplicateException.class)
+    public ResponseEntity<?> handleEmailDuplicateException(NameDuplicateException ex){
+        log.error("NameDuplicateException",ex);
+
+        return response.fail(ex.getMessage()+ex.getErrorCode().getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<?> handleAccessDeniedException(AccessDeniedException ex){
         log.error("AccessDeniedException",ex);

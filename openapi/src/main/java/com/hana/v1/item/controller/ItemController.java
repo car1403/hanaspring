@@ -5,6 +5,8 @@ import com.hana.common.util.Helper;
 import com.hana.v1.item.dto.request.ItemRequestDto;
 import com.hana.v1.item.service.ItemService;
 import io.swagger.v3.oas.annotations.Operation;
+
+import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -21,15 +23,12 @@ public class ItemController {
 
     private final ItemService itemService;
     private final Response response;
-    @Operation(summary = "회원가입", description = "이메일 비번 입력 <br> token 리턴 ")
+    @Operation(summary = "Item 등록", description = "아이템 이름과  <br> 금액을 입력 ")
     // GET 일때
 //    @Parameter(name = "email", description = "이메일 입력", )
 //    @Parameter(name = "password", description = "비빌번호 입력")
     @PostMapping("/add")
     public ResponseEntity<?> add(@Validated @RequestBody ItemRequestDto dto, Errors errors) {
-        log.info("signUp---------------------------------");
-        log.info("signUp---------------------------------"+dto.getPrice());
-        log.info("signUp---------------------------------"+dto.getName());
         // validation check
         if (errors.hasErrors()) {
             return response.invalidFields(Helper.refineErrors(errors));

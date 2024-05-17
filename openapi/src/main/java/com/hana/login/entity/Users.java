@@ -24,7 +24,7 @@ public class Users extends BaseEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
-    @Column
+    @Column(unique = true)
     private String email;
 
     @Column

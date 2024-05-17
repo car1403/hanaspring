@@ -38,6 +38,7 @@ public class UsersController {
         if (errors.hasErrors()) {
             return response.invalidFields(Helper.refineErrors(errors));
         }
+
         return usersService.signUp(signUp);
     }
 

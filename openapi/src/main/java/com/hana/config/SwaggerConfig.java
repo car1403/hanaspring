@@ -1,6 +1,7 @@
 package com.hana.config;
 
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -17,6 +18,8 @@ import java.util.Arrays;
 @RequiredArgsConstructor
 @Configuration
 public class SwaggerConfig {
+
+
 
     @Bean
     public OpenAPI openAPI(){
@@ -59,8 +62,8 @@ public class SwaggerConfig {
                 .addOpenApiCustomizer(
                         openApi -> openApi.setInfo(
                                 new Info()
-                                        .title("board api2") // API 제목
-                                        .description("게시판 업무 처리를 위한 API") // API 설명
+                                        .title("My Open API Project") // API 제목
+                                        .description("업무 처리를 위한 API") // API 설명
                                         .version("1.0.1") // API 버전
                         )
                 )

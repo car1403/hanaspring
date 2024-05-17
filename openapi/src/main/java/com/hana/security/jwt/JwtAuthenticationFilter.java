@@ -21,6 +21,8 @@ import java.io.IOException;
 public class JwtAuthenticationFilter extends GenericFilterBean {
 
     private static final String AUTHORIZATION_HEADER = "Authorization";
+    // Bearer
+    //JWT 혹은 OAuth에 대한 토큰을 사용한다. (RFC 6750)
     private static final String BEARER_TYPE = "Bearer";
 
     private final JwtTokenProvider jwtTokenProvider;
@@ -39,14 +41,15 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
             // Redis 에 해당 accessToken logout 여부 확인
             String isLogout = (String)redisTemplate.opsForValue().get(token);
             log.info("Start isLogout -------------------------------------------4 "+ isLogout);
-            log.info("Start isLogout -------------------------------------------4 "+ ObjectUtils.isEmpty(isLogout));
+            log.info("Start isLogout -------------------------------------------5 "+ ObjectUtils.isEmpty(isLogout));
 
 
             if (ObjectUtils.isEmpty(isLogout)) {
-                log.info("Start JwtAuthenticationFilter -------------------------------------------5 ,, Logout");
-
                 // 토큰이 유효할 경우 토큰에서 Authentication 객체를 가지고 와서 SecurityContext 에 저장
                 Authentication authentication = jwtTokenProvider.getAuthentication(token);
+                // getName은 사용자의 ID를 의미 함
+                log.info("Start JwtAuthenticationFilter -------------------------------------------6 "+authentication.getName());
+                log.info("Start JwtAuthenticationFilter -------------------------------------------6 "+authentication.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         }
