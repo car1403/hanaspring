@@ -7,6 +7,7 @@ import com.hana.v1.item.service.ItemService;
 import io.swagger.v3.oas.annotations.Operation;
 
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -25,8 +26,8 @@ public class ItemController {
     private final Response response;
     @Operation(summary = "Item 등록", description = "아이템 이름과  <br> 금액을 입력 ")
     // GET 일때
-//    @Parameter(name = "email", description = "이메일 입력", )
-//    @Parameter(name = "password", description = "비빌번호 입력")
+    @Parameter(name = "name", description = "Item 이름 입력" )
+    @Parameter(name = "price", description = "Item 가격 입력")
     @PostMapping("/add")
     public ResponseEntity<?> add(@Validated @RequestBody ItemRequestDto dto, Errors errors) {
         // validation check
@@ -40,6 +41,7 @@ public class ItemController {
     public ResponseEntity<?> get() {
         return itemService.getall();
     }
+    @Parameter(name = "id", description = "Item ID 입력")
     @GetMapping("/get/{id}")
     public ResponseEntity<?> get(@RequestParam("id") Long id) {
         return itemService.get(id);
