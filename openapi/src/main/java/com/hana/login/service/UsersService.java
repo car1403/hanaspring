@@ -71,6 +71,9 @@ public class UsersService {
         UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.generateToken(authentication);
 
         // 4. RefreshToken Redis 저장 (expirationTime 설정을 통해 자동 삭제 처리)
+        log.info("RT:" + authentication.getName()+" : "+tokenInfo.getRefreshToken()+" : "+tokenInfo.getRefreshTokenExpirationTime()+" : "+TimeUnit.MILLISECONDS);
+
+
         redisTemplate.opsForValue()
                 .set("RT:" + authentication.getName(), tokenInfo.getRefreshToken(), tokenInfo.getRefreshTokenExpirationTime(), TimeUnit.MILLISECONDS);
 
@@ -125,22 +128,9 @@ public class UsersService {
         Long expiration = jwtTokenProvider.getExpiration(logout.getAccessToken());
         redisTemplate.opsForValue()
                 .set(logout.getAccessToken(), "logout", expiration, TimeUnit.MILLISECONDS);
+        // 5. 이후 JwtAuthenticationFilter 에서 redis에 있는 logout 정보를 가지고 와서 접근을 거부함
 
         return response.success("로그아웃 되었습니다.");
-    }
-
-    public ResponseEntity<?> authority() {
-        // SecurityContext에 담겨 있는 authentication userEamil 정보
-        String userEmail = SecurityUtil.getCurrentUserEmail();
-
-        Users user = usersRepository.findByEmail(userEmail)
-                .orElseThrow(() -> new UsernameNotFoundException("No authentication information."));
-
-        // add ROLE_ADMIN
-        user.getRoles().add(Authority.ROLE_ADMIN.name());
-        usersRepository.save(user);
-
-        return response.success();
     }
 
 

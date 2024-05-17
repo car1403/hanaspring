@@ -28,20 +28,29 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
+        log.info("Start JwtAuthenticationFilter -------------------------------------------1");
         // 1. Request Header 에서 JWT 토큰 추출
         String token = resolveToken((HttpServletRequest) request);
 
         // 2. validateToken 으로 토큰 유효성 검사
         if (token != null && jwtTokenProvider.validateToken(token)) {
+            log.info("Start JwtAuthenticationFilter -------------------------------------------2");
+
             // Redis 에 해당 accessToken logout 여부 확인
             String isLogout = (String)redisTemplate.opsForValue().get(token);
+            log.info("Start isLogout -------------------------------------------4 "+ isLogout);
+            log.info("Start isLogout -------------------------------------------4 "+ ObjectUtils.isEmpty(isLogout));
+
+
             if (ObjectUtils.isEmpty(isLogout)) {
+                log.info("Start JwtAuthenticationFilter -------------------------------------------5 ,, Logout");
+
                 // 토큰이 유효할 경우 토큰에서 Authentication 객체를 가지고 와서 SecurityContext 에 저장
                 Authentication authentication = jwtTokenProvider.getAuthentication(token);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         }
+        // 접근 권한 없으면 AccessDeniedException 발생
         chain.doFilter(request, response);
     }
 

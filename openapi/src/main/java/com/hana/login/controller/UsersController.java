@@ -7,6 +7,7 @@ import com.hana.login.dto.request.UserRequestDto;
 import com.hana.login.service.UsersService;
 import com.hana.security.jwt.JwtTokenProvider;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/api/login/")
 @RestController
+@Tag(name = "Login Open API", description = "사용자 등록 및 로그인 아웃 처리")
 public class UsersController {
 
     private final JwtTokenProvider jwtTokenProvider;
@@ -32,9 +34,6 @@ public class UsersController {
 //    @Parameter(name = "password", description = "비빌번호 입력")
     @PostMapping("/sign-up")
     public ResponseEntity<?> signUp(@Validated @RequestBody UserRequestDto.SignUp signUp, Errors errors) {
-        log.info("signUp---------------------------------");
-        log.info("signUp---------------------------------"+signUp.getEmail());
-        log.info("signUp---------------------------------"+signUp.getPassword());
         // validation check
         if (errors.hasErrors()) {
             return response.invalidFields(Helper.refineErrors(errors));
@@ -68,22 +67,4 @@ public class UsersController {
         }
         return usersService.logout(logout);
     }
-
-//    @GetMapping("/authority")
-//    public ResponseEntity<?> authority() {
-//        log.info("ADD ROLE_ADMIN");
-//        return usersService.authority();
-//    }
-//
-//    @GetMapping("/userTest")
-//    public ResponseEntity<?> userTest() {
-//        log.info("ROLE_USER TEST");
-//        return usersService.getUsers();
-//    }
-//
-//    @GetMapping("/adminTest")
-//    public ResponseEntity<?> adminTest() {
-//        log.info("ROLE_ADMIN TEST");
-//        return usersService.getUsers();
-//    }
 }
