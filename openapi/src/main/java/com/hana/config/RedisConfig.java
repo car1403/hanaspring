@@ -37,7 +37,7 @@ public class RedisConfig {
     }
 
     // Redis를 사용하는 방법은 두가지 방법이 있음
-    // 1. Redis Connectino 만 생성 후 JPA 형식으로 CRUD 작업 진행
+    // 1. Redis Connection 만 생성 후 JPA 형식으로 CRUD 작업 진행
     // 2. RedisTemplate 를 생성 하여 주어진 함수를 사용하여 작업 진행
     @Bean
     @Primary
