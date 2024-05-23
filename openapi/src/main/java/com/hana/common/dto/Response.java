@@ -145,6 +145,7 @@ public class Response {
                 .result("fail")
                 .errorCode(errorCode)
                 .error(Collections.emptyList())
+                .massage(errorCode.getErrorMessage())
                 .build();
         return ResponseEntity.ok(body);
     }
