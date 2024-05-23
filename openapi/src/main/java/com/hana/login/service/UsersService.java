@@ -3,6 +3,7 @@ package com.hana.login.service;
 
 
 import com.hana.common.dto.Response;
+import com.hana.common.exception.ErrorCode;
 import com.hana.login.dto.request.UserRequestDto;
 import com.hana.login.dto.response.UserResponseDto;
 import com.hana.login.entity.Authority;
@@ -40,7 +41,7 @@ public class UsersService {
 
     public ResponseEntity<?> signUp(UserRequestDto.SignUp signUp) {
         if (usersRepository.existsByEmail(signUp.getEmail())) {
-            return response.fail("이미 회원가입된 이메일입니다.", HttpStatus.BAD_REQUEST);
+            return response.fail(ErrorCode.EMAIL_DUPLICATION, HttpStatus.BAD_REQUEST);
         }
 
         Users user = Users.builder()
@@ -56,7 +57,7 @@ public class UsersService {
     public ResponseEntity<?> login(UserRequestDto.Login login) {
 
         if (usersRepository.findByEmail(login.getEmail()).orElse(null) == null) {
-            return response.fail("해당하는 유저가 존재하지 않습니다.", HttpStatus.BAD_REQUEST);
+            return response.fail(ErrorCode.EMAIL_NOT_FOUND, HttpStatus.BAD_REQUEST);
         }
 
         // 1. Login ID/PW 를 기반으로 Authentication 객체 생성
@@ -84,7 +85,7 @@ public class UsersService {
     public ResponseEntity<?> reissue(UserRequestDto.Reissue reissue) {
         // 1. Refresh Token 검증
         if (!jwtTokenProvider.validateToken(reissue.getRefreshToken())) {
-            return response.fail("Refresh Token 정보가 유효하지 않습니다.", HttpStatus.BAD_REQUEST);
+            return response.fail(ErrorCode.REFRESH_TOKEN_NOT_AVAILABLE, HttpStatus.BAD_REQUEST);
         }
 
         // 2. Access Token 에서 User email 을 가져옵니다.
@@ -94,10 +95,10 @@ public class UsersService {
         String refreshToken = (String)redisTemplate.opsForValue().get("RT:" + authentication.getName());
         // (추가) 로그아웃되어 Redis 에 RefreshToken 이 존재하지 않는 경우 처리
         if(ObjectUtils.isEmpty(refreshToken)) {
-            return response.fail("잘못된 요청입니다.", HttpStatus.BAD_REQUEST);
+            return response.fail(ErrorCode.ACCESS_ERROR, HttpStatus.BAD_REQUEST);
         }
         if(!refreshToken.equals(reissue.getRefreshToken())) {
-            return response.fail("Refresh Token 정보가 일치하지 않습니다.", HttpStatus.BAD_REQUEST);
+            return response.fail(ErrorCode.REFRESH_TOKEN_NOT_AVAILABLE, HttpStatus.BAD_REQUEST);
         }
 
         // 4. 새로운 토큰 생성
@@ -113,7 +114,7 @@ public class UsersService {
     public ResponseEntity<?> logout(UserRequestDto.Logout logout) {
         // 1. Access Token 검증
         if (!jwtTokenProvider.validateToken(logout.getAccessToken())) {
-            return response.fail("잘못된 요청입니다.", HttpStatus.BAD_REQUEST);
+            return response.fail(ErrorCode.ACCESS_ERROR, HttpStatus.BAD_REQUEST);
         }
 
         // 2. Access Token 에서 User email 을 가져옵니다.

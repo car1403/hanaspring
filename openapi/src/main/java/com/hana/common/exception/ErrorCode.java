@@ -7,13 +7,17 @@ import lombok.Getter;
 @Getter
 
 public enum ErrorCode {
-    NOT_FOUND(404,"COMMON-ERR-404","PAGE NOT FOUND"),
-    INTER_SERVER_ERROR(500,"COMMON-ERR-500","INTER SERVER ERROR"),
-    EMAIL_DUPLICATION(400,"MEMBER-ERR-400","EMAIL DUPLICATED"),
-    NAME_DUPLICATION(401,"MEMBER-ERR-401","NAME DUPLICATED"),
+//  HttpStatus 의 기본 Error코드 이외의 사용자 정의 Error 코드 입력
+    ACCESS_ERROR("E201","ACCESS ERROR"),
+    REFRESH_TOKEN_NOT_AVAILABLE("T100","REFRESH TOKEN NOT AVAILABLE"),
+
+
+    NOT_FOUND("E401","PAGE NOT FOUND"),
+    EMAIL_NOT_FOUND("E501","EMAIL PAGE NOT FOUND"),
+    EMAIL_DUPLICATION("E601","EMAIL DUPLICATED"),
+    NAME_DUPLICATION("E701","NAME DUPLICATED"),
     ;
 
-    private int status;
     private String errorCode;
-    private String message;
+    private String errorMessage;
 }

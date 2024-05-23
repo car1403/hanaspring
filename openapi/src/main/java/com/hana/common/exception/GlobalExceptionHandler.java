@@ -14,17 +14,21 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RequiredArgsConstructor
 public class GlobalExceptionHandler {
     private final Response response;
+
+    // User Define Exception
     @ExceptionHandler(NameDuplicateException.class)
     public ResponseEntity<?> handleEmailDuplicateException(NameDuplicateException ex){
         log.error("NameDuplicateException",ex);
 
-        return response.fail(ex.getMessage()+ex.getErrorCode().getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return response.fail(ex.getErrorCode(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    // Java Exception
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<?> handleAccessDeniedException(AccessDeniedException ex){
         log.error("AccessDeniedException",ex);
 
-        return response.fail("접근 거부 입니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+        return response.fail(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<?> handleIllegalArgumentException(IllegalArgumentException ex){

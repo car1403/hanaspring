@@ -33,7 +33,7 @@ public class ItemService implements HanaOpenService<ItemRequestDto, Long> {
         Optional<ItemEntity> item = itemRepository.findById(aLong);
         // 에러정보 리턴 아래는 예외 발생
         if(item.isEmpty()){
-            return response.fail("검색 내용이 없습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+            return response.fail(ErrorCode.EMAIL_NOT_FOUND, HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return response.success(new ItemResponseDto(item.get()));
 
