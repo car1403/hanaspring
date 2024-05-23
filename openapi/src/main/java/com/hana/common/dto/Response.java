@@ -92,35 +92,35 @@ public class Response {
         return success(Collections.emptyList(), null, HttpStatus.OK);
     }
 
-    /**
-     * <p> 단순 메시지를 가진 실패 응답을 반환한다. </p>
-     * <pre>
-     *     {
-     *         "state" : HttpStatus Code,
-     *         "result" : fail,
-     *         "message" : message,
-     *         "data" : [],
-     *         "error" : [{error1}, {error2}...]
-     *     }
-     * </pre>
-     *
-     * @param msg 응답 바디 message 필드에 포함될 정보
-     * @param status 응답 바디 status 필드에 포함될 응답 상태 코드
-     * @return 응답 객체
-     */
-    public ResponseEntity<?> fail(Object data, String msg, HttpStatus status) {
-        Body body = Body.builder()
-                .state(status.value())
-                .data(data)
-                .result("fail")
-                .massage(msg)
-                .error(Collections.emptyList())
-                .build();
-        return ResponseEntity.ok(body);
-    }
-    public ResponseEntity<?> fail(String msg, HttpStatus status) {
-        return fail(Collections.emptyList(), msg, status);
-    }
+//    /**
+//     * <p> 단순 메시지를 가진 실패 응답을 반환한다. </p>
+//     * <pre>
+//     *     {
+//     *         "state" : HttpStatus Code,
+//     *         "result" : fail,
+//     *         "message" : message,
+//     *         "data" : [],
+//     *         "error" : [{error1}, {error2}...]
+//     *     }
+//     * </pre>
+//     *
+//     * @param msg 응답 바디 message 필드에 포함될 정보
+//     * @param status 응답 바디 status 필드에 포함될 응답 상태 코드
+//     * @return 응답 객체
+//     */
+//    public ResponseEntity<?> fail(Object data, String msg, HttpStatus status) {
+//        Body body = Body.builder()
+//                .state(status.value())
+//                .data(data)
+//                .result("fail")
+//                .massage(msg)
+//                .error(Collections.emptyList())
+//                .build();
+//        return ResponseEntity.ok(body);
+//    }
+//    public ResponseEntity<?> fail(String msg, HttpStatus status) {
+//        return fail(Collections.emptyList(), msg, status);
+//    }
 
     /**
      * <p> ErrorCode를 가진 실패 응답을 반환한다. </p>
@@ -143,9 +143,8 @@ public class Response {
                 .state(status.value())
                 .data(data)
                 .result("fail")
-                .errorCode(errorCode)
                 .error(Collections.emptyList())
-                .massage(errorCode.getErrorMessage())
+                .errorCode(errorCode)
                 .build();
         return ResponseEntity.ok(body);
     }

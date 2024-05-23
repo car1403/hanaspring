@@ -44,7 +44,7 @@ public class ItemService implements HanaOpenService<ItemRequestDto, Long> {
         Optional<ItemEntity> item =  itemRepository.findByName(itemRequestDto.getName());
         // 사용자 정의 예외 발생
         if( item.isPresent()){
-            throw new NameDuplicateException("email duplicated", ErrorCode.NAME_DUPLICATION);
+            throw new NameDuplicateException("ID duplicated", ErrorCode.NAME_DUPLICATION);
         }
         ItemEntity itemEntity = itemRepository.save(new ItemEntity(itemRequestDto));
         return response.success("성공했습니다.");

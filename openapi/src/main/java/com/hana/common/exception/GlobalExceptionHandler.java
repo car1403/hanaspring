@@ -28,17 +28,17 @@ public class GlobalExceptionHandler {
     public ResponseEntity<?> handleAccessDeniedException(AccessDeniedException ex){
         log.error("AccessDeniedException",ex);
 
-        return response.fail(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return response.fail(ErrorCode.ALL_Exception, HttpStatus.INTERNAL_SERVER_ERROR);
     }
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<?> handleIllegalArgumentException(IllegalArgumentException ex){
         log.error("IllegalArgumentException",ex);
 
-        return response.fail(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return response.fail(ErrorCode.ALL_Exception, HttpStatus.INTERNAL_SERVER_ERROR);
     }
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleException(Exception ex){
         log.error("handleException----------------",ex);
-        return response.fail("시스템 오류 입니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+        return response.fail(ErrorCode.ALL_Exception, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
